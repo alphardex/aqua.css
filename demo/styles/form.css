@@ -1,0 +1,37 @@
+.form-group input {
+  width: 100%;
+}
+
+.form-check-group {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-group-label {
+  margin-right: 18px;
+}
+
+.order-form {
+  display: grid;
+  gap: 2rem;
+  width: 250px;
+  padding: 50px 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+h2 {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+output {
+  font-weight: bold;
+  color: #3bafda;
+}

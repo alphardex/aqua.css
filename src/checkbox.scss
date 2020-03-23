@@ -1,0 +1,121 @@
+.form-check-input[type="checkbox"] {
+  --checkbox-bg-color: white;
+  --border-color: #ccd1d9;
+  --checkbox-hover-color: #aab2bd;
+  --checkbox-checked-color: var(--primary-color);
+  --checkbox-disabled-bg-color: #e6e9ed;
+  --checkbox-disabled-checked-color: #aab2bd;
+
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  background: var(--checkbox-checked-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  transition: 0.3s;
+
+  & ~ .form-check-label {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &::before {
+    position: absolute;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18px' height='18px' fill='none' stroke-width='2px' stroke='white' stroke-linecap='round' viewBox='0 0 21 21'%3E%3Cpolyline points='5 10.75 8.5 14.25 16 6'%3E%3C/polyline%3E%3C/svg%3E");
+    transform: scale(0);
+    transition: 0.3s;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--checkbox-bg-color);
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px var(--border-color);
+    transition: 0.2s;
+  }
+
+  &:hover {
+    --border-color: var(--checkbox-hover-color);
+  }
+
+  &:checked {
+    &::before {
+      transform: scale(1);
+    }
+
+    &::after {
+      transform: scale(0);
+    }
+  }
+
+  &:disabled {
+    --checkbox-bg-color: var(--checkbox-disabled-bg-color);
+    --checkbox-checked-color: var(--checkbox-disabled-checked-color);
+
+    cursor: not-allowed;
+
+    & ~ .form-check-label {
+      cursor: not-allowed;
+    }
+  }
+
+  &.bounce {
+    &:checked {
+      &::before {
+        transition: none;
+        animation: scale-out-bounce-checkbox 0.6s ease-out reverse forwards;
+      }
+    }
+  }
+}
+
+// https://easings.net/#easeInBounce
+@keyframes scale-out-bounce-checkbox {
+  0% {
+    transform: scale(1);
+  }
+
+  4% {
+    transform: scale(0.98);
+  }
+
+  8% {
+    transform: scale(0.99);
+  }
+
+  18% {
+    transform: scale(0.94);
+  }
+
+  26% {
+    transform: scale(0.98);
+  }
+
+  46% {
+    transform: scale(0.75);
+  }
+
+  64% {
+    transform: scale(0.98);
+  }
+
+  76% {
+    transform: scale(0.44);
+  }
+
+  88% {
+    transform: scale(0.11);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}

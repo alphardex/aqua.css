@@ -1,0 +1,125 @@
+.form-check-input[type="radio"] {
+  --radio-bg-color: white;
+  --border-color: #ccd1d9;
+  --radio-hover-color: #aab2bd;
+  --radio-checked-color: var(--primary-color);
+  --radio-disabled-bg-color: #e6e9ed;
+  --radio-disabled-checked-color: #aab2bd;
+
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  background: var(--radio-checked-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  transition: 0.3s;
+
+  & ~ .form-check-label {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--radio-bg-color);
+    border-radius: inherit;
+    transform: scale(0);
+    transition: 0.3s;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--radio-bg-color);
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px var(--border-color);
+    transition: 0.2s;
+  }
+
+  &:hover {
+    --border-color: var(--radio-hover-color);
+  }
+
+  &:checked {
+    &::before {
+      transform: scale(1);
+    }
+
+    &::after {
+      transform: scale(0);
+    }
+  }
+
+  &:disabled {
+    --radio-bg-color: var(--radio-disabled-bg-color);
+    --radio-checked-color: var(--radio-disabled-checked-color);
+
+    cursor: not-allowed;
+
+    & ~ .form-check-label {
+      cursor: not-allowed;
+    }
+  }
+
+  &.bounce {
+    &:checked {
+      &::before {
+        transition: none;
+        animation: scale-out-bounce-radio 0.6s ease-out reverse forwards;
+      }
+    }
+  }
+}
+
+// https://easings.net/#easeInBounce
+@keyframes scale-out-bounce-radio {
+  0% {
+    transform: scale(0.5);
+  }
+
+  4% {
+    transform: scale(0.98 * 0.5);
+  }
+
+  8% {
+    transform: scale(0.99 * 0.5);
+  }
+
+  18% {
+    transform: scale(0.94 * 0.5);
+  }
+
+  26% {
+    transform: scale(0.98 * 0.5);
+  }
+
+  46% {
+    transform: scale(0.55 * 0.5);
+  }
+
+  64% {
+    transform: scale(0.98 * 0.5);
+  }
+
+  76% {
+    transform: scale(0.44 * 0.5);
+  }
+
+  88% {
+    transform: scale(0.11 * 0.5);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}

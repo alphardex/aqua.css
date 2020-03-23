@@ -1,0 +1,30 @@
+{
+  "name": "aqua.css",
+  "version": "1.0.0",
+  "description": "A CSS framework named after aqua in konosuba.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output dist/aqua.css dist/aqua.css",
+    "build-cleancss": "cleancss -o dist/aqua.min.css dist/aqua.css",
+    "build-clean": "rimraf dist",
+    "build-sass": "node-sass --output-style expanded --source-map true src/aqua.scss dist/aqua.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alphardex/aqua.css.git"
+  },
+  "keywords": [
+    "ui",
+    "aqua.css"
+  ],
+  "author": "alphardex",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.13.1",
+    "postcss-cli": "^7.1.0",
+    "rimraf": "^3.0.2"
+  }
+}

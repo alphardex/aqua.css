@@ -1,0 +1,66 @@
+.form-group {
+  --default-color: rgba(0, 0, 0, 0.5);
+  --invalid-color: var(--danger-color);
+  --valid-color: var(--primary-color);
+  --border-bottom-color: rgba(0, 0, 0, 0.3);
+
+  position: relative;
+  border-bottom: 1px solid var(--border-bottom-color);
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background: var(--valid-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s;
+  }
+
+  &:focus-within::before {
+    transform: scaleX(1);
+  }
+
+  label {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    transition: 0.3s;
+    transform-origin: left;
+  }
+
+  .form-control {
+    padding: 8px 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: currentColor;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    &:invalid {
+      & ~ label {
+        color: var(--invalid-color);
+      }
+    }
+
+    &:valid ~ label {
+      color: var(--valid-color);
+    }
+
+    &:placeholder-shown ~ label {
+      color: var(--default-color);
+    }
+
+    // label will float in 2 situations based on its sibling input:
+    // 1. input get focus
+    // 2. input has text filled
+    &:focus ~ label,
+    &:not(:placeholder-shown) ~ label {
+      transform: translateY(-120%) scale(0.75);
+    }
+  }
+}
