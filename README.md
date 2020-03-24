@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> A delicate CSS framework for humans .
+> A delicate CSS framework for humans.
 
 ### 🏠 [Homepage](https://aqua.css)
 

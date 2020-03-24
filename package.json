@@ -1,7 +1,7 @@
 {
   "name": "aqua.css",
   "version": "1.0.0",
-  "description": "A CSS framework named after aqua in konosuba.",
+  "description": "A delicate CSS framework for humans.",
   "main": "index.js",
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
