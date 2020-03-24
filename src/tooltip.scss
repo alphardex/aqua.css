@@ -1,0 +1,222 @@
+[data-tooltip] {
+  --tooltip-color: #434a54;
+  overflow: visible !important;
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+
+  &::before {
+    content: attr(data-tooltip);
+    padding: 8px;
+    font-size: 14px;
+    line-height: 1.2;
+    background: var(--tooltip-color);
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: var(--tooltip-color) transparent transparent transparent;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // top
+  &[data-placement^="top"] {
+    &::before {
+      bottom: calc(100% + 10px);
+    }
+
+    &::after {
+      bottom: calc(100% + 5px);
+    }
+  }
+
+  &[data-placement="top"] {
+    &::before,
+    &::after {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &[data-placement="top-left"] {
+    &::before {
+      left: 0;
+      transform: translate(0, 0);
+    }
+
+    &::after {
+      left: 10px;
+    }
+  }
+
+  &[data-placement="top-right"] {
+    &::before {
+      left: 100%;
+      transform: translate(-100%, 0);
+    }
+
+    &::after {
+      right: 10px;
+    }
+  }
+
+  // right
+  &[data-placement^="right"] {
+    &::before {
+      left: calc(100% + 10px);
+    }
+
+    &::after {
+      left: calc(100% + 3px);
+    }
+  }
+
+  &[data-placement="right"] {
+    &::before,
+    &::after {
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &::after {
+      transform: translate(0, -50%) rotate(90deg);
+    }
+  }
+
+  &[data-placement="right-top"] {
+    &::before {
+      top: 0;
+      transform: translate(0, 0);
+    }
+
+    &::after {
+      top: 10px;
+      transform: translate(0, 0) rotate(90deg);
+    }
+  }
+
+  &[data-placement="right-bottom"] {
+    &::before {
+      top: 100%;
+      transform: translate(0, -100%);
+    }
+
+    &::after {
+      bottom: 10px;
+      transform: translate(0, 100%) rotate(90deg);
+    }
+  }
+
+  // bottom
+  &[data-placement^="bottom"] {
+    &::before {
+      top: calc(100% + 10px);
+    }
+
+    &::after {
+      top: calc(100% + 6px);
+    }
+  }
+
+  &[data-placement="bottom"] {
+    &::before,
+    &::after {
+      right: 50%;
+      transform: translate(50%, 0);
+    }
+
+    &::after {
+      transform: translate(50%, 0) rotate(180deg);
+    }
+  }
+
+  &[data-placement="bottom-left"] {
+    &::before {
+      right: 0;
+      transform: translate(0, 0);
+    }
+
+    &::after {
+      right: 10px;
+      transform: translate(0, 0) rotate(180deg);
+    }
+  }
+
+  &[data-placement="bottom-right"] {
+    &::before {
+      right: 100%;
+      transform: translate(100%, 0);
+    }
+
+    &::after {
+      left: 10px;
+      transform: translate(100%, 0) rotate(180deg);
+    }
+  }
+
+  // left
+  &[data-placement^="left"] {
+    &::before {
+      right: calc(100% + 10px);
+    }
+
+    &::after {
+      right: calc(100% + 3px);
+    }
+  }
+
+  &[data-placement="left"] {
+    &::before,
+    &::after {
+      bottom: 50%;
+      transform: translate(0, 50%);
+    }
+
+    &::after {
+      transform: translate(0, 50%) rotate(270deg);
+    }
+  }
+
+  &[data-placement="left-top"] {
+    &::before {
+      bottom: 100%;
+      transform: translate(0, 100%);
+    }
+
+    &::after {
+      top: 10px;
+      transform: translate(0, -100%) rotate(270deg);
+    }
+  }
+
+  &[data-placement="left-bottom"] {
+    &::before {
+      bottom: 0;
+      transform: translate(0, 0);
+    }
+
+    &::after {
+      bottom: 10px;
+      transform: translate(0, 0) rotate(270deg);
+    }
+  }
+}

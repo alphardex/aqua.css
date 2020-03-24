@@ -1091,4 +1091,183 @@
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
+
+[data-tooltip] {
+  --tooltip-color: #434a54;
+  overflow: visible;
+}
+
+[data-tooltip]::before, [data-tooltip]::after {
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+[data-tooltip]::before {
+  content: attr(data-tooltip);
+  padding: 6px;
+  font-size: 14px;
+  line-height: 1.2;
+  background: var(--tooltip-color);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+[data-tooltip]::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: var(--tooltip-color) transparent transparent transparent;
+}
+
+[data-tooltip]:hover::before, [data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-tooltip][data-placement^="top"]::before {
+  bottom: calc(100% + 10px);
+}
+
+[data-tooltip][data-placement^="top"]::after {
+  bottom: calc(100% + 5px);
+}
+
+[data-tooltip][data-placement="top"]::before, [data-tooltip][data-placement="top"]::after {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+[data-tooltip][data-placement="top-left"]::before {
+  left: 0;
+  transform: translate(0, 0);
+}
+
+[data-tooltip][data-placement="top-left"]::after {
+  left: 10px;
+}
+
+[data-tooltip][data-placement="top-right"]::before {
+  left: 100%;
+  transform: translate(-100%, 0);
+}
+
+[data-tooltip][data-placement="top-right"]::after {
+  right: 10px;
+}
+
+[data-tooltip][data-placement^="right"]::before {
+  left: calc(100% + 10px);
+}
+
+[data-tooltip][data-placement^="right"]::after {
+  left: calc(100% + 3px);
+}
+
+[data-tooltip][data-placement="right"]::before, [data-tooltip][data-placement="right"]::after {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+[data-tooltip][data-placement="right"]::after {
+  transform: translate(0, -50%) rotate(90deg);
+}
+
+[data-tooltip][data-placement="right-top"]::before {
+  top: 0;
+  transform: translate(0, 0);
+}
+
+[data-tooltip][data-placement="right-top"]::after {
+  top: 10px;
+  transform: translate(0, 0) rotate(90deg);
+}
+
+[data-tooltip][data-placement="right-bottom"]::before {
+  top: 100%;
+  transform: translate(0, -100%);
+}
+
+[data-tooltip][data-placement="right-bottom"]::after {
+  bottom: 10px;
+  transform: translate(0, 100%) rotate(90deg);
+}
+
+[data-tooltip][data-placement^="bottom"]::before {
+  top: calc(100% + 10px);
+}
+
+[data-tooltip][data-placement^="bottom"]::after {
+  top: calc(100% + 6px);
+}
+
+[data-tooltip][data-placement="bottom"]::before, [data-tooltip][data-placement="bottom"]::after {
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+[data-tooltip][data-placement="bottom"]::after {
+  transform: translate(50%, 0) rotate(180deg);
+}
+
+[data-tooltip][data-placement="bottom-left"]::before {
+  right: 0;
+  transform: translate(0, 0);
+}
+
+[data-tooltip][data-placement="bottom-left"]::after {
+  right: 10px;
+  transform: translate(0, 0) rotate(180deg);
+}
+
+[data-tooltip][data-placement="bottom-right"]::before {
+  right: 100%;
+  transform: translate(100%, 0);
+}
+
+[data-tooltip][data-placement="bottom-right"]::after {
+  left: 10px;
+  transform: translate(100%, 0) rotate(180deg);
+}
+
+[data-tooltip][data-placement^="left"]::before {
+  right: calc(100% + 10px);
+}
+
+[data-tooltip][data-placement^="left"]::after {
+  right: calc(100% + 3px);
+}
+
+[data-tooltip][data-placement="left"]::before, [data-tooltip][data-placement="left"]::after {
+  bottom: 50%;
+  transform: translate(0, 50%);
+}
+
+[data-tooltip][data-placement="left"]::after {
+  transform: translate(0, 50%) rotate(270deg);
+}
+
+[data-tooltip][data-placement="left-top"]::before {
+  bottom: 100%;
+  transform: translate(0, 100%);
+}
+
+[data-tooltip][data-placement="left-top"]::after {
+  top: 10px;
+  transform: translate(0, -100%) rotate(270deg);
+}
+
+[data-tooltip][data-placement="left-bottom"]::before {
+  bottom: 0;
+  transform: translate(0, 0);
+}
+
+[data-tooltip][data-placement="left-bottom"]::after {
+  bottom: 10px;
+  transform: translate(0, 0) rotate(270deg);
+}
 /*# sourceMappingURL=aqua.css.map */

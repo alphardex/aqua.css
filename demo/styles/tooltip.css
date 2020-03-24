@@ -1,0 +1,28 @@
+.tooltips {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  place-items: center;
+}
+
+.btn {
+  margin: 0.5rem 0.25rem;
+}
+
+.top {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.right {
+  grid-area: 2 / 4 / 4 / 5;
+  width: 100px;
+}
+
+.bottom {
+  grid-area: 4 / 2 / 5 / 4;
+}
+
+.left {
+  grid-area: 2 / 1 / 4 / 2;
+  width: 100px;
+}
