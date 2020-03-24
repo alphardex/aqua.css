@@ -1094,7 +1094,7 @@
 
 [data-tooltip] {
   --tooltip-color: #434a54;
-  overflow: visible;
+  overflow: visible !important;
 }
 
 [data-tooltip]::before, [data-tooltip]::after {
@@ -1107,7 +1107,7 @@
 
 [data-tooltip]::before {
   content: attr(data-tooltip);
-  padding: 6px;
+  padding: 10px;
   font-size: 14px;
   line-height: 1.2;
   background: var(--tooltip-color);
