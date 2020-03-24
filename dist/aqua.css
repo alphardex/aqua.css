@@ -44,6 +44,17 @@ p {
   margin: 0;
 }
 
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 .btn {
   position: relative;
   padding: 12px 20px;
@@ -1356,5 +1367,52 @@ body {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+.pagination {
+  --disabled-color: #ccd1d9;
+  display: flex;
+  line-height: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.pagination .page-item {
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.pagination .page-item:not(.disabled):hover .page-link, .pagination .page-item.active .page-link {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+.pagination .page-item.active {
+  cursor: default;
+}
+
+.pagination .page-item.active .page-link {
+  cursor: default;
+}
+
+.pagination .page-item.disabled {
+  cursor: not-allowed;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: var(--disabled-color);
+  fill: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+.pagination .page-link {
+  color: black;
+  transition: 0.1s;
+}
+
+.pagination .page-link .arrow {
+  transition: 0.1s;
 }
 /*# sourceMappingURL=aqua.css.map */
