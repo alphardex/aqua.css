@@ -1,0 +1,34 @@
+.form-control-range {
+  --bar-color: #e6e9ed;
+
+  height: 2px;
+  background: var(--bar-color);
+  border-radius: 30px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    cursor: grab;
+    appearance: none;
+    transition: 0.3s;
+  }
+
+  &:hover,
+  &:active {
+    &::-webkit-slider-thumb {
+      transform: scale(1.2);
+    }
+  }
+
+  &:active {
+    &::-webkit-slider-thumb {
+      cursor: grabbing;
+    }
+  }
+}

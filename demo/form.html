@@ -14,7 +14,7 @@
       oninput="price.value=parseInt(Array.from(document.querySelectorAll(`[name='type']`)).filter(e=>e.checked)[0]?.dataset?.price)*parseInt(amount.value)+!!document.querySelector('#insurance').checked*0.4 || 0"
     >
       <h2>完善订单信息</h2>
-      <div class="form-group">
+      <div class="form-input-material">
         <input
           class="form-control"
           type="email"
@@ -26,7 +26,7 @@
         />
         <label for="email">邮箱</label>
       </div>
-      <div class="form-group">
+      <div class="form-input-material">
         <input
           class="form-control"
           type="tel"
@@ -38,8 +38,8 @@
         />
         <label for="tel">手机号</label>
       </div>
-      <div class="form-check-group">
-        <div class="form-check-group-label">款式</div>
+      <div class="form-group">
+        <span class="form-check-text">款式</span>
         <div class="form-check form-check-inline">
           <input
             class="form-check-input bounce"
@@ -62,7 +62,7 @@
         </div>
       </div>
       <div>男款200元/件，女款150元/件</div>
-      <div class="form-group">
+      <div class="form-input-material">
         <input
           class="form-control"
           type="number"
@@ -76,7 +76,7 @@
         />
         <label for="amount">购买数量</label>
       </div>
-      <div class="form-group">
+      <div class="form-input-material">
         <input
           class="form-control"
           type="text"
@@ -88,7 +88,7 @@
         />
         <label for="city">城市</label>
       </div>
-      <div class="form-group">
+      <div class="form-input-material">
         <input
           class="form-control"
           type="text"
@@ -100,7 +100,7 @@
         />
         <label for="message">给商家留言</label>
       </div>
-      <div class="form-check-group">
+      <div class="form-group">
         <div class="form-check form-check-inline">
           <input
             class="form-check-input bounce"
@@ -116,9 +116,9 @@
       <div class="form-output">
         您总共需要支付 <output name="price">0</output> 元
       </div>
-      <div class="form-check-group">
+      <div class="form-group">
         <div class="form-check">
-          <label class="switch">
+          <label class="form-switch">
             <input type="checkbox" id="toggle" name="huodaofukuan" />
             <div class="line"></div>
             <div class="ball"></div>
@@ -126,7 +126,7 @@
           <span>是否货到付款</span>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-input-material">
         <input
           class="form-control"
           type="date"

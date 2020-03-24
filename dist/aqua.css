@@ -27,6 +27,11 @@
   margin-right: 12px;
 }
 
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
 .btn {
   position: relative;
   padding: 12px 20px;
@@ -619,7 +624,7 @@
   }
 }
 
-.form-group {
+.form-input-material {
   --default-color: rgba(0, 0, 0, 0.5);
   --invalid-color: var(--danger-color);
   --valid-color: var(--primary-color);
@@ -628,7 +633,7 @@
   border-bottom: 1px solid var(--border-bottom-color);
 }
 
-.form-group::before {
+.form-input-material::before {
   position: absolute;
   content: "";
   left: 0;
@@ -641,11 +646,11 @@
   transition: 0.3s;
 }
 
-.form-group:focus-within::before {
+.form-input-material:focus-within::before {
   transform: scaleX(1);
 }
 
-.form-group label {
+.form-input-material label {
   position: absolute;
   top: 8px;
   left: 0;
@@ -653,7 +658,7 @@
   transform-origin: left;
 }
 
-.form-group .form-control {
+.form-input-material .form-control {
   padding: 8px 0;
   font-size: inherit;
   font-weight: inherit;
@@ -663,20 +668,20 @@
   outline: none;
 }
 
-.form-group .form-control:invalid ~ label {
+.form-input-material .form-control:invalid ~ label {
   color: var(--invalid-color);
 }
 
-.form-group .form-control:valid ~ label {
+.form-input-material .form-control:valid ~ label {
   color: var(--valid-color);
 }
 
-.form-group .form-control:placeholder-shown ~ label {
+.form-input-material .form-control:placeholder-shown ~ label {
   color: var(--default-color);
 }
 
-.form-group .form-control:focus ~ label,
-.form-group .form-control:not(:placeholder-shown) ~ label {
+.form-input-material .form-control:focus ~ label,
+.form-input-material .form-control:not(:placeholder-shown) ~ label {
   transform: translateY(-120%) scale(0.75);
 }
 
@@ -962,7 +967,7 @@
   }
 }
 
-.switch {
+.form-switch {
   --switch-color: white;
   --ball-color: #ccd1d9;
   --ball-active-color: var(--primary-color);
@@ -977,14 +982,14 @@
   cursor: pointer;
 }
 
-.switch input[type="checkbox"] {
+.form-switch input[type="checkbox"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   opacity: 0;
 }
 
-.switch input[type="checkbox"] ~ .line::before, .switch input[type="checkbox"] ~ .line::after {
+.form-switch input[type="checkbox"] ~ .line::before, .form-switch input[type="checkbox"] ~ .line::after {
   position: absolute;
   content: "";
   top: 14px;
@@ -994,20 +999,20 @@
   transition: 0.3s;
 }
 
-.switch input[type="checkbox"] ~ .line::before {
+.form-switch input[type="checkbox"] ~ .line::before {
   left: 4px;
   border-radius: 2px 0 0 2px;
   transform: scaleX(0);
   transform-origin: left;
 }
 
-.switch input[type="checkbox"] ~ .line::after {
+.form-switch input[type="checkbox"] ~ .line::after {
   left: 32px;
   border-radius: 0 2px 2px 0;
   transform-origin: right;
 }
 
-.switch input[type="checkbox"] ~ .ball {
+.form-switch input[type="checkbox"] ~ .ball {
   position: absolute;
   content: "";
   top: 4px;
@@ -1020,15 +1025,15 @@
   transition: 0.3s;
 }
 
-.switch input[type="checkbox"]:checked ~ .line::before {
+.form-switch input[type="checkbox"]:checked ~ .line::before {
   transform: scaleX(1);
 }
 
-.switch input[type="checkbox"]:checked ~ .line::after {
+.form-switch input[type="checkbox"]:checked ~ .line::after {
   transform: scaleX(0);
 }
 
-.switch input[type="checkbox"]:checked ~ .ball {
+.form-switch input[type="checkbox"]:checked ~ .ball {
   box-shadow: inset 0 0 0 12px var(--ball-active-color);
   transform: translateX(28px);
 }
@@ -1036,7 +1041,7 @@
 .progress-bar {
   --bar-color: #e6e9ed;
   --progress-color: var(--primary-color);
-  height: 8px;
+  height: 6px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1050,5 +1055,40 @@
 .progress-bar::-webkit-progress-value {
   background: var(--progress-color);
   border-radius: 30px;
+}
+
+.form-control-range {
+  --bar-color: #e6e9ed;
+  height: 2px;
+  background: var(--bar-color);
+  border-radius: 30px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form-control-range::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-appearance: none;
+          appearance: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.form-control-range:hover::-webkit-slider-thumb, .form-control-range:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+.form-control-range:active::-webkit-slider-thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 /*# sourceMappingURL=aqua.css.map */
