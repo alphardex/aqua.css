@@ -1,4 +1,6 @@
+@import "./variables.scss";
 @import "./common.scss";
+@import "./reset.scss";
 @import "./button.scss";
 @import "./input.scss";
 @import "./checkbox.scss";
@@ -7,3 +9,4 @@
 @import "./progress.scss";
 @import "./range.scss";
 @import "./tooltip.scss";
+@import "./dialog.scss";

@@ -32,6 +32,18 @@
   align-items: center;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 .btn {
   position: relative;
   padding: 12px 20px;
@@ -1193,7 +1205,7 @@
 }
 
 [data-tooltip][data-placement="right-bottom"]::after {
-  bottom: 10px;
+  bottom: 13px;
   transform: translate(0, 100%) rotate(90deg);
 }
 
@@ -1257,7 +1269,7 @@
 }
 
 [data-tooltip][data-placement="left-top"]::after {
-  top: 10px;
+  top: 13px;
   transform: translate(0, -100%) rotate(270deg);
 }
 
@@ -1269,5 +1281,80 @@
 [data-tooltip][data-placement="left-bottom"]::after {
   bottom: 10px;
   transform: translate(0, 0) rotate(270deg);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #eceffc;
+}
+
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  border: transparent;
+  border-radius: 10px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+  -webkit-animation: scale-in 0.6s forwards;
+          animation: scale-in 0.6s forwards;
+}
+
+.dialog::-webkit-backdrop {
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.dialog-content {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.dialog-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@-webkit-keyframes scale-in {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=aqua.css.map */

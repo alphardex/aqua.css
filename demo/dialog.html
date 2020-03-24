@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog</title>
+    <link rel="stylesheet" href="../dist/aqua.css" />
+    <link rel="stylesheet" href="./styles/demo.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
+  </head>
+  <body>
+    <dialog class="dialog" id="dialog">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <h5 class="dialog-title">Konosuba</h5>
+        </div>
+        <div class="dialog-body">
+          <p>Kono subarashi sekai ni shufuku wo!</p>
+        </div>
+        <div class="dialog-footer">
+          <button
+            class="btn btn-primary"
+            onclick="document.querySelector('#dialog').close()"
+          >
+            Confirm
+          </button>
+          <button
+            class="btn"
+            onclick="document.querySelector('#dialog').close()"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </dialog>
+    <form action="javascript:void(0);">
+      <button
+        class="btn btn-info"
+        onclick="document.querySelector('#dialog').showModal()"
+      >
+        Open Dialog
+      </button>
+    </form>
+  </body>
+</html>

@@ -1,21 +1,3 @@
-:root {
-  --primary-color: hsl(196, 78%, 61%);
-  --success-color: hsl(165, 58%, 55%);
-  --info-color: hsl(214, 79%, 65%);
-  --warning-color: hsl(43, 100%, 66%);
-  --danger-color: hsl(354, 81%, 63%);
-  --primary-color-darker: hsl(196, 68%, 54%);
-  --success-color-darker: hsl(165, 55%, 48%);
-  --info-color-darker: hsl(214, 68%, 58%);
-  --warning-color-darker: hsl(39, 97%, 62%);
-  --danger-color-darker: hsl(354, 67%, 56%);
-  --primary-color-lighter: hsl(196, 78%, 81%);
-  --success-color-lighter: hsl(165, 58%, 75%);
-  --info-color-lighter: hsl(214, 79%, 85%);
-  --warning-color-lighter: hsl(43, 100%, 86%);
-  --danger-color-lighter: hsl(354, 81%, 83%);
-}
-
 .form-check {
   display: flex;
   align-items: center;
