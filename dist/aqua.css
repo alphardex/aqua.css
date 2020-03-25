@@ -1570,4 +1570,58 @@ a {
   margin: 1rem 0 0 3.5rem;
   line-height: 1.5;
 }
+
+.accordion {
+  --text-color: #656d78;
+  --active-color: var(--primary-color);
+  --line-color: #ccd1d9;
+  width: 720px;
+  color: var(--text-color);
+}
+
+.accordion-item a {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: currentColor;
+  border-bottom: 1px solid var(--line-color);
+  cursor: pointer;
+}
+
+.accordion-item a svg {
+  width: 30px;
+  height: 30px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.accordion-item a:hover, .accordion-item a:target {
+  color: var(--active-color);
+  border-bottom: 1px solid currentColor;
+}
+
+.accordion-item a:hover svg, .accordion-item a:target svg {
+  border-color: currentColor;
+  fill: currentColor;
+}
+
+.accordion-item:target a svg {
+  transform: rotate(0.5turn);
+}
+
+.accordion-item:target .accordion-content {
+  padding: 1rem;
+  max-height: 10rem;
+  opacity: 1;
+}
+
+.accordion-content {
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s 0.15s;
+}
 /*# sourceMappingURL=aqua.css.map */

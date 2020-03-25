@@ -1,0 +1,59 @@
+.accordion {
+  --text-color: #656d78;
+  --active-color: var(--primary-color);
+  --line-color: #ccd1d9;
+
+  width: 720px;
+  color: var(--text-color);
+
+  &-item {
+    a {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      font-size: 1.2rem;
+      color: currentColor;
+      border-bottom: 1px solid var(--line-color);
+      cursor: pointer;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+
+      &:hover,
+      &:target {
+        color: var(--active-color);
+        border-bottom: 1px solid currentColor;
+
+        svg {
+          border-color: currentColor;
+          fill: currentColor;
+        }
+      }
+    }
+
+    &:target {
+      a svg {
+        transform: rotate(0.5turn);
+      }
+
+      .accordion-content {
+        padding: 1rem;
+        max-height: 10rem;
+        opacity: 1;
+      }
+    }
+  }
+
+  &-content {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s 0.15s;
+  }
+}
