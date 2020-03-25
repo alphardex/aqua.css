@@ -1505,4 +1505,69 @@ a {
 .dropdown:hover .dropdown-menu {
   transform: rotate(0);
 }
+
+.timeline {
+  --text-color: hsl(0, 0%, 0%);
+  --bg-color: hsl(0, 0%, 100%);
+  --dot-color: var(--primary-color);
+  --line-color: hsl(214, 16%, 92%);
+  --timestamp-col-count: 3;
+  position: relative;
+  display: grid;
+  gap: 40px;
+  max-width: 600px;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--text-color);
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  width: 4px;
+  height: 100%;
+  background: var(--line-color);
+}
+
+.timeline-item__timestamp {
+  display: grid;
+  grid-template-columns: repeat(var(--timestamp-col-count), auto) 1fr;
+  align-items: center;
+  gap: 6px;
+}
+
+.timeline-item__timestamp .dot {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background: var(--bg-color);
+  border-radius: 50%;
+}
+
+.timeline-item__timestamp .dot::before {
+  position: absolute;
+  content: "";
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: var(--bg-color);
+}
+
+.timeline-item__timestamp .dot::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 4px solid var(--dot-color);
+  border-radius: inherit;
+}
+
+.timeline-item__content {
+  margin: 1rem 0 0 3.5rem;
+  line-height: 1.5;
+}
 /*# sourceMappingURL=aqua.css.map */
