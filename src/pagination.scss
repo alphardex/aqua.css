@@ -1,4 +1,5 @@
 .pagination {
+  --active-color: var(--primary-color);
   --disabled-color: #ccd1d9;
 
   display: flex;
@@ -12,8 +13,8 @@
     &:not(.disabled):hover,
     &.active {
       .page-link {
-        color: var(--primary-color);
-        fill: var(--primary-color);
+        color: var(--active-color);
+        fill: var(--active-color);
       }
     }
 

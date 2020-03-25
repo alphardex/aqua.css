@@ -1082,6 +1082,7 @@ a {
 
 .form-control-range {
   --bar-color: #e6e9ed;
+  --thumb-border-color: var(--primary-color);
   height: 2px;
   background: var(--bar-color);
   border-radius: 30px;
@@ -1096,7 +1097,7 @@ a {
   width: 20px;
   height: 20px;
   background: white;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--thumb-border-color);
   border-radius: 50%;
   cursor: -webkit-grab;
   cursor: grab;
@@ -1361,6 +1362,7 @@ a {
 }
 
 .pagination {
+  --active-color: var(--primary-color);
   --disabled-color: #ccd1d9;
   display: flex;
   line-height: 1;
@@ -1376,8 +1378,8 @@ a {
 }
 
 .pagination .page-item:not(.disabled):hover .page-link, .pagination .page-item.active .page-link {
-  color: var(--primary-color);
-  fill: var(--primary-color);
+  color: var(--active-color);
+  fill: var(--active-color);
 }
 
 .pagination .page-item.active {
@@ -1449,10 +1451,18 @@ a {
   transform: scaleX(1);
 }
 
+.dropdown {
+  --toggle-color: black;
+  --menu-item-color: var(--primary-color);
+  --menu-item-hover-color: var(--primary-color-darker);
+  --menu-item-divider-color: rgba(255, 255, 255, 0.2);
+  --menu-text-color: white;
+}
+
 .dropdown .dropdown-toggle {
   display: block;
   padding: 10px 0;
-  color: black;
+  color: var(--toggle-color);
   transition: 0.4s;
 }
 
@@ -1465,7 +1475,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 5px 5px 0 6px;
-  border-color: black transparent transparent transparent;
+  border-color: var(--toggle-color) transparent transparent transparent;
   transition: 0.4s;
 }
 
@@ -1479,26 +1489,25 @@ a {
   display: block;
   padding: 10px;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  color: white;
-  background: var(--primary-color);
+  color: var(--menu-text-color);
+  background: var(--menu-item-color);
   transition: 0.4s;
 }
 
 .dropdown .dropdown-menu .dropdown-item a:hover {
-  background: var(--primary-color-darker);
+  background: var(--menu-item-hover-color);
 }
 
 .dropdown .dropdown-menu .dropdown-item:not(:last-child) a {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid var(--menu-item-divider-color);
 }
 
 .dropdown:hover .dropdown-toggle {
-  color: var(--primary-color);
+  color: var(--menu-item-color);
 }
 
 .dropdown:hover .dropdown-toggle::after {
-  border-top-color: var(--primary-color);
+  border-top-color: var(--menu-item-color);
   transform: scaleY(-1);
 }
 
@@ -1672,5 +1681,74 @@ a {
 
 .rate:hover input:checked ~ label::before {
   opacity: 0;
+}
+
+.loader {
+  --square-color: var(--info-color);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.loader .square {
+  width: 25%;
+  height: 25%;
+  background: var(--square-color);
+  -webkit-animation: zoom 1.4s ease-in-out infinite;
+          animation: zoom 1.4s ease-in-out infinite;
+}
+
+.loader .square:nth-child(13) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.loader .square:nth-child(9), .loader .square:nth-child(14) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.loader .square:nth-child(5), .loader .square:nth-child(10), .loader .square:nth-child(15) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.loader .square:nth-child(1), .loader .square:nth-child(6), .loader .square:nth-child(11), .loader .square:nth-child(16) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.loader .square:nth-child(2), .loader .square:nth-child(7), .loader .square:nth-child(12) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.loader .square:nth-child(3), .loader .square:nth-child(8) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.loader .square:nth-child(4) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes zoom {
+  35% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  35% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1);
+  }
 }
 /*# sourceMappingURL=aqua.css.map */

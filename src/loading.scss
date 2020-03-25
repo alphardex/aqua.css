@@ -1,0 +1,62 @@
+.loader {
+  --square-color: var(--info-color);
+
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .square {
+    width: 25%;
+    height: 25%;
+    background: var(--square-color);
+    animation: zoom 1.4s ease-in-out infinite;
+
+    &:nth-child(13) {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(9),
+    &:nth-child(14) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(5),
+    &:nth-child(10),
+    &:nth-child(15) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(1),
+    &:nth-child(6),
+    &:nth-child(11),
+    &:nth-child(16) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(2),
+    &:nth-child(7),
+    &:nth-child(12) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(3),
+    &:nth-child(8) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.5s;
+    }
+  }
+}
+
+@keyframes zoom {
+  35% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
