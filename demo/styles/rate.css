@@ -1,0 +1,8 @@
+.rate-form {
+  display: flex;
+  line-height: 1;
+}
+
+output {
+  margin-right: 10px;
+}

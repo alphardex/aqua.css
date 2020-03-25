@@ -55,6 +55,11 @@ a {
   text-decoration: none;
 }
 
+textarea {
+  padding: 0 !important;
+  resize: none;
+}
+
 .btn {
   position: relative;
   padding: 12px 20px;
