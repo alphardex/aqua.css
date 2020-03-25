@@ -1,20 +1,3 @@
-$types: "primary", "success", "info", "warning", "danger";
-
-@mixin btn-color-with-state($type) {
-  &-#{$type} {
-    color: white;
-    --btn-color: var(--#{$type}-color);
-
-    &:active {
-      --btn-color: var(--#{$type}-color-darker);
-    }
-
-    &.disabled {
-      --btn-color: var(--#{$type}-color-lighter);
-    }
-  }
-}
-
 .btn {
   position: relative;
   padding: 12px 20px;
@@ -352,6 +335,7 @@ $types: "primary", "success", "info", "warning", "danger";
 
   &-cross {
     border-radius: 1.5rem;
+    transform: rotate(0);
     transition: 0.3s;
 
     &::before,

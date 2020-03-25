@@ -453,6 +453,7 @@ a {
 
 .btn-cross {
   border-radius: 1.5rem;
+  transform: rotate(0);
   transition: 0.3s;
 }
 
@@ -1750,5 +1751,62 @@ a {
   70% {
     transform: scale(1);
   }
+}
+
+.gauge {
+  --gauge-value: 500;
+  --gauge-max-value: 1000;
+  --percentage: calc(var(--gauge-value) / var(--gauge-max-value) * 100%);
+  --bg-color: white;
+  --gauge-color: var(--primary-color);
+  --gauge-color-lighter: var(--primary-color-lighter);
+  --text-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  color: var(--text-color);
+  background: conic-gradient(var(--gauge-color) var(--percentage), var(--gauge-color-lighter) 0);
+  border-radius: 50%;
+  counter-reset: value var(--gauge-value);
+}
+
+.gauge::before {
+  position: absolute;
+  content: counter(value);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background: var(--bg-color);
+  border-radius: inherit;
+}
+
+.gauge-primary {
+  --gauge-color: var(--primary-color);
+  --gauge-color-lighter: var(--primary-color-lighter);
+}
+
+.gauge-success {
+  --gauge-color: var(--success-color);
+  --gauge-color-lighter: var(--success-color-lighter);
+}
+
+.gauge-info {
+  --gauge-color: var(--info-color);
+  --gauge-color-lighter: var(--info-color-lighter);
+}
+
+.gauge-warning {
+  --gauge-color: var(--warning-color);
+  --gauge-color-lighter: var(--warning-color-lighter);
+}
+
+.gauge-danger {
+  --gauge-color: var(--danger-color);
+  --gauge-color-lighter: var(--danger-color-lighter);
 }
 /*# sourceMappingURL=aqua.css.map */
