@@ -14,7 +14,8 @@
       oninput="price.value=parseInt(Array.from(document.querySelectorAll(`[name='type']`)).filter(e=>e.checked)[0]?.dataset?.price)*parseInt(amount.value)+!!document.querySelector('#insurance').checked*0.4 || 0"
     >
       <h2>完善订单信息</h2>
-      <div class="form-input-material">
+      <div class="form-group">
+        <label for="email">邮箱</label>
         <input
           class="form-control"
           type="email"
@@ -24,9 +25,9 @@
           autocomplete="off"
           pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
         />
-        <label for="email">邮箱</label>
       </div>
-      <div class="form-input-material">
+      <div class="form-group">
+        <label for="tel">手机号</label>
         <input
           class="form-control"
           type="tel"
@@ -36,10 +37,9 @@
           autocomplete="off"
           pattern="^(?:(?:\+|00)86)?1\d{10}$"
         />
-        <label for="tel">手机号</label>
       </div>
       <div class="form-group">
-        <span class="form-check-text">款式</span>
+        <label class="form-check-text">款式</label>
         <div class="form-check form-check-inline">
           <input
             class="form-check-input bounce"
@@ -62,7 +62,8 @@
         </div>
       </div>
       <div>男款200元/件，女款150元/件</div>
-      <div class="form-input-material">
+      <div class="form-group">
+        <label for="amount">购买数量</label>
         <input
           class="form-control"
           type="number"
@@ -74,9 +75,9 @@
           max="99"
           value="1"
         />
-        <label for="amount">购买数量</label>
       </div>
-      <div class="form-input-material">
+      <div class="form-group">
+        <label for="city">城市</label>
         <input
           class="form-control"
           type="text"
@@ -86,9 +87,9 @@
           autocomplete="off"
           pattern="^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$"
         />
-        <label for="city">城市</label>
       </div>
-      <div class="form-input-material">
+      <div class="form-group">
+        <label for="message">给商家留言</label>
         <textarea
           class="form-control"
           name="message"
@@ -97,7 +98,6 @@
           autocomplete="off"
           maxlength="200"
         ></textarea>
-        <label for="message">给商家留言</label>
       </div>
       <div class="form-group">
         <div class="form-check form-check-inline">
@@ -125,7 +125,8 @@
           <span>是否货到付款</span>
         </div>
       </div>
-      <div class="form-input-material">
+      <div class="form-group">
+        <label for="arrival-date">希望到货日期</label>
         <input
           class="form-control"
           type="date"
@@ -134,7 +135,6 @@
           placeholder=" "
           autocomplete="off"
         />
-        <label for="arrival-date">希望到货日期</label>
       </div>
       <button type="submit" class="btn btn-primary btn-shock">提交</button>
     </form>

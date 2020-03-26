@@ -1,29 +1,20 @@
 .order-form {
   display: grid;
-  gap: 2rem;
-  width: 250px;
-  padding: 50px 40px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
-    0 1px 1px rgba(128, 128, 128, 0.155),
-    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
-    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
-    0 12px 12px rgba(128, 128, 128, 0.35);
+  gap: 1rem;
+  place-items: center start;
 }
 
-.form-control {
-  width: 100%;
+.form-group {
+  display: flex;
+  align-items: center;
 }
 
-.form-check-text {
-  margin-right: 12px;
+label {
+  margin-right: 9px;
 }
 
 h2 {
-  margin: 0;
   font-size: 24px;
-  text-align: center;
 }
 
 output {
