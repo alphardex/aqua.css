@@ -7,7 +7,7 @@
   text-decoration: none;
   background-color: var(--btn-color, white);
   border: 1px solid var(--btn-color, #ccd1d9);
-  border-radius: 3px;
+  border-radius: 4px;
   outline: transparent;
   overflow: hidden;
   cursor: pointer;
@@ -483,5 +483,34 @@
 @keyframes move-left {
   to {
     transform: translateX(-100%);
+  }
+}
+
+.btn-group {
+  --divider-color: #f5f7fa;
+  --divider-length: 1px;
+
+  display: flex;
+
+  .btn {
+    border: calc(var(--divider-length) / 2) solid var(--divider-color);
+    border-top: none;
+    border-bottom: none;
+
+    &:first-child {
+      border-left: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
   }
 }

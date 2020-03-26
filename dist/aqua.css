@@ -63,7 +63,7 @@ textarea {
   text-decoration: none;
   background-color: var(--btn-color, white);
   border: 1px solid var(--btn-color, #ccd1d9);
-  border-radius: 3px;
+  border-radius: 4px;
   outline: transparent;
   overflow: hidden;
   cursor: pointer;
@@ -645,6 +645,34 @@ textarea {
   to {
     transform: translateX(-100%);
   }
+}
+
+.btn-group {
+  --divider-color: #f5f7fa;
+  --divider-length: 1px;
+  display: flex;
+}
+
+.btn-group .btn {
+  border: calc(var(--divider-length) / 2) solid var(--divider-color);
+  border-top: none;
+  border-bottom: none;
+}
+
+.btn-group .btn:first-child {
+  border-left: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group .btn:last-child {
+  border-right: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-group .btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
 }
 
 .form-control {
@@ -1622,6 +1650,10 @@ textarea {
   height: 8px;
   border: 4px solid var(--dot-color);
   border-radius: inherit;
+}
+
+.timeline-item__timestamp a {
+  color: var(--primary-color);
 }
 
 .timeline-item__content {

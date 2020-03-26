@@ -1,3 +1,7 @@
-.btn {
+.buttons .btn {
   margin: 1rem;
+}
+
+.btn-group {
+  margin: 1rem 0;
 }
