@@ -6,11 +6,10 @@
     <title>Rate</title>
     <link rel="stylesheet" href="../dist/aqua.css" />
     <link rel="stylesheet" href="./styles/demo.css" />
-    <link rel="stylesheet" href="./styles/rate.css" />
   </head>
   <body>
     <form
-      class="rate-form"
+      class="form-check-inline"
       oninput="rate.value=parseInt(Array.from(document.querySelectorAll(`input[name='rating']`)).filter(e=>e.checked)[0].value)"
     >
       <div class="rate">

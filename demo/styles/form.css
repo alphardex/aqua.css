@@ -1,23 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
 .order-form {
   display: grid;
   gap: 1rem;
-  place-items: center start;
+  max-width: 360px;
 }
 
 .form-group {
-  display: flex;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
   align-items: center;
 }
 
-label {
-  margin-right: 9px;
+.form-control {
+  width: 100%;
 }
 
-h2 {
-  font-size: 24px;
+.form-check {
+  margin: 0 6px 0 0;
+}
+
+.form-output {
+  padding: 9px;
+  font-weight: bold;
+  text-align: center;
+  background: #e6e9ed;
 }
 
 output {
-  font-weight: bold;
-  color: #3bafda;
+  color: var(--danger-color);
 }

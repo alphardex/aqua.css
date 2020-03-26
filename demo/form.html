@@ -11,9 +11,9 @@
   <body>
     <form
       class="order-form"
-      oninput="price.value=parseInt(Array.from(document.querySelectorAll(`[name='type']`)).filter(e=>e.checked)[0]?.dataset?.price)*parseInt(amount.value)+!!document.querySelector('#insurance').checked*0.4 || 0"
+      oninput="price.value=parseInt(Array.from(document.querySelectorAll(`[name='type']`)).filter(e=>e.checked)[0]?.dataset?.price)*parseInt(amount.value)+!!document.querySelector('#insurance').checked*1 || 0"
     >
-      <h2>完善订单信息</h2>
+      <h3>手办订单信息</h3>
       <div class="form-group">
         <label for="email">邮箱</label>
         <input
@@ -39,29 +39,31 @@
         />
       </div>
       <div class="form-group">
-        <label class="form-check-text">款式</label>
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input bounce"
-            type="radio"
-            name="type"
-            id="male"
-            data-price="200"
-          />
-          <label class="form-check-label" for="male">男款</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input bounce"
-            type="radio"
-            name="type"
-            id="female"
-            data-price="150"
-          />
-          <label class="form-check-label" for="female">女款</label>
+        <label class="form-check-text">版本</label>
+        <div class="form-checks">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input bounce"
+              type="radio"
+              name="type"
+              id="chinese"
+              data-price="100"
+            />
+            <label class="form-check-label" for="chinese">国版</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input bounce"
+              type="radio"
+              name="type"
+              id="japanese"
+              data-price="750"
+            />
+            <label class="form-check-label" for="japanese">日版</label>
+          </div>
         </div>
       </div>
-      <div>男款200元/件，女款150元/件</div>
+      <div>国版100元/个，日版750元/个</div>
       <div class="form-group">
         <label for="amount">购买数量</label>
         <input
@@ -100,30 +102,24 @@
         ></textarea>
       </div>
       <div class="form-group">
-        <div class="form-check form-check-inline">
-          <input
-            class="form-check-input bounce"
-            type="checkbox"
-            name="insurance"
-            id="insurance"
-          />
-          <label class="form-check-label" for="insurance"
-            >使用运费险0.4元</label
-          >
-        </div>
+        <span>运费险1元</span>
+        <input
+          class="form-check-input bounce"
+          type="checkbox"
+          name="insurance"
+          id="insurance"
+        />
       </div>
       <div class="form-output">
         您总共需要支付 <output name="price">0</output> 元
       </div>
       <div class="form-group">
-        <div class="form-check">
-          <label class="form-switch">
-            <input type="checkbox" id="toggle" name="huodaofukuan" />
-            <div class="line"></div>
-            <div class="ball"></div>
-          </label>
-          <span>是否货到付款</span>
-        </div>
+        <span>是否货到付款</span>
+        <label class="form-switch">
+          <input type="checkbox" id="toggle" name="huodaofukuan" />
+          <div class="line"></div>
+          <div class="ball"></div>
+        </label>
       </div>
       <div class="form-group">
         <label for="arrival-date">希望到货日期</label>
@@ -136,7 +132,7 @@
           autocomplete="off"
         />
       </div>
-      <button type="submit" class="btn btn-primary btn-shock">提交</button>
+      <button type="submit" class="btn btn-primary">提交</button>
     </form>
   </body>
 </html>

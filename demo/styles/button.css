@@ -1,11 +1,3 @@
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  max-width: 60vw;
-}
-
-.buttons .btn {
+.btn {
   margin: 1rem;
 }

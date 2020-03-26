@@ -57,6 +57,10 @@
           border-radius: inherit;
         }
       }
+
+      a {
+        color: var(--primary-color);
+      }
     }
 
     &__content {
