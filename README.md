@@ -1,6 +1,9 @@
 <h1 align="center">aqua.css</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://aquacss.netlify.com/">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
+  </a>
   <a href="https://twitter.com/alphardex007">
     <img alt="Twitter: alphardex007" src="https://img.shields.io/twitter/follow/alphardex007.svg?style=social" target="_blank" />
   </a>
@@ -8,13 +11,13 @@
 
 > A delicate CSS framework for humans.
 
-## 快速开始
+### 🏠 [文档](https://aquacss.netlify.com/)
+
+## 安装
 
 首先将项目克隆到本地：`git clone https://github.com/alphardex/aqua.css`
 
 然后在页面中引用`dist`文件夹中的`aqua.min.css`即可
-
-codepen 上有[所有组件的用例](https://codepen.io/collection/DmqvyG)
 
 ## 特点
 
