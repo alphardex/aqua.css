@@ -31,7 +31,6 @@
     background: var(--radio-bg-color);
     border-radius: inherit;
     transform: scale(0);
-    transition: 0.3s;
   }
 
   &::after {
@@ -51,7 +50,7 @@
 
   &:checked {
     &::before {
-      transform: scale(1);
+      animation: scale-in-smaller 0.1s 0.2s linear forwards;
     }
 
     &::after {
@@ -73,52 +72,8 @@
   &.bounce {
     &:checked {
       &::before {
-        transition: none;
-        animation: scale-out-bounce-radio 0.6s ease-out reverse forwards;
+        animation: scale-in-bounce-smaller 0.3s 0.2s linear forwards;
       }
     }
-  }
-}
-
-// https://easings.net/#easeInBounce
-@keyframes scale-out-bounce-radio {
-  0% {
-    transform: scale(0.5);
-  }
-
-  4% {
-    transform: scale(0.98 * 0.5);
-  }
-
-  8% {
-    transform: scale(0.99 * 0.5);
-  }
-
-  18% {
-    transform: scale(0.94 * 0.5);
-  }
-
-  26% {
-    transform: scale(0.98 * 0.5);
-  }
-
-  46% {
-    transform: scale(0.55 * 0.5);
-  }
-
-  64% {
-    transform: scale(0.98 * 0.5);
-  }
-
-  76% {
-    transform: scale(0.44 * 0.5);
-  }
-
-  88% {
-    transform: scale(0.11 * 0.5);
-  }
-
-  100% {
-    transform: scale(0);
   }
 }

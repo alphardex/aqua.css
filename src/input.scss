@@ -28,7 +28,12 @@
 
   &:focus {
     --border-color: var(--valid-color);
-    animation: shadow-burst 0.6s forwards;
+  }
+
+  &.shadow-burst {
+    &:focus {
+      animation: shadow-burst 0.6s forwards;
+    }
   }
 }
 
@@ -96,11 +101,5 @@
     &:not(:placeholder-shown) ~ label {
       transform: translateY(-120%) scale(0.75);
     }
-  }
-}
-
-@keyframes shadow-burst {
-  to {
-    box-shadow: 0 0 20px 10px transparent;
   }
 }

@@ -27,7 +27,6 @@
     position: absolute;
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18px' height='18px' fill='none' stroke-width='2px' stroke='white' stroke-linecap='round' viewBox='0 0 21 21'%3E%3Cpolyline points='5 10.75 8.5 14.25 16 6'%3E%3C/polyline%3E%3C/svg%3E");
     transform: scale(0);
-    transition: 0.3s;
   }
 
   &::after {
@@ -47,7 +46,7 @@
 
   &:checked {
     &::before {
-      transform: scale(1);
+      animation: scale-in 0.1s 0.2s linear forwards;
     }
 
     &::after {
@@ -69,52 +68,8 @@
   &.bounce {
     &:checked {
       &::before {
-        transition: none;
-        animation: scale-out-bounce-checkbox 0.6s ease-out reverse forwards;
+        animation: scale-in-bounce 0.3s 0.2s linear forwards;
       }
     }
-  }
-}
-
-// https://easings.net/#easeInBounce
-@keyframes scale-out-bounce-checkbox {
-  0% {
-    transform: scale(1);
-  }
-
-  4% {
-    transform: scale(0.98);
-  }
-
-  8% {
-    transform: scale(0.99);
-  }
-
-  18% {
-    transform: scale(0.94);
-  }
-
-  26% {
-    transform: scale(0.98);
-  }
-
-  46% {
-    transform: scale(0.75);
-  }
-
-  64% {
-    transform: scale(0.98);
-  }
-
-  76% {
-    transform: scale(0.44);
-  }
-
-  88% {
-    transform: scale(0.11);
-  }
-
-  100% {
-    transform: scale(0);
   }
 }

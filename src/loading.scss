@@ -10,7 +10,7 @@
     width: 25%;
     height: 25%;
     background: var(--square-color);
-    animation: zoom 1.4s ease-in-out infinite;
+    animation: scale-out-in 1.4s ease-in-out infinite;
 
     &:nth-child(13) {
       animation-delay: 0s;
@@ -48,15 +48,5 @@
     &:nth-child(4) {
       animation-delay: 0.5s;
     }
-  }
-}
-
-@keyframes zoom {
-  35% {
-    transform: scale(0);
-  }
-
-  70% {
-    transform: scale(1);
   }
 }
