@@ -1,0 +1,23 @@
+[data-badge] {
+  --badge-color: var(--btn-color);
+
+  &::after {
+    position: absolute;
+    content: attr(data-badge);
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 18px;
+    height: 18px;
+    padding: 2px 4px;
+    font-size: 12px;
+    line-height: 1;
+    background: var(--badge-color);
+    border-radius: 9px;
+    box-shadow: 0 0 0 2px white;
+    transform: translate(50%, -50%);
+  }
+}
