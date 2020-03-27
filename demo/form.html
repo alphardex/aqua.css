@@ -11,7 +11,9 @@
   <body>
     <form
       class="order-form"
-      oninput="price.value=parseInt(Array.from(document.querySelectorAll(`[name='type']`)).filter(e=>e.checked)[0]?.dataset?.price)*parseInt(amount.value)+!!document.querySelector('#insurance').checked*1 || 0"
+      oninput="price.value=parseInt(Array.from(document.querySelectorAll(`[name='type']`)).filter(e=>e.checked)[0].value)*parseInt(amount.value)+parseInt(document.querySelector('#insurance').value) || 0"
+      onsubmit="alert(`提交的数据如下:\n${Array.from(new FormData(this), field => field.map(encodeURIComponent).join('=')).join('&')}`)"
+      action="javascript:void(0);"
     >
       <h3>手办订单信息</h3>
       <div class="form-group">
@@ -22,24 +24,22 @@
           name="email"
           id="email"
           placeholder=" "
-          autocomplete="off"
           pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
         />
       </div>
       <div class="form-group">
-        <label for="tel">手机号</label>
+        <label for="phone">手机号</label>
         <input
           class="form-control"
           type="tel"
-          name="tel"
-          id="tel"
+          name="phone"
+          id="phone"
           placeholder=" "
-          autocomplete="off"
           pattern="^(?:(?:\+|00)86)?1\d{10}$"
         />
       </div>
       <div class="form-group">
-        <label class="form-check-text">版本</label>
+        <label class="form-check-text">类型</label>
         <div class="form-checks">
           <div class="form-check form-check-inline">
             <input
@@ -47,7 +47,7 @@
               type="radio"
               name="type"
               id="chinese"
-              data-price="100"
+              value="100"
             />
             <label class="form-check-label" for="chinese">国版</label>
           </div>
@@ -57,7 +57,7 @@
               type="radio"
               name="type"
               id="japanese"
-              data-price="750"
+              value="750"
             />
             <label class="form-check-label" for="japanese">日版</label>
           </div>
@@ -71,8 +71,6 @@
           type="number"
           name="amount"
           id="amount"
-          placeholder=" "
-          autocomplete="off"
           min="1"
           max="99"
           value="1"
@@ -86,7 +84,6 @@
           name="city"
           id="city"
           placeholder=" "
-          autocomplete="off"
           pattern="^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$"
         />
       </div>
@@ -97,7 +94,6 @@
           name="message"
           id="message"
           placeholder=" "
-          autocomplete="off"
           maxlength="200"
         ></textarea>
       </div>
@@ -108,6 +104,7 @@
           type="checkbox"
           name="insurance"
           id="insurance"
+          value="1"
         />
       </div>
       <div class="form-output">
@@ -116,7 +113,7 @@
       <div class="form-group">
         <span>是否货到付款</span>
         <label class="form-switch">
-          <input type="checkbox" id="toggle" name="huodaofukuan" />
+          <input type="checkbox" id="toggle" name="to-be-collected" />
           <div class="line"></div>
           <div class="ball"></div>
         </label>
@@ -128,8 +125,6 @@
           type="date"
           name="arrival-date"
           id="arrival-date"
-          placeholder=" "
-          autocomplete="off"
         />
       </div>
       <button type="submit" class="btn btn-primary">提交</button>

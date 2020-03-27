@@ -16,15 +16,7 @@
   --danger-color-lighter: hsl(354, 81%, 83%);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0;
-}
-
-p {
+body {
   margin: 0;
 }
 
@@ -39,8 +31,15 @@ a {
   text-decoration: none;
 }
 
+button,
+input,
+optgroup,
+select,
 textarea {
-  resize: vertical;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
 .form-check {
@@ -57,21 +56,12 @@ textarea {
 .btn {
   position: relative;
   padding: 12px 20px;
-  font-size: 100%;
-  line-height: 1;
   color: black;
-  text-decoration: none;
   background-color: var(--btn-color, white);
   border: 1px solid var(--btn-color, #ccd1d9);
   border-radius: 4px;
   outline: transparent;
-  overflow: hidden;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  white-space: nowrap;
 }
 
 .btn:hover {
@@ -208,6 +198,7 @@ textarea {
 .btn-icon {
   position: relative;
   margin-left: 8px;
+  overflow: hidden;
 }
 
 .btn-icon svg {
@@ -288,6 +279,7 @@ textarea {
 }
 
 .btn-slash {
+  overflow: hidden;
   transition: 0.3s;
 }
 
@@ -376,7 +368,6 @@ textarea {
   border: none;
   border-radius: 0;
   perspective: 500px;
-  overflow: visible;
   transition: 0.3s;
 }
 
@@ -424,6 +415,7 @@ textarea {
   font-weight: 600;
   border: none;
   border-radius: 1.5rem;
+  overflow: hidden;
   transition: 0.3s;
 }
 
@@ -453,6 +445,7 @@ textarea {
 .btn-cross {
   border-radius: 1.5rem;
   transform: rotate(0);
+  overflow: hidden;
   transition: 0.3s;
 }
 
@@ -496,7 +489,6 @@ textarea {
 
 .btn-open-line {
   border: none;
-  overflow: visible;
   transition: 0.3s;
 }
 
@@ -683,7 +675,6 @@ textarea {
   --valid-color: var(--primary-color);
   --shadow-burst-color: var(--primary-color);
   padding: 9px 12px;
-  font-size: inherit;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   box-shadow: 0 0 0 0 var(--shadow-burst-color);
@@ -795,7 +786,6 @@ textarea {
   position: relative;
   width: 18px;
   height: 18px;
-  margin: 0;
   background: var(--checkbox-checked-color);
   border: none;
   border-radius: 4px;
@@ -934,7 +924,6 @@ textarea {
   position: relative;
   width: 18px;
   height: 18px;
-  margin: 0;
   background: var(--radio-checked-color);
   border: none;
   border-radius: 50%;
@@ -1083,10 +1072,11 @@ textarea {
 }
 
 .form-switch input[type="checkbox"] {
+  opacity: 0;
+  visibility: hidden;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  opacity: 0;
 }
 
 .form-switch input[type="checkbox"] ~ .line::before, .form-switch input[type="checkbox"] ~ .line::after {
@@ -1401,7 +1391,6 @@ textarea {
 .dialog-content {
   display: grid;
   place-items: center;
-  gap: 1rem;
   padding: 1rem;
 }
 
@@ -1492,10 +1481,7 @@ textarea {
   --text-fade-color: rgba(0, 0, 0, 0.2);
   --active-link-color: var(--primary-color);
   display: flex;
-  padding: 0;
-  margin: 0;
   border-bottom: 1px solid var(--underline-color);
-  list-style-type: none;
 }
 
 .nav:hover .nav-item:not(:hover) .nav-link {
@@ -1505,9 +1491,7 @@ textarea {
 .nav .nav-item .nav-link {
   position: relative;
   display: flex;
-  padding: 30px 25px 30px 25px;
-  line-height: 1;
-  text-decoration: none;
+  padding: 24px;
   color: var(--text-color);
   transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1725,6 +1709,7 @@ textarea {
 .rate input {
   position: absolute;
   opacity: 0;
+  visibility: hidden;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;

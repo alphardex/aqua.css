@@ -14,8 +14,9 @@
   cursor: pointer;
 
   input[type="checkbox"] {
-    appearance: none;
     opacity: 0;
+    visibility: hidden;
+    appearance: none;
 
     & ~ .line {
       &::before,

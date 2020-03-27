@@ -8,6 +8,7 @@
   input {
     position: absolute;
     opacity: 0;
+    visibility: hidden;
     appearance: none;
 
     &:checked ~ label::before {

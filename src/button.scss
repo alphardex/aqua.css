@@ -1,18 +1,12 @@
 .btn {
   position: relative;
   padding: 12px 20px;
-  font-size: 100%;
-  line-height: 1;
   color: black;
-  text-decoration: none;
   background-color: var(--btn-color, white);
   border: 1px solid var(--btn-color, #ccd1d9);
   border-radius: 4px;
   outline: transparent;
-  overflow: hidden;
   cursor: pointer;
-  user-select: none;
-  white-space: nowrap;
 
   &:hover {
     border-color: var(--btn-color, #aab2bd);
@@ -84,6 +78,7 @@
   &-icon {
     position: relative;
     margin-left: 8px;
+    overflow: hidden;
 
     svg {
       position: absolute;
@@ -169,6 +164,7 @@
   }
 
   &-slash {
+    overflow: hidden;
     transition: 0.3s;
 
     &::before {
@@ -258,7 +254,6 @@
     border: none;
     border-radius: 0;
     perspective: 500px;
-    overflow: visible;
     transition: 0.3s;
 
     &:hover {
@@ -308,6 +303,7 @@
     font-weight: 600;
     border: none;
     border-radius: 1.5rem;
+    overflow: hidden;
     transition: 0.3s;
 
     &:hover {
@@ -336,6 +332,7 @@
   &-cross {
     border-radius: 1.5rem;
     transform: rotate(0);
+    overflow: hidden;
     transition: 0.3s;
 
     &::before,
@@ -381,7 +378,6 @@
 
   &-open-line {
     border: none;
-    overflow: visible;
     transition: 0.3s;
 
     &::before,

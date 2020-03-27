@@ -5,10 +5,7 @@
   --active-link-color: var(--primary-color);
 
   display: flex;
-  padding: 0;
-  margin: 0;
   border-bottom: 1px solid var(--underline-color);
-  list-style-type: none;
 
   &:hover {
     .nav-item:not(:hover) .nav-link {
@@ -20,9 +17,7 @@
     .nav-link {
       position: relative;
       display: flex;
-      padding: 30px 25px 30px 25px;
-      line-height: 1;
-      text-decoration: none;
+      padding: 24px;
       color: var(--text-color);
       transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 

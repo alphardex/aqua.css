@@ -1,12 +1,4 @@
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0;
-}
-
-p {
+body {
   margin: 0;
 }
 
@@ -21,6 +13,13 @@ a {
   text-decoration: none;
 }
 
+button,
+input,
+optgroup,
+select,
 textarea {
-  resize: vertical;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
