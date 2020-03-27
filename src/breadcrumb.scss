@@ -1,0 +1,52 @@
+.breadcrumb {
+  --divider: "/";
+  --divider-color: #aab2bd;
+  --link-color: black;
+  --active-link-color: var(--primary-color);
+
+  display: flex;
+
+  &-item {
+    a {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        transform: scaleX(0);
+        transition: 0.3s;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+
+    &:not(:first-child) {
+      padding-left: 9px;
+
+      &::before {
+        content: var(--divider);
+        padding-right: 9px;
+        color: var(--divider-color);
+      }
+    }
+
+    &:not(:last-child) {
+      a {
+        color: var(--link-color);
+      }
+    }
+
+    &:last-child {
+      a {
+        color: var(--active-link-color);
+      }
+    }
+  }
+}
