@@ -19,3 +19,10 @@
     --gauge-color-lighter: var(--#{$type}-color-lighter);
   }
 }
+
+@mixin alert-color-with-state($type) {
+  &-#{$type} {
+    color: var(--#{$type}-color-darker);
+    --alert-color: var(--#{$type}-color-lighter);
+  }
+}

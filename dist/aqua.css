@@ -1894,4 +1894,79 @@ textarea {
 .breadcrumb-item:last-child a {
   color: var(--active-link-color);
 }
+
+.alert {
+  --close-icon-color: currentColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  margin: 0 0 1rem 0;
+  background: var(--alert-color);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.alert-primary {
+  color: var(--primary-color-darker);
+  --alert-color: var(--primary-color-lighter);
+}
+
+.alert-success {
+  color: var(--success-color-darker);
+  --alert-color: var(--success-color-lighter);
+}
+
+.alert-info {
+  color: var(--info-color-darker);
+  --alert-color: var(--info-color-lighter);
+}
+
+.alert-warning {
+  color: var(--warning-color-darker);
+  --alert-color: var(--warning-color-lighter);
+}
+
+.alert-danger {
+  color: var(--danger-color-darker);
+  --alert-color: var(--danger-color-lighter);
+}
+
+.alert .close-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  background: var(--close-icon-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.alert .close-icon::before, .alert .close-icon::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  background: white;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.alert .close-icon::before {
+  width: 50%;
+  height: 2px;
+}
+
+.alert .close-icon::after {
+  width: 2px;
+  height: 50%;
+}
+
+.alert .close-icon:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.alert .close-icon:active {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
 /*# sourceMappingURL=aqua.css.map */

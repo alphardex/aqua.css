@@ -1,0 +1,8 @@
+body {
+  display: block;
+  min-height: 100vh;
+}
+
+.alerts {
+  margin: 2rem;
+}
