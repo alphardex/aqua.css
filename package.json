@@ -1,6 +1,6 @@
 {
   "name": "@alphardex/aqua.css",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A delicate CSS framework for humans.",
   "main": "index.js",
   "scripts": {
