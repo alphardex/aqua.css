@@ -5,6 +5,9 @@
   --active-link-color: var(--primary-color);
 
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   border-bottom: 1px solid var(--underline-color);
 
   &:hover {
@@ -19,6 +22,7 @@
       display: flex;
       padding: 24px;
       color: var(--text-color);
+      text-decoration: none;
       transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
       &::after {

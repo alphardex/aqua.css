@@ -9,6 +9,9 @@
   display: grid;
   gap: 40px;
   max-width: 600px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   font-size: 0.75rem;
   line-height: 1;
   color: var(--text-color);
@@ -61,6 +64,7 @@
       a {
         font-weight: bold;
         color: var(--primary-color);
+        text-decoration: none;
       }
     }
 

@@ -11,7 +11,7 @@
 
 .top {
   grid-area: 1 / 2 / 2 / 4;
-  width: 306px;
+  width: 320px;
 }
 
 .right {
@@ -21,7 +21,7 @@
 
 .bottom {
   grid-area: 4 / 2 / 5 / 4;
-  width: 306px;
+  width: 320px;
 }
 
 .left {

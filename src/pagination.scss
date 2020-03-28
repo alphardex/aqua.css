@@ -3,8 +3,10 @@
   --disabled-color: var(--secondary-color);
 
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   line-height: 1;
-  user-select: none;
 
   .page-item {
     padding: 0 12px;
@@ -39,6 +41,7 @@
 
   .page-link {
     color: black;
+    text-decoration: none;
     transition: 0.1s;
 
     .arrow {

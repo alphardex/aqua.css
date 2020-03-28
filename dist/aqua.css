@@ -20,30 +20,12 @@
   --secondary-color-darkest: hsl(215, 11%, 30%);
 }
 
-body {
-  margin: 0;
-}
-
-ul,
-ol {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
+  font: inherit;
 }
 
 .form-check {
@@ -1803,11 +1785,10 @@ textarea {
   --active-color: var(--primary-color);
   --disabled-color: var(--secondary-color);
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   line-height: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .pagination .page-item {
@@ -1840,6 +1821,7 @@ textarea {
 
 .pagination .page-link {
   color: black;
+  text-decoration: none;
   transition: 0.1s;
 }
 
@@ -1853,6 +1835,9 @@ textarea {
   --text-fade-color: rgba(0, 0, 0, 0.2);
   --active-link-color: var(--primary-color);
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   border-bottom: 1px solid var(--underline-color);
 }
 
@@ -1865,6 +1850,7 @@ textarea {
   display: flex;
   padding: 24px;
   color: var(--text-color);
+  text-decoration: none;
   transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -1896,6 +1882,7 @@ textarea {
   display: block;
   padding: 10px 0;
   color: var(--toggle-color);
+  text-decoration: none;
   transition: 0.4s;
 }
 
@@ -1913,6 +1900,9 @@ textarea {
 }
 
 .dropdown .dropdown-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   transform: perspective(400px) rotateX(-90deg);
   transform-origin: top;
   transition: 0.4s;
@@ -1922,6 +1912,7 @@ textarea {
   display: block;
   padding: 10px;
   text-align: center;
+  text-decoration: none;
   color: var(--menu-text-color);
   background: var(--menu-item-color);
   transition: 0.4s;
@@ -1958,6 +1949,9 @@ textarea {
   display: grid;
   gap: 40px;
   max-width: 600px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   font-size: 0.75rem;
   line-height: 1;
   color: var(--text-color);
@@ -2011,6 +2005,7 @@ textarea {
 .timeline-item__timestamp a {
   font-weight: bold;
   color: var(--primary-color);
+  text-decoration: none;
 }
 
 .timeline-item__content {
@@ -2023,6 +2018,9 @@ textarea {
   --active-color: var(--primary-color);
   --line-color: var(--secondary-color);
   width: 720px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   color: var(--text-color);
 }
 
@@ -2032,6 +2030,7 @@ textarea {
   padding: 1rem;
   font-size: 1.2rem;
   color: currentColor;
+  text-decoration: none;
   border-bottom: 1px solid var(--line-color);
   cursor: pointer;
 }
@@ -2265,10 +2264,14 @@ textarea {
   --link-color: black;
   --active-link-color: var(--primary-color);
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .breadcrumb-item a {
   position: relative;
+  text-decoration: none;
 }
 
 .breadcrumb-item a::before {

@@ -9,6 +9,7 @@
     display: block;
     padding: 10px 0;
     color: var(--toggle-color);
+    text-decoration: none;
     transition: 0.4s;
 
     &::after {
@@ -26,6 +27,9 @@
   }
 
   .dropdown-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     transform: perspective(400px) rotateX(-90deg);
     transform-origin: top;
     transition: 0.4s;
@@ -34,6 +38,7 @@
       display: block;
       padding: 10px;
       text-align: center;
+      text-decoration: none;
       color: var(--menu-text-color);
       background: var(--menu-item-color);
       transition: 0.4s;
