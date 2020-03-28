@@ -1,4 +1,69 @@
 .form-switch {
+  --switch-bg-color: white;
+  --switch-ball-color: var(--secondary-color);
+  --border-color: var(--secondary-color);
+  --switch-hover-color: var(--secondary-color-darker);
+  --switch-checked-color: var(--primary-color);
+  --switch-checked-ball-color: white;
+  --switch-disabled-bg-color: var(--secondary-color-lighter);
+  --switch-disabled-checked-color: var(--secondary-color-darker);
+
+  position: relative;
+  width: 41px;
+  height: 21px;
+  background: var(--switch-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  transition: 0.3s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    background: var(--switch-ball-color);
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  & ~ .form-check-label {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    --border-color: var(--switch-hover-color);
+  }
+
+  &:checked {
+    --switch-bg-color: var(--switch-checked-color);
+    --border-color: var(--switch-checked-color);
+
+    &::before {
+      --switch-ball-color: var(--switch-checked-ball-color);
+      transform: translateX(20px);
+    }
+  }
+
+  &:disabled {
+    --switch-bg-color: var(--switch-disabled-bg-color);
+    --switch-checked-color: var(--switch-disabled-checked-color);
+
+    cursor: not-allowed;
+
+    & ~ .form-check-label {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.form-switch-material {
   --switch-color: white;
   --ball-color: var(--secondary-color);
   --ball-active-color: var(--primary-color);
