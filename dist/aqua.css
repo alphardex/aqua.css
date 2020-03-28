@@ -2349,4 +2349,54 @@ textarea {
   color: var(--danger-color-darker);
   --alert-color: var(--danger-color-lighter);
 }
+
+.tag {
+  --close-icon-color: currentColor;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 0 8px;
+  font-size: 12px;
+  background: var(--tag-color);
+  border: 1px solid var(--tag-color, var(--secondary-color));
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.tag-primary {
+  color: var(--primary-color-darker);
+  --tag-color: var(--primary-color-lighter);
+}
+
+.tag-secondary {
+  color: var(--secondary-color-darker);
+  --tag-color: var(--secondary-color-lighter);
+}
+
+.tag-success {
+  color: var(--success-color-darker);
+  --tag-color: var(--success-color-lighter);
+}
+
+.tag-info {
+  color: var(--info-color-darker);
+  --tag-color: var(--info-color-lighter);
+}
+
+.tag-warning {
+  color: var(--warning-color-darker);
+  --tag-color: var(--warning-color-lighter);
+}
+
+.tag-danger {
+  color: var(--danger-color-darker);
+  --tag-color: var(--danger-color-lighter);
+}
+
+.tag .close-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+}
 /*# sourceMappingURL=aqua.css.map */
