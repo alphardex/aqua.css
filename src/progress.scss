@@ -1,5 +1,5 @@
 .progress-bar {
-  --bar-color: #e6e9ed;
+  --bar-color: var(--secondary-color-lighter);
   --progress-color: var(--primary-color);
 
   height: 6px;

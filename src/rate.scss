@@ -1,5 +1,5 @@
 .rate {
-  --star-color: #fcbb42;
+  --star-color: var(--warning-color);
 
   display: flex;
   flex-direction: row-reverse;

@@ -1,0 +1,7 @@
+.gauges {
+  display: flex;
+}
+
+.gauge {
+  margin: 1rem;
+}

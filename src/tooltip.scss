@@ -1,5 +1,5 @@
 [data-tooltip] {
-  --tooltip-color: #434a54;
+  --tooltip-color: var(--secondary-color-darkest);
   overflow: visible !important;
 
   &::before,

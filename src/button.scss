@@ -3,21 +3,21 @@
   padding: 12px 20px;
   color: black;
   background-color: var(--btn-color, white);
-  border: 1px solid var(--btn-color, #ccd1d9);
+  border: 1px solid var(--btn-color, var(--secondary-color));
   border-radius: 4px;
   outline: transparent;
   cursor: pointer;
 
   &:hover {
-    border-color: var(--btn-color, #aab2bd);
+    border-color: var(--btn-color, var(--secondary-color-darker));
   }
 
   &:focus {
-    border-color: var(--btn-color, #5d9cec);
+    border-color: var(--btn-color, var(--primary-color-darker));
   }
 
   &:active {
-    border-color: var(--btn-color, #434a54);
+    border-color: var(--btn-color, var(--secondary-color-darker));
   }
 
   @each $type in $types {
@@ -416,7 +416,7 @@
 }
 
 .btn-group {
-  --divider-color: #f5f7fa;
+  --divider-color: var(--secondary-color-lighter);
   --divider-length: 1px;
 
   display: flex;

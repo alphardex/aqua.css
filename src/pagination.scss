@@ -1,6 +1,6 @@
 .pagination {
   --active-color: var(--primary-color);
-  --disabled-color: #ccd1d9;
+  --disabled-color: var(--secondary-color);
 
   display: flex;
   line-height: 1;

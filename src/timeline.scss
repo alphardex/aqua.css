@@ -1,8 +1,8 @@
 .timeline {
-  --text-color: hsl(0, 0%, 0%);
-  --bg-color: hsl(0, 0%, 100%);
+  --text-color: black;
+  --bg-color: white;
   --dot-color: var(--primary-color);
-  --line-color: hsl(214, 16%, 92%);
+  --line-color: var(--secondary-color-lighter);
   --timestamp-col-count: 3;
 
   position: relative;
@@ -59,6 +59,7 @@
       }
 
       a {
+        font-weight: bold;
         color: var(--primary-color);
       }
     }

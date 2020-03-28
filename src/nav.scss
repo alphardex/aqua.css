@@ -1,5 +1,5 @@
 .nav {
-  --underline-color: hsla(255, 100%, 0%, 0.2);
+  --underline-color: var(--secondary-color);
   --text-color: black;
   --text-fade-color: rgba(0, 0, 0, 0.2);
   --active-link-color: var(--primary-color);

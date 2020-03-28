@@ -1,8 +1,8 @@
 .form-switch {
   --switch-color: white;
-  --ball-color: #ccd1d9;
+  --ball-color: var(--secondary-color);
   --ball-active-color: var(--primary-color);
-  --line-color: #ccd1d9;
+  --line-color: var(--secondary-color);
 
   position: relative;
   width: 60px;

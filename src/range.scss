@@ -1,5 +1,5 @@
 .form-control-range {
-  --bar-color: #e6e9ed;
+  --bar-color: var(--secondary-color-lighter);
   --thumb-border-color: var(--primary-color);
 
   height: 2px;

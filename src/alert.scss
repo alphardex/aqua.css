@@ -13,41 +13,4 @@
   @each $type in $types {
     @include alert-color-with-state($type);
   }
-
-  .close-icon {
-    position: relative;
-    width: 18px;
-    height: 18px;
-    background: var(--close-icon-color);
-    border-radius: 50%;
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 50%;
-      background: white;
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    &::before {
-      width: 50%;
-      height: 2px;
-    }
-
-    &::after {
-      width: 2px;
-      height: 50%;
-    }
-
-    &:hover {
-      filter: brightness(0.9);
-    }
-
-    &:active {
-      filter: brightness(0.8);
-    }
-  }
 }

@@ -1,6 +1,6 @@
 .breadcrumb {
   --divider: "/";
-  --divider-color: #aab2bd;
+  --divider-color: var(--secondary-color-darker);
   --link-color: black;
   --active-link-color: var(--primary-color);
 

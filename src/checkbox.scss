@@ -1,10 +1,10 @@
 .form-check-input[type="checkbox"] {
   --checkbox-bg-color: white;
-  --border-color: #ccd1d9;
-  --checkbox-hover-color: #aab2bd;
+  --border-color: var(--secondary-color);
+  --checkbox-hover-color: var(--secondary-color-darker);
   --checkbox-checked-color: var(--primary-color);
-  --checkbox-disabled-bg-color: #e6e9ed;
-  --checkbox-disabled-checked-color: #aab2bd;
+  --checkbox-disabled-bg-color: var(--secondary-color-lighter);
+  --checkbox-disabled-checked-color: var(--secondary-color-darker);
 
   position: relative;
   width: 18px;

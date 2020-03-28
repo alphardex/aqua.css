@@ -1,10 +1,10 @@
 .form-check-input[type="radio"] {
   --radio-bg-color: white;
-  --border-color: #ccd1d9;
-  --radio-hover-color: #aab2bd;
+  --border-color: var(--secondary-color);
+  --radio-hover-color: var(--secondary-color-darker);
   --radio-checked-color: var(--primary-color);
-  --radio-disabled-bg-color: #e6e9ed;
-  --radio-disabled-checked-color: #aab2bd;
+  --radio-disabled-bg-color: var(--secondary-color-lighter);
+  --radio-disabled-checked-color: var(--secondary-color-darker);
 
   position: relative;
   width: 18px;

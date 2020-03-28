@@ -1,7 +1,7 @@
 .accordion {
-  --text-color: #656d78;
+  --text-color: var(--secondary-color-darker);
   --active-color: var(--primary-color);
-  --line-color: #ccd1d9;
+  --line-color: var(--secondary-color);
 
   width: 720px;
   color: var(--text-color);
