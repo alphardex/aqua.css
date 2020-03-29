@@ -1234,6 +1234,7 @@ textarea {
   position: relative;
   width: 18px;
   height: 18px;
+  margin: 0;
   background: var(--checkbox-checked-color);
   border: none;
   border-radius: 4px;
@@ -1306,6 +1307,7 @@ textarea {
   position: relative;
   width: 18px;
   height: 18px;
+  margin: 0;
   background: var(--radio-checked-color);
   border: none;
   border-radius: 50%;
@@ -1384,6 +1386,7 @@ textarea {
   position: relative;
   width: 41px;
   height: 21px;
+  margin: 0;
   background: var(--switch-bg-color);
   border: 1px solid var(--border-color);
   border-radius: 12px;
