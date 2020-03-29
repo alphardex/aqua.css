@@ -11,7 +11,7 @@
   <body>
     <form
       class="order-form"
-      oninput="price.value=parseInt(Array.from(document.querySelectorAll(`[name='type']`)).filter(e=>e.checked)[0].value)*parseInt(amount.value)+parseInt(document.querySelector('#insurance').value) || 0"
+      oninput="price.value=parseInt(Array.from(document.querySelectorAll(`[name='type']`)).filter(e=>e.checked)[0]?.value)*parseInt(amount.value)+parseInt(Array.from(document.querySelectorAll('#insurance')).filter(e=>e.checked)[0]?.value || 0)"
       onsubmit="alert(`提交的数据如下:\n${Array.from(new FormData(this), field => field.map(encodeURIComponent).join('=')).join('&')}`)"
       action="javascript:void(0);"
     >
