@@ -1104,7 +1104,7 @@ textarea {
 
 .form-control {
   --input-color: white;
-  --placeholder-color: currentColor;
+  --placeholder-color: var(--secondary-color);
   --border-color: rgba(0, 0, 0, 0.3);
   --focus-color: var(--primary-color);
   --default-color: rgba(0, 0, 0, 0.3);
