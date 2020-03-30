@@ -1,4 +1,6 @@
 .form-control {
+  --input-color: white;
+  --placeholder-color: currentColor;
   --border-color: rgba(0, 0, 0, 0.3);
   --focus-color: var(--primary-color);
   --default-color: rgba(0, 0, 0, 0.3);
@@ -7,12 +9,16 @@
   --shadow-burst-color: var(--primary-color);
 
   padding: 9px 12px;
+  background: var(--input-color);
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  box-shadow: 0 0 0 0 var(--shadow-burst-color);
   outline: none;
   appearance: none;
   transition: 0.3s;
+
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
 
   &:invalid {
     --border-color: var(--invalid-color);
@@ -31,6 +37,8 @@
   }
 
   &.shadow-burst {
+    box-shadow: 0 0 0 0 var(--shadow-burst-color);
+
     &:focus {
       animation: shadow-burst 0.6s forwards;
     }

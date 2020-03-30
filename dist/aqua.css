@@ -1103,6 +1103,8 @@ textarea {
 }
 
 .form-control {
+  --input-color: white;
+  --placeholder-color: currentColor;
   --border-color: rgba(0, 0, 0, 0.3);
   --focus-color: var(--primary-color);
   --default-color: rgba(0, 0, 0, 0.3);
@@ -1110,14 +1112,34 @@ textarea {
   --valid-color: var(--primary-color);
   --shadow-burst-color: var(--primary-color);
   padding: 9px 12px;
+  background: var(--input-color);
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  box-shadow: 0 0 0 0 var(--shadow-burst-color);
   outline: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   transition: 0.3s;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+.form-control::-moz-placeholder {
+  color: var(--placeholder-color);
+}
+
+.form-control:-ms-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+.form-control::-ms-input-placeholder {
+  color: var(--placeholder-color);
+}
+
+.form-control::placeholder {
+  color: var(--placeholder-color);
 }
 
 .form-control:invalid {
@@ -1134,6 +1156,10 @@ textarea {
 
 .form-control:focus {
   --border-color: var(--valid-color);
+}
+
+.form-control.shadow-burst {
+  box-shadow: 0 0 0 0 var(--shadow-burst-color);
 }
 
 .form-control.shadow-burst:focus {
