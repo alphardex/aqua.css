@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link rel="stylesheet" href="../dist/aqua.css" />
+    <link rel="stylesheet" href="./styles/demo.css" />
+    <link rel="stylesheet" href="./styles/role-table.css" />
+  </head>
+
+  <body>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Role</th>
+          <th>Permissions</th>
+          <th>Active?</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>alphardex</td>
+          <td>Administrator</td>
+          <td>
+            <span class="tag tag-primary">Read</span
+            ><span class="tag tag-success">Write</span
+            ><span class="tag tag-danger">Execute</span>
+          </td>
+          <td>
+            <div class="form-check">
+              <input type="checkbox" class="form-switch" />
+            </div>
+          </td>
+          <td><button class="btn btn-primary edit">Edit</button></td>
+        </tr>
+        <tr>
+          <td>Aqua</td>
+          <td>Modifier</td>
+          <td>
+            <span class="tag tag-primary">Read</span
+            ><span class="tag tag-success">Write</span>
+          </td>
+          <td>
+            <div class="form-check">
+              <input type="checkbox" class="form-switch" />
+            </div>
+          </td>
+          <td><button class="btn btn-primary edit">Edit</button></td>
+        </tr>
+        <tr>
+          <td>Megumin</td>
+          <td>User</td>
+          <td><span class="tag tag-primary">Read</span></td>
+          <td>
+            <div class="form-check">
+              <input type="checkbox" class="form-switch" />
+            </div>
+          </td>
+          <td><button class="btn btn-primary edit">Edit</button></td>
+        </tr>
+        <tr>
+          <td>Darkness</td>
+          <td>Guest</td>
+          <td><span class="tag">None</span></td>
+          <td>
+            <div class="form-check">
+              <input type="checkbox" class="form-switch" />
+            </div>
+          </td>
+          <td><button class="btn btn-primary edit">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+.table {
+  width: 100%;
+}
+
+.tag {
+  margin-right: 6px;
+}
+
+.form-check {
+  margin: 0;
+}
+
+.edit {
+  padding: 8px 30px;
+}
