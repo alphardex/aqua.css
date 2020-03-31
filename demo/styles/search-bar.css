@@ -1,0 +1,16 @@
+.search-bar {
+  border-radius: 10px;
+}
+
+.search-bar .form-control {
+  --input-color: var(--secondary-color-lighter);
+  border-color: transparent;
+}
+
+.search-bar .btn {
+  --btn-color: var(--secondary-color-lighter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0;
+}
