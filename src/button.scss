@@ -82,8 +82,8 @@
 
     svg {
       position: absolute;
-      top: 10%;
-      left: 40%;
+      top: 32%;
+      left: 42%;
       transform: translate(-16%, 400%);
       transition: 0.2s;
     }
@@ -97,7 +97,7 @@
 
     &:hover {
       svg {
-        transform: translate(-16%, 42%);
+        transform: translate(-16%, 0);
       }
 
       span {
@@ -117,7 +117,7 @@
 
     &:hover {
       background: transparent;
-      box-shadow: inset 0 0 0 2em var(--btn-color);
+      box-shadow: inset 0 0 0 36px var(--btn-color);
     }
   }
 
@@ -148,7 +148,7 @@
 
   &-pulse {
     &:hover {
-      box-shadow: 0 0 0 1em transparent;
+      box-shadow: 0 0 0 18px transparent;
       animation: pulse 1s;
     }
   }
@@ -158,8 +158,8 @@
 
     &:hover {
       background: transparent;
-      box-shadow: inset 3em 0 0 0 var(--btn-color),
-        inset -3em 0 0 0 var(--btn-color);
+      box-shadow: inset 54px 0 0 0 var(--btn-color),
+        inset -54px 0 0 0 var(--btn-color);
     }
   }
 
@@ -194,7 +194,7 @@
 
     &:hover {
       background: transparent;
-      box-shadow: inset 0 -3em 0 0 var(--btn-color);
+      box-shadow: inset 0 -54px 0 0 var(--btn-color);
     }
   }
 
@@ -203,7 +203,7 @@
 
     &:hover {
       background: transparent;
-      box-shadow: inset 5em 0 0 0 var(--btn-color);
+      box-shadow: inset 90px 0 0 0 var(--btn-color);
     }
   }
 
@@ -237,13 +237,13 @@
 
   &-offset {
     border-radius: 0;
-    box-shadow: 0.3em 0.3em 0 0 var(--btn-color),
-      inset 0.3em 0.3em 0 0 var(--btn-color);
+    box-shadow: 6px 6px 0 0 var(--btn-color), inset 6px 6px 0 0 var(--btn-color);
     transition: 0.3s;
 
     &:hover {
       background: transparent;
-      box-shadow: 0 0 0 0 var(--btn-color), inset 6em 4em 0 0 var(--btn-color);
+      box-shadow: 0 0 0 0 var(--btn-color),
+        inset 108px 72px 0 0 var(--btn-color);
     }
   }
 
@@ -302,7 +302,6 @@
   &-marquee {
     font-weight: 600;
     border: none;
-    border-radius: 1.5rem;
     overflow: hidden;
     transition: 0.3s;
 
@@ -330,7 +329,6 @@
   }
 
   &-cross {
-    border-radius: 1.5rem;
     transform: rotate(0);
     overflow: hidden;
     transition: 0.3s;

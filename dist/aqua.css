@@ -754,8 +754,8 @@ textarea {
 
 .btn-icon svg {
   position: absolute;
-  top: 10%;
-  left: 40%;
+  top: 32%;
+  left: 42%;
   transform: translate(-16%, 400%);
   transition: 0.2s;
 }
@@ -768,7 +768,7 @@ textarea {
 }
 
 .btn-icon:hover svg {
-  transform: translate(-16%, 42%);
+  transform: translate(-16%, 0);
 }
 
 .btn-icon:hover span {
@@ -786,7 +786,7 @@ textarea {
 
 .btn-fill:hover {
   background: transparent;
-  box-shadow: inset 0 0 0 2em var(--btn-color);
+  box-shadow: inset 0 0 0 36px var(--btn-color);
 }
 
 .btn-open {
@@ -815,7 +815,7 @@ textarea {
 }
 
 .btn-pulse:hover {
-  box-shadow: 0 0 0 1em transparent;
+  box-shadow: 0 0 0 18px transparent;
   -webkit-animation: pulse 1s;
           animation: pulse 1s;
 }
@@ -826,7 +826,7 @@ textarea {
 
 .btn-close:hover {
   background: transparent;
-  box-shadow: inset 3em 0 0 0 var(--btn-color), inset -3em 0 0 0 var(--btn-color);
+  box-shadow: inset 54px 0 0 0 var(--btn-color), inset -54px 0 0 0 var(--btn-color);
 }
 
 .btn-slash {
@@ -861,7 +861,7 @@ textarea {
 
 .btn-fill-up:hover {
   background: transparent;
-  box-shadow: inset 0 -3em 0 0 var(--btn-color);
+  box-shadow: inset 0 -54px 0 0 var(--btn-color);
 }
 
 .btn-slide {
@@ -870,7 +870,7 @@ textarea {
 
 .btn-slide:hover {
   background: transparent;
-  box-shadow: inset 5em 0 0 0 var(--btn-color);
+  box-shadow: inset 90px 0 0 0 var(--btn-color);
 }
 
 .btn-through {
@@ -903,13 +903,13 @@ textarea {
 
 .btn-offset {
   border-radius: 0;
-  box-shadow: 0.3em 0.3em 0 0 var(--btn-color), inset 0.3em 0.3em 0 0 var(--btn-color);
+  box-shadow: 6px 6px 0 0 var(--btn-color), inset 6px 6px 0 0 var(--btn-color);
   transition: 0.3s;
 }
 
 .btn-offset:hover {
   background: transparent;
-  box-shadow: 0 0 0 0 var(--btn-color), inset 6em 4em 0 0 var(--btn-color);
+  box-shadow: 0 0 0 0 var(--btn-color), inset 108px 72px 0 0 var(--btn-color);
 }
 
 .btn-flip-down {
@@ -965,7 +965,6 @@ textarea {
 .btn-marquee {
   font-weight: 600;
   border: none;
-  border-radius: 1.5rem;
   overflow: hidden;
   transition: 0.3s;
 }
@@ -994,7 +993,6 @@ textarea {
 }
 
 .btn-cross {
-  border-radius: 1.5rem;
   transform: rotate(0);
   overflow: hidden;
   transition: 0.3s;
@@ -1802,7 +1800,7 @@ textarea {
 .dialog-content {
   display: grid;
   place-items: center;
-  padding: 1rem;
+  padding: 18px;
 }
 
 .dialog-title {
@@ -1981,7 +1979,7 @@ textarea {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-size: 0.75rem;
+  font-size: 14px;
   line-height: 1;
   color: var(--text-color);
 }
@@ -2038,7 +2036,7 @@ textarea {
 }
 
 .timeline-item__content {
-  margin: 1rem 0 0 3.5rem;
+  margin: 18px 0 0 63px;
   line-height: 1.5;
 }
 
@@ -2056,8 +2054,8 @@ textarea {
 .accordion-item a {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  font-size: 1.2rem;
+  padding: 18px;
+  font-size: 21px;
   color: currentColor;
   text-decoration: none;
   border-bottom: 1px solid var(--line-color);
@@ -2087,13 +2085,13 @@ textarea {
 }
 
 .accordion-item:target .accordion-content {
-  padding: 1rem;
-  max-height: 10rem;
+  padding: 18px;
+  max-height: 180px;
   opacity: 1;
 }
 
 .accordion-content {
-  padding: 0 1rem;
+  padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -2136,7 +2134,7 @@ textarea {
 
 .rate label::before {
   position: absolute;
-  content: url("data:image/svg+xml,%3Csvg t='1584099189586' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='10117' fill='%23fcbb42' width='1em' height='1em'%3E%3Cpath d='M987.282286 369.737143q0 12.580571-14.848 27.428571l-207.433143 202.313143 49.152 285.696q0.585143 4.022857 0.585143 11.410286 0 11.995429-5.997714 20.260571t-17.408 8.265143q-10.825143 0-22.820571-6.875429l-256.585143-134.875429-256.585143 134.875429q-12.580571 6.875429-22.820571 6.875429-11.995429 0-17.993143-8.265143t-5.997714-20.260571q0-3.437714 1.170286-11.410286l49.152-285.696-208.018286-202.313143q-14.262857-15.433143-14.262857-27.428571 0-21.138286 32.036571-26.258286l286.866286-41.691429 128.585143-260.022857q10.825143-23.405714 28.013714-23.405714t28.013714 23.405714l128.585143 260.022857 286.866286 41.691429q32.036571 5.12 32.036571 26.258286z' p-id='10118'%3E%3C/path%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg t='1584099189586' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='10117' fill='%23fcbb42' width='18px' height='18px'%3E%3Cpath d='M987.282286 369.737143q0 12.580571-14.848 27.428571l-207.433143 202.313143 49.152 285.696q0.585143 4.022857 0.585143 11.410286 0 11.995429-5.997714 20.260571t-17.408 8.265143q-10.825143 0-22.820571-6.875429l-256.585143-134.875429-256.585143 134.875429q-12.580571 6.875429-22.820571 6.875429-11.995429 0-17.993143-8.265143t-5.997714-20.260571q0-3.437714 1.170286-11.410286l49.152-285.696-208.018286-202.313143q-14.262857-15.433143-14.262857-27.428571 0-21.138286 32.036571-26.258286l286.866286-41.691429 128.585143-260.022857q10.825143-23.405714 28.013714-23.405714t28.013714 23.405714l128.585143 260.022857 286.866286 41.691429q32.036571 5.12 32.036571 26.258286z' p-id='10118'%3E%3C/path%3E%3C/svg%3E");
   opacity: 0;
   transition: 0.3s;
 }
@@ -2213,8 +2211,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5rem;
-  height: 5rem;
+  width: 90px;
+  height: 90px;
   color: var(--text-color);
   background: conic-gradient(var(--gauge-color) var(--percentage), var(--gauge-color-lighter) 0);
   border-radius: 50%;
@@ -2343,7 +2341,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   padding: 14px 28px;
-  margin: 0 0 1rem 0;
+  margin: 0 0 18px 0;
   background: var(--alert-color);
   border-radius: 4px;
   transition: 0.3s;

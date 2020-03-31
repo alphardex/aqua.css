@@ -13,8 +13,8 @@
     a {
       display: flex;
       justify-content: space-between;
-      padding: 1rem;
-      font-size: 1.2rem;
+      padding: 18px;
+      font-size: 21px;
       color: currentColor;
       text-decoration: none;
       border-bottom: 1px solid var(--line-color);
@@ -46,15 +46,15 @@
       }
 
       .accordion-content {
-        padding: 1rem;
-        max-height: 10rem;
+        padding: 18px;
+        max-height: 180px;
         opacity: 1;
       }
     }
   }
 
   &-content {
-    padding: 0 1rem;
+    padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
