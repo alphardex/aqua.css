@@ -1,0 +1,22 @@
+.table {
+  --row-border-color: var(--secondary-color);
+  --thead-text-color: var(--secondary-color-darkest);
+  --thead-bg-color: var(--secondary-color-lightest);
+
+  border-collapse: collapse;
+
+  thead {
+    color: var(--thead-text-color);
+    background: var(--thead-bg-color);
+  }
+
+  tbody tr {
+    border-bottom: 1px solid var(--row-border-color);
+  }
+
+  td,
+  th {
+    padding: 12px;
+    text-align: left;
+  }
+}
