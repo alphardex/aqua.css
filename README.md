@@ -13,15 +13,19 @@
 
 ### 🏠 [文档](https://aquacss.netlify.com/)
 
+## 范例
+
+![Dashboard](https://user-gold-cdn.xitu.io/2020/4/1/1713563b3a556384?w=1920&h=1371&f=png&s=162117)
+
+地址：[猛戳这里](https://codepen.io/alphardex/full/yLNwKqx)
+
+看到这么精美的 Dashboard 是不是心动了？快来尝试一下吧！
+
 ## 安装
 
 首先将项目克隆到本地：`git clone https://github.com/alphardex/aqua.css`
 
 然后在页面中引用`dist`文件夹中的`aqua.min.css`即可
-
-## 范例
-
-![dashboard](https://user-gold-cdn.xitu.io/2020/4/1/17134ab3e222aa64?w=1920&h=1371&f=png&s=161795)
 
 ## 特点
 
