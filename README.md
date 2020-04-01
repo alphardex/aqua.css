@@ -19,6 +19,10 @@
 
 然后在页面中引用`dist`文件夹中的`aqua.min.css`即可
 
+## 范例
+
+![dashboard](https://user-gold-cdn.xitu.io/2020/4/1/17134ab3e222aa64?w=1920&h=1371&f=png&s=161795)
+
 ## 特点
 
 ### 易用

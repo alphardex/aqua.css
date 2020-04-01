@@ -1,5 +1,6 @@
 .search-bar {
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .search-bar .form-control {
