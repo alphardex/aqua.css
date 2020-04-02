@@ -15,7 +15,7 @@
 
 ## 范例
 
-![Dashboard](https://user-gold-cdn.xitu.io/2020/4/1/1713563b3a556384?w=1920&h=1371&f=png&s=162117)
+![Dashboard](https://user-gold-cdn.xitu.io/2020/4/2/1713911e73046096?w=1920&h=1371&f=png&s=165668)
 
 地址：[猛戳这里](https://codepen.io/alphardex/full/yLNwKqx)
 
