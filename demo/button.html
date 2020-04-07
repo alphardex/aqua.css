@@ -1,148 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Button</title>
-    <link rel="stylesheet" href="../dist/aqua.css" />
-    <link rel="stylesheet" href="./styles/demo.css" />
-    <link rel="stylesheet" href="./styles/button.css" />
-  </head>
-  <body>
-    <div class="buttons">
-      <button class="btn">
-        Default
-      </button>
-      <button class="btn btn-primary">
-        Primary
-      </button>
-      <button class="btn btn-secondary">
-        Secondary
-      </button>
-      <button class="btn btn-success">
-        Success
-      </button>
-      <button class="btn btn-info">
-        Info
-      </button>
-      <button class="btn btn-warning">
-        Warning
-      </button>
-      <button class="btn btn-danger">
-        Danger
-      </button>
-      <button class="btn btn-primary btn-round">
-        Round
-      </button>
-      <button class="btn btn-primary btn-circle">
-        <svg
-          t="1580189332989"
-          class="icon"
-          viewBox="0 0 1028 1024"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          p-id="4164"
-          width="18"
-          height="18"
-        >
-          <path
-            d="M332.8 790.528q19.456 0 36.864 7.168t30.208 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.208 20.48-36.864 7.68q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 37.888-7.168zM758.784 792.576q19.456 0 37.376 7.168t30.72 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.72 20.48-37.376 7.68-36.864-7.68-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 36.864-7.168zM930.816 210.944q28.672 0 44.544 7.68t22.528 18.944 6.144 24.064-3.584 22.016-13.312 37.888-22.016 62.976-23.552 68.096-18.944 53.248q-13.312 40.96-33.28 56.832t-49.664 15.872l-35.84 0-65.536 0-86.016 0-96.256 0-253.952 0 14.336 92.16 517.12 0q49.152 0 49.152 41.984 0 20.48-9.728 35.84t-38.4 14.336l-49.152 0-94.208 0-118.784 0-119.808 0-99.328 0-55.296 0q-20.48 0-34.304-9.216t-23.04-24.064-14.848-32.256-8.704-32.768q-1.024-6.144-5.632-29.696t-11.264-58.88-14.848-78.848-16.384-87.552q-19.456-103.424-44.032-230.4l-76.8 0q-15.36 0-25.6-7.68t-16.896-18.432-9.216-23.04-2.56-22.528q0-20.48 13.824-33.792t37.376-12.288l103.424 0q20.48 0 32.768 6.144t19.456 15.36 10.24 18.944 5.12 16.896q2.048 8.192 4.096 23.04t4.096 30.208q3.072 18.432 6.144 38.912l700.416 0zM892.928 302.08l-641.024-2.048 35.84 185.344 535.552 1.024z"
-            p-id="4165"
-            fill="currentColor"
-          ></path>
-        </svg>
-      </button>
-      <button class="btn btn-primary disabled">
-        Disabled
-      </button>
-      <button class="btn btn-primary loading">
-        Loading
-      </button>
-      <button class="btn btn-primary btn-ghost">
-        Ghost
-      </button>
-      <button class="btn btn-primary btn-jittery">
-        <svg
-          t="1580189332989"
-          class="icon"
-          viewBox="0 0 1028 1024"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          p-id="4164"
-          width="18"
-          height="18"
-        >
-          <path
-            d="M332.8 790.528q19.456 0 36.864 7.168t30.208 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.208 20.48-36.864 7.68q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 37.888-7.168zM758.784 792.576q19.456 0 37.376 7.168t30.72 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.72 20.48-37.376 7.68-36.864-7.68-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 36.864-7.168zM930.816 210.944q28.672 0 44.544 7.68t22.528 18.944 6.144 24.064-3.584 22.016-13.312 37.888-22.016 62.976-23.552 68.096-18.944 53.248q-13.312 40.96-33.28 56.832t-49.664 15.872l-35.84 0-65.536 0-86.016 0-96.256 0-253.952 0 14.336 92.16 517.12 0q49.152 0 49.152 41.984 0 20.48-9.728 35.84t-38.4 14.336l-49.152 0-94.208 0-118.784 0-119.808 0-99.328 0-55.296 0q-20.48 0-34.304-9.216t-23.04-24.064-14.848-32.256-8.704-32.768q-1.024-6.144-5.632-29.696t-11.264-58.88-14.848-78.848-16.384-87.552q-19.456-103.424-44.032-230.4l-76.8 0q-15.36 0-25.6-7.68t-16.896-18.432-9.216-23.04-2.56-22.528q0-20.48 13.824-33.792t37.376-12.288l103.424 0q20.48 0 32.768 6.144t19.456 15.36 10.24 18.944 5.12 16.896q2.048 8.192 4.096 23.04t4.096 30.208q3.072 18.432 6.144 38.912l700.416 0zM892.928 302.08l-641.024-2.048 35.84 185.344 535.552 1.024z"
-            p-id="4165"
-            fill="currentColor"
-          ></path>
-        </svg>
-        <span>6</span>
-      </button>
-      <button class="btn btn-primary btn-icon">
-        <svg
-          t="1580189512976"
-          class="icon"
-          viewBox="0 0 1024 1024"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          p-id="5767"
-          width="18"
-          height="18"
-        >
-          <path
-            d="M514.304 958.977c-57.876 0-114.084-10.893-166.954-32.489-51.101-20.758-96.927-50.515-136.313-88.434-39.386-37.919-70.293-82.105-91.922-131.269-22.363-50.902-33.711-104.984-33.711-160.737 0-66.712 16.989-132.941 49.098-191.619 31.041-56.686 76.133-106.462 130.439-143.931 15.086-10.412 36.047-7.037 46.828 7.455 10.781 14.493 7.344 34.642-7.743 44.989-45.894 31.749-83.979 73.717-110.146 121.565-27.47 50.162-41.388 104.502-41.388 161.541 0 93.061 37.65 180.563 106.007 246.342 68.324 65.812 159.177 102.059 255.805 102.059 96.595 0 187.482-36.248 255.839-102.06 68.357-65.78 105.974-153.281 105.974-246.342 0-56.975-13.885-111.411-41.388-161.54-26.167-47.816-64.285-89.816-110.179-121.502-15.054-10.346-18.558-30.495-7.744-44.989 10.814-14.492 31.743-17.898 46.795-7.454 54.339 37.469 99.498 87.245 130.507 143.93 32.142 58.678 49.131 124.907 49.131 191.619 0 55.754-11.348 109.836-33.744 160.769-21.597 49.166-52.537 93.351-91.923 131.269-39.385 37.919-85.212 67.643-136.313 88.499-52.903 21.466-109.078 32.327-166.954 32.327h-0.001v0.002z m10.08-448.084c-18.524 0-33.544-14.397-33.544-32.264V96.164c0-17.803 15.02-32.296 33.544-32.296 18.525 0 33.578 14.493 33.578 32.296v382.465c0 17.867-15.052 32.264-33.578 32.264z"
-            p-id="5768"
-            fill="currentColor"
-          ></path>
-        </svg>
-        <span>Logout</span>
-      </button>
-      <button class="btn btn-primary btn-jelly">
-        Jelly
-      </button>
-      <button class="btn btn-primary btn-ghost btn-fill">
-        Fill In
-      </button>
-      <button class="btn btn-primary btn-pulse">
-        Pulse
-      </button>
-      <button class="btn btn-primary btn-ghost btn-open">
-        Open
-      </button>
-      <button class="btn btn-primary btn-ghost btn-close">
-        Close
-      </button>
-      <button class="btn btn-primary btn-ghost btn-slash">
-        Slash
-      </button>
-      <button class="btn btn-primary btn-ghost btn-fill-up">
-        Fill Up
-      </button>
-      <button class="btn btn-primary btn-ghost btn-slide">
-        Slide
-      </button>
-      <button class="btn btn-primary btn-ghost btn-through">
-        Through
-      </button>
-      <button class="btn btn-primary btn-ghost btn-offset">
-        Offset
-      </button>
-      <button class="btn btn-primary btn-ghost btn-flip-down">
-        Flip Down
-        <div class="front">Flip Down</div>
-        <div class="back">Flip Down</div>
-      </button>
-      <button class="btn btn-primary btn-round btn-marquee">
-        <span data-text="Marquee">Marquee</span>
-      </button>
-      <button class="btn btn-primary btn-round btn-ghost btn-cross">
-        Cross Bar
-      </button>
-      <button class="btn btn-primary btn-ghost btn-open-line">
-        Line
-      </button>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Button</title>
+  <link rel="stylesheet" href="../dist/aqua.css" />
+  <link rel="stylesheet" href="./styles/demo.css" />
+  <link rel="stylesheet" href="./styles/button.css" />
+</head>
+
+<body>
+  <div class="buttons">
+    <button class="btn">
+      Default
+    </button>
+    <button class="btn btn-primary">
+      Primary
+    </button>
+    <button class="btn btn-secondary">
+      Secondary
+    </button>
+    <button class="btn btn-success">
+      Success
+    </button>
+    <button class="btn btn-info">
+      Info
+    </button>
+    <button class="btn btn-warning">
+      Warning
+    </button>
+    <button class="btn btn-danger">
+      Danger
+    </button>
+    <button class="btn btn-primary btn-round">
+      Round
+    </button>
+    <button class="btn btn-primary btn-circle">
+      <svg t="1580189332989" class="icon" viewBox="0 0 1028 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="4164" width="18" height="18">
+        <path
+          d="M332.8 790.528q19.456 0 36.864 7.168t30.208 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.208 20.48-36.864 7.68q-20.48 0-37.888-7.68t-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 37.888-7.168zM758.784 792.576q19.456 0 37.376 7.168t30.72 19.968 20.48 30.208 7.68 36.864-7.68 36.864-20.48 30.208-30.72 20.48-37.376 7.68-36.864-7.68-30.208-20.48-20.48-30.208-7.68-36.864 7.68-36.864 20.48-30.208 30.208-19.968 36.864-7.168zM930.816 210.944q28.672 0 44.544 7.68t22.528 18.944 6.144 24.064-3.584 22.016-13.312 37.888-22.016 62.976-23.552 68.096-18.944 53.248q-13.312 40.96-33.28 56.832t-49.664 15.872l-35.84 0-65.536 0-86.016 0-96.256 0-253.952 0 14.336 92.16 517.12 0q49.152 0 49.152 41.984 0 20.48-9.728 35.84t-38.4 14.336l-49.152 0-94.208 0-118.784 0-119.808 0-99.328 0-55.296 0q-20.48 0-34.304-9.216t-23.04-24.064-14.848-32.256-8.704-32.768q-1.024-6.144-5.632-29.696t-11.264-58.88-14.848-78.848-16.384-87.552q-19.456-103.424-44.032-230.4l-76.8 0q-15.36 0-25.6-7.68t-16.896-18.432-9.216-23.04-2.56-22.528q0-20.48 13.824-33.792t37.376-12.288l103.424 0q20.48 0 32.768 6.144t19.456 15.36 10.24 18.944 5.12 16.896q2.048 8.192 4.096 23.04t4.096 30.208q3.072 18.432 6.144 38.912l700.416 0zM892.928 302.08l-641.024-2.048 35.84 185.344 535.552 1.024z"
+          p-id="4165" fill="currentColor"></path>
+      </svg>
+    </button>
+    <button class="btn btn-primary disabled">
+      Disabled
+    </button>
+    <button class="btn btn-primary loading">
+      Loading
+    </button>
+    <button class="btn btn-primary btn-ghost">
+      Ghost
+    </button>
+  </div>
+</body>
+
 </html>
