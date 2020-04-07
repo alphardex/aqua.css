@@ -65,12 +65,4 @@
       cursor: not-allowed;
     }
   }
-
-  &.bounce {
-    &:checked {
-      &::before {
-        animation: scale-in-bounce 0.3s 0.2s linear forwards;
-      }
-    }
-  }
 }
