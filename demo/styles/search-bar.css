@@ -1,11 +1,7 @@
-.search-bar {
-  border-radius: 10px;
-  overflow: hidden;
-}
-
 .search-bar .form-control {
   --input-color: var(--secondary-color-lighter);
   border-color: transparent;
+  border-radius: 15px;
 }
 
 .search-bar .btn {
@@ -14,4 +10,6 @@
   justify-content: center;
   align-items: center;
   padding-right: 0;
+  border-color: transparent;
+  border-radius: 15px;
 }

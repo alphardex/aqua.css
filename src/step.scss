@@ -1,0 +1,103 @@
+.step {
+  --circle-color: var(--default-color);
+  --circle-bg-color: transparent;
+  --line-color: var(--secondary-color);
+  --default-color: var(--secondary-color-darker);
+  --active-color: var(--primary-color);
+  --line-width: 120px;
+
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  counter-reset: step;
+
+  &-item {
+    position: relative;
+    color: var(--default-color);
+    counter-increment: step;
+
+    &__content {
+      position: absolute;
+      left: -24px;
+      width: 100px;
+      text-align: center;
+    }
+
+    &__title {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    &__desc {
+      margin-top: 4px;
+      font-size: 12px;
+      transition: 0.3s;
+    }
+
+    &:last-child {
+      .step-item__node::after {
+        display: none;
+      }
+    }
+
+    &__node {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: counter(step);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        margin: 0 8px;
+        font-size: 12px;
+        background: var(--circle-bg-color);
+        border: 1px solid var(--circle-color);
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+
+      &::after {
+        content: "";
+        width: var(--line-width);
+        height: 1px;
+        background: var(--line-color);
+        transition: 0.3s;
+      }
+    }
+
+    &.done {
+      .step-item__node {
+        &::before {
+          --circle-color: var(--active-color);
+
+          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18px' height='18px' fill='none' stroke-width='2px' stroke='%234ec0e9' stroke-linecap='round' viewBox='0 0 21 21'%3E%3Cpolyline points='5 10.75 8.5 14.25 16 6'%3E%3C/polyline%3E%3C/svg%3E");
+          line-height: 1;
+          color: var(--active-color);
+        }
+
+        &::after {
+          --line-color: var(--active-color);
+        }
+      }
+    }
+
+    &.active {
+      color: var(--secondary-color-darkest);
+
+      .step-item__node {
+        &::before {
+          --circle-color: var(--active-color);
+          --circle-bg-color: var(--active-color);
+
+          color: white;
+        }
+      }
+    }
+  }
+}
