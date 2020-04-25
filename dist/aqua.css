@@ -1029,16 +1029,15 @@ textarea {
 }
 
 .dropdown {
-  --toggle-color: black;
-  --menu-item-color: var(--primary-color);
-  --menu-item-hover-color: var(--primary-color-darker);
+  --toggle-color: var(--primary-color);
+  --menu-item-color: white;
+  --menu-item-hover-color: hsl(0, 0%, 96%);
   --menu-item-divider-color: rgba(255, 255, 255, 0.2);
-  --menu-text-color: white;
+  --menu-text-color: black;
+  position: relative;
 }
 
 .dropdown .dropdown-toggle {
-  display: block;
-  padding: 10px 0;
   color: var(--toggle-color);
   text-decoration: none;
   transition: 0.4s;
@@ -1047,7 +1046,7 @@ textarea {
 .dropdown .dropdown-toggle::after {
   display: inline-flex;
   vertical-align: middle;
-  margin-left: 10px;
+  margin-left: 4px;
   content: "";
   width: 0;
   height: 0;
@@ -1058,17 +1057,22 @@ textarea {
 }
 
 .dropdown .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
   margin: 0;
-  padding: 0;
+  padding: 4px 0;
   list-style-type: none;
   transform: perspective(400px) rotateX(-90deg);
   transform-origin: top;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
   transition: 0.4s;
 }
 
 .dropdown .dropdown-menu .dropdown-item a {
   display: block;
-  padding: 10px;
+  padding: 6px 12px;
   text-align: center;
   text-decoration: none;
   color: var(--menu-text-color);
@@ -1084,12 +1088,7 @@ textarea {
   border-bottom: 1px solid var(--menu-item-divider-color);
 }
 
-.dropdown:hover .dropdown-toggle {
-  color: var(--menu-item-color);
-}
-
 .dropdown:hover .dropdown-toggle::after {
-  border-top-color: var(--menu-item-color);
   transform: scaleY(-1);
 }
 
