@@ -23,9 +23,23 @@
 
 ## 安装
 
-首先将项目克隆到本地：`git clone https://github.com/alphardex/aqua.css`
+### 通过 cdn 引用
 
-然后在页面中引用`dist`文件夹中的`aqua.min.css`即可
+在页面的`<head>`标签里添加以下行即可
+
+```html
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css"
+/>
+```
+
+### 通过 npm 安装
+
+```sh
+npm i @alphardex/aqua.css -S
+```
 
 ## 特点
 
