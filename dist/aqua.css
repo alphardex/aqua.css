@@ -296,6 +296,31 @@ textarea {
   height: 16px;
 }
 
+.plus-icon.circle {
+  width: 22px;
+  height: 22px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.plus-icon.circle::before, .plus-icon.circle::after {
+  border-radius: 5px;
+}
+
+.plus-icon.circle::before {
+  top: 8px;
+  left: 4px;
+  width: 10px;
+  height: 2px;
+}
+
+.plus-icon.circle::after {
+  top: 4px;
+  left: 8px;
+  width: 2px;
+  height: 10px;
+}
+
 .minus-icon {
   position: relative;
   display: block;
@@ -316,6 +341,21 @@ textarea {
   height: 2px;
   background: currentColor;
   border-radius: 10px;
+}
+
+.minus-icon.circle {
+  width: 22px;
+  height: 22px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.minus-icon.circle::before {
+  top: 8px;
+  left: 4px;
+  width: 10px;
+  height: 2px;
+  border-radius: 5px;
 }
 
 .btn {

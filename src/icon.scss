@@ -185,6 +185,31 @@
     width: 2px;
     height: 16px;
   }
+
+  &.circle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+
+    &::before, &::after {
+      border-radius: 5px;
+    }
+
+    &::before {
+      top: 8px;
+      left: 4px;
+      width: 10px;
+      height: 2px;
+    }
+
+    &::after {
+      top: 4px;
+      left: 8px;
+      width: 2px;
+      height: 10px;
+    }
+  }
 }
 
 .minus-icon {
@@ -206,5 +231,20 @@
     height: 2px;
     background: currentColor;
     border-radius: 10px;
+  }
+
+  &.circle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+
+    &::before {
+      top: 8px;
+      left: 4px;
+      width: 10px;
+      height: 2px;
+      border-radius: 5px;
+    }
   }
 }
