@@ -109,6 +109,7 @@ textarea {
 
 .close-icon {
   position: relative;
+  display: block;
   width: 18px;
   height: 18px;
   background: var(--close-icon-color, var(--secondary-color-darker));
@@ -143,6 +144,125 @@ textarea {
 .close-icon:active {
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
+}
+
+.chevron-icon {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  color: var(--chevron-color);
+}
+
+.chevron-icon::before {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border-color: currentColor;
+  transform: rotate(var(--chevron-rotate-deg));
+}
+
+.chevron-icon.up {
+  --chevron-rotate-deg: -45deg;
+}
+
+.chevron-icon.up::before {
+  left: 4px;
+  bottom: 2px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+}
+
+.chevron-icon.right {
+  --chevron-rotate-deg: -45deg;
+}
+
+.chevron-icon.right::before {
+  top: 4px;
+  right: 6px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+.chevron-icon.down {
+  --chevron-rotate-deg: 45deg;
+}
+
+.chevron-icon.down::before {
+  left: 4px;
+  top: 2px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+.chevron-icon.left {
+  --chevron-rotate-deg: 45deg;
+}
+
+.chevron-icon.left::before {
+  left: 6px;
+  top: 4px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+}
+
+.chevron-icon.circle {
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.chevron-icon.circle::before {
+  width: 6px;
+  height: 6px;
+}
+
+.chevron-icon.circle.down::before {
+  left: 6px;
+  top: 5px;
+}
+
+.chevron-icon.circle.right::before {
+  left: 5px;
+  top: 6px;
+}
+
+.chevron-icon.circle.up::before {
+  left: 6px;
+  bottom: 5px;
+}
+
+.chevron-icon.circle.left::before {
+  left: 7px;
+  top: 6px;
+}
+
+.search-icon {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  margin: -4px 0 0 -4px;
+  color: var(--search-color);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.search-icon::before {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: 12px;
+  box-sizing: border-box;
+  width: 2px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 3px;
+  transform: rotate(-45deg);
 }
 
 .btn {
@@ -256,6 +376,10 @@ textarea {
   height: 44px;
   padding: 0;
   border-radius: 50%;
+}
+
+.btn-circle i {
+  display: inline-flex;
 }
 
 .btn.disabled {
@@ -978,12 +1102,9 @@ textarea {
 }
 
 .pagination .page-link {
+  display: block;
   color: black;
   text-decoration: none;
-  transition: 0.1s;
-}
-
-.pagination .page-link .arrow {
   transition: 0.1s;
 }
 
@@ -1190,12 +1311,9 @@ textarea {
   cursor: pointer;
 }
 
-.accordion-item a svg {
-  width: 30px;
-  height: 30px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
+.accordion-item a .accordion-toggle {
   transition: 0.3s;
+  transform: scale(1.5);
 }
 
 .accordion-item a:hover, .accordion-item a:target {
@@ -1203,13 +1321,8 @@ textarea {
   border-bottom: 1px solid currentColor;
 }
 
-.accordion-item a:hover svg, .accordion-item a:target svg {
-  border-color: currentColor;
-  fill: currentColor;
-}
-
-.accordion-item:target a svg {
-  transform: rotate(0.5turn);
+.accordion-item:target a .accordion-toggle {
+  transform: scale(1.5) rotate(0.5turn);
 }
 
 .accordion-item:target .accordion-content {
@@ -1242,12 +1355,18 @@ textarea {
           appearance: none;
 }
 
-.rate input:checked ~ label::before {
+.rate input:checked ~ label::after {
   opacity: 1;
+}
+
+.rate input:checked ~ label::before {
+  opacity: 0;
 }
 
 .rate label {
   position: relative;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -1256,12 +1375,19 @@ textarea {
   margin-right: 6px;
 }
 
-.rate label:hover {
+.rate label:hover::after {
   transform: scale(1.2);
 }
 
 .rate label::before {
   position: absolute;
+  content: url("data:image/svg+xml,%3Csvg t='1584099080940' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='9773' width='1em' height='1em' fill='currentColor' %3E%3Cpath d='M686.153143 573.732571l174.884571-169.691429-241.152-35.401143-108.032-218.258286-108.032 218.258286-241.152 35.401143 174.884571 169.691429-41.691429 240.566857 215.990857-113.737143 215.405714 113.737143zM987.282286 369.737143q0 12.580571-14.848 27.428571l-207.433143 202.313143 49.152 285.696q0.585143 4.022857 0.585143 11.410286 0 28.598857-23.405714 28.598857-10.825143 0-22.820571-6.875429l-256.585143-134.875429-256.585143 134.875429q-12.580571 6.875429-22.820571 6.875429-11.995429 0-17.993143-8.265143t-5.997714-20.260571q0-3.437714 1.170286-11.410286l49.152-285.696-208.018286-202.313143q-14.262857-15.433143-14.262857-27.428571 0-21.138286 32.036571-26.258286l286.866286-41.691429 128.585143-260.022857q10.825143-23.405714 28.013714-23.405714t28.013714 23.405714l128.585143 260.022857 286.866286 41.691429q32.036571 5.12 32.036571 26.258286z' p-id='9774' %3E%3C/path%3E%3C/svg %3E");
+  transition: 0.3s;
+}
+
+.rate label::after {
+  position: absolute;
+  z-index: 1;
   content: url("data:image/svg+xml,%3Csvg t='1584099189586' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='10117' fill='%23fcbb42' width='18px' height='18px'%3E%3Cpath d='M987.282286 369.737143q0 12.580571-14.848 27.428571l-207.433143 202.313143 49.152 285.696q0.585143 4.022857 0.585143 11.410286 0 11.995429-5.997714 20.260571t-17.408 8.265143q-10.825143 0-22.820571-6.875429l-256.585143-134.875429-256.585143 134.875429q-12.580571 6.875429-22.820571 6.875429-11.995429 0-17.993143-8.265143t-5.997714-20.260571q0-3.437714 1.170286-11.410286l49.152-285.696-208.018286-202.313143q-14.262857-15.433143-14.262857-27.428571 0-21.138286 32.036571-26.258286l286.866286-41.691429 128.585143-260.022857q10.825143-23.405714 28.013714-23.405714t28.013714 23.405714l128.585143 260.022857 286.866286 41.691429q32.036571 5.12 32.036571 26.258286z' p-id='10118'%3E%3C/path%3E%3C/svg%3E");
   opacity: 0;
   transition: 0.3s;
@@ -1269,10 +1395,19 @@ textarea {
 
 .rate label:hover::before,
 .rate label:hover ~ label::before {
+  opacity: 0 !important;
+}
+
+.rate label:hover::after,
+.rate label:hover ~ label::after {
   opacity: 1 !important;
 }
 
 .rate:hover input:checked ~ label::before {
+  opacity: 1;
+}
+
+.rate:hover input:checked ~ label::after {
   opacity: 0;
 }
 

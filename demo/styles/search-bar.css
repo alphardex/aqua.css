@@ -6,6 +6,7 @@
 
 .search-bar .btn {
   --btn-color: var(--secondary-color-lighter);
+  --search-color: var(--secondary-color-darker);
   display: flex;
   justify-content: center;
   align-items: center;

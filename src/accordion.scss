@@ -19,29 +19,21 @@
       border-bottom: 1px solid var(--line-color);
       cursor: pointer;
 
-      svg {
-        width: 30px;
-        height: 30px;
-        border: 1px solid currentColor;
-        border-radius: 50%;
+      .accordion-toggle {
         transition: 0.3s;
+        transform: scale(1.5);
       }
 
       &:hover,
       &:target {
         color: var(--active-color);
         border-bottom: 1px solid currentColor;
-
-        svg {
-          border-color: currentColor;
-          fill: currentColor;
-        }
       }
     }
 
     &:target {
-      a svg {
-        transform: rotate(0.5turn);
+      a .accordion-toggle {
+        transform: scale(1.5) rotate(0.5turn);
       }
 
       .accordion-content {

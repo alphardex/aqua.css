@@ -34,6 +34,10 @@
     height: 44px;
     padding: 0;
     border-radius: 50%;
+
+    i {
+      display: inline-flex;
+    }
   }
 
   &.disabled {
