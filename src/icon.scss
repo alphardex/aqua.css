@@ -143,7 +143,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 10px;
     left: 12px;
     box-sizing: border-box;
@@ -152,5 +152,59 @@
     background: currentColor;
     border-radius: 3px;
     transform: rotate(-45deg);
+  }
+}
+
+.plus-icon {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  color: var(--plus-color);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    background: currentColor;
+    border-radius: 10px;
+  }
+
+  &::before {
+    top: 7px;
+    width: 16px;
+    height: 2px;
+  }
+
+  &::after {
+    left: 7px;
+    width: 2px;
+    height: 16px;
+  }
+}
+
+.minus-icon {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  color: var(--minus-color);
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    display: block;
+    box-sizing: border-box;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 10px;
   }
 }
