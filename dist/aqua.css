@@ -1396,6 +1396,7 @@ textarea {
 .accordion-item a {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 18px;
   font-size: 21px;
   color: currentColor;
@@ -1405,8 +1406,14 @@ textarea {
 }
 
 .accordion-item a .accordion-toggle {
+  border-width: 1px;
   transition: 0.3s;
   transform: scale(1.5);
+}
+
+.accordion-item a .accordion-toggle::before {
+  left: 7px !important;
+  top: 6px !important;
 }
 
 .accordion-item a:hover, .accordion-item a:target {

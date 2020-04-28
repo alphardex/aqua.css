@@ -12,6 +12,7 @@
     a {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 18px;
       font-size: 21px;
       color: currentColor;
@@ -20,8 +21,14 @@
       cursor: pointer;
 
       .accordion-toggle {
+        border-width: 1px;
         transition: 0.3s;
         transform: scale(1.5);
+
+        &::before {
+          left: 7px !important;
+          top: 6px !important;
+        }
       }
 
       &:hover,
