@@ -74,6 +74,14 @@
       background: var(--btn-color);
     }
   }
+
+  [class$="icon"] {
+    display: inline-flex;
+
+    & ~ span {
+      margin-left: 5px;
+    }
+  }
 }
 
 .btn-group {

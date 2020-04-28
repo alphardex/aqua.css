@@ -512,6 +512,14 @@ textarea {
   background: var(--btn-color);
 }
 
+.btn [class$="icon"] {
+  display: inline-flex;
+}
+
+.btn [class$="icon"] ~ span {
+  margin-left: 5px;
+}
+
 .btn-group {
   --divider-color: var(--secondary-color-lighter);
   --divider-length: 1px;
