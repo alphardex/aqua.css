@@ -63,8 +63,4 @@
   &:hover input:checked ~ label::before {
     opacity: 1;
   }
-
-  &:hover input:checked ~ label::after {
-    opacity: 0;
-  }
 }

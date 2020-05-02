@@ -32,13 +32,13 @@
       }
 
       &:hover,
-      &:target {
+      &.active {
         color: var(--active-color);
         border-bottom: 1px solid currentColor;
       }
     }
 
-    &:target {
+    &.active {
       a .accordion-toggle {
         transform: scale(1.5) rotate(0.5turn);
       }

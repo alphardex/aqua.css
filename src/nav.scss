@@ -11,13 +11,13 @@
   border-bottom: 1px solid var(--underline-color);
 
   &:hover {
-    .nav-item:not(:hover) .nav-link {
+    .nav-item:not(:hover) a {
       color: var(--text-fade-color);
     }
   }
 
   .nav-item {
-    .nav-link {
+    a {
       position: relative;
       display: flex;
       padding: 24px;

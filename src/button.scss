@@ -75,7 +75,7 @@
     }
   }
 
-  [class$="icon"] {
+  i {
     display: inline-flex;
 
     & ~ span {
@@ -88,7 +88,7 @@
   --divider-color: var(--secondary-color-lighter);
   --divider-length: 1px;
 
-  display: flex;
+  display: inline-flex;
 
   .btn {
     border: calc(var(--divider-length) / 2) solid var(--divider-color);

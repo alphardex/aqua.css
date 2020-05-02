@@ -523,7 +523,7 @@ textarea {
 .btn-group {
   --divider-color: var(--secondary-color-lighter);
   --divider-length: 1px;
-  display: flex;
+  display: inline-flex;
 }
 
 .btn-group .btn {
@@ -1221,11 +1221,11 @@ textarea {
   border-bottom: 1px solid var(--underline-color);
 }
 
-.nav:hover .nav-item:not(:hover) .nav-link {
+.nav:hover .nav-item:not(:hover) a {
   color: var(--text-fade-color);
 }
 
-.nav .nav-item .nav-link {
+.nav .nav-item a {
   position: relative;
   display: flex;
   padding: 24px;
@@ -1234,7 +1234,7 @@ textarea {
   transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.nav .nav-item .nav-link::after {
+.nav .nav-item a::after {
   position: absolute;
   content: "";
   top: 100%;
@@ -1246,7 +1246,7 @@ textarea {
   transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.nav .nav-item .nav-link:hover::after, .nav .nav-item .nav-link.router-link-active::after {
+.nav .nav-item a:hover::after, .nav .nav-item a.router-link-active::after {
   transform: scaleX(1);
 }
 
@@ -1424,16 +1424,16 @@ textarea {
   top: 6px !important;
 }
 
-.accordion-item a:hover, .accordion-item a:target {
+.accordion-item a:hover, .accordion-item a.active {
   color: var(--active-color);
   border-bottom: 1px solid currentColor;
 }
 
-.accordion-item:target a .accordion-toggle {
+.accordion-item.active a .accordion-toggle {
   transform: scale(1.5) rotate(0.5turn);
 }
 
-.accordion-item:target .accordion-content {
+.accordion-item.active .accordion-content {
   padding: 18px;
   max-height: 180px;
   opacity: 1;
@@ -1513,10 +1513,6 @@ textarea {
 
 .rate:hover input:checked ~ label::before {
   opacity: 1;
-}
-
-.rate:hover input:checked ~ label::after {
-  opacity: 0;
 }
 
 .loader {
