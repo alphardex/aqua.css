@@ -1826,12 +1826,14 @@ textarea {
   display: flex;
   padding: 0;
   margin: 0;
+  width: 100%;
   list-style-type: none;
   counter-reset: step;
 }
 
 .step-item {
   position: relative;
+  flex: 1;
   color: var(--default-color);
   counter-increment: step;
 }
@@ -1856,8 +1858,12 @@ textarea {
   transition: 0.3s;
 }
 
+.step-item:last-child {
+  max-width: 50px;
+}
+
 .step-item:last-child .step-item__node::after {
-  display: none;
+  content: none;
 }
 
 .step-item__node {
@@ -1882,7 +1888,7 @@ textarea {
 
 .step-item__node::after {
   content: "";
-  width: var(--line-width);
+  width: calc(100% - 48px);
   height: 1px;
   background: var(--line-color);
   transition: 0.3s;
