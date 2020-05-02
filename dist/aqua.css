@@ -512,11 +512,11 @@ textarea {
   background: var(--btn-color);
 }
 
-.btn [class$="icon"] {
+.btn i {
   display: inline-flex;
 }
 
-.btn [class$="icon"] ~ span {
+.btn i ~ span {
   margin-left: 5px;
 }
 
