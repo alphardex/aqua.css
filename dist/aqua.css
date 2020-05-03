@@ -1822,7 +1822,6 @@ textarea {
   --line-color: var(--secondary-color);
   --default-color: var(--secondary-color-darker);
   --active-color: var(--primary-color);
-  --line-width: 120px;
   display: flex;
   padding: 0;
   margin: 0;
@@ -1962,5 +1961,28 @@ textarea {
   scroll-snap-align: start;
   width: 100%;
   height: var(--carousel-height);
+}
+
+.divider {
+  --divider-text: none;
+  --divider-color: var(--secondary-color-lighter);
+  --divider-text-color: var(--secondary-color-darkest);
+  --divider-text-align: center;
+  width: 100%;
+  max-height: 1px;
+  line-height: 1;
+  border: none;
+  border-top: 1px solid var(--divider-color);
+  text-align: var(--divider-text-align);
+  overflow: visible;
+}
+
+.divider::after {
+  position: relative;
+  content: var(--divider-text);
+  top: -9px;
+  padding: 0 1rem;
+  color: var(--divider-text-color);
+  background: white;
 }
 /*# sourceMappingURL=aqua.css.map */
