@@ -1980,7 +1980,7 @@ textarea {
 .divider::after {
   position: relative;
   content: var(--divider-text);
-  top: -9px;
+  top: -0.5em;
   padding: 0 1rem;
   color: var(--divider-text-color);
   background: white;
