@@ -1,0 +1,32 @@
+.back-top {
+  --visibility-height: 200px;
+  --right: 40px;
+  --bottom: 80px;
+  --active-color: var(--primary-color);
+  --icon-color: var(--secondary-color-darker);
+
+  position: absolute;
+  top: var(--visibility-height);
+  right: var(--right);
+  bottom: calc(-1 * var(--bottom));
+
+  &-link {
+    position: sticky;
+    top: calc(100vh - var(--bottom));
+    color: var(--icon-color);
+    border: none !important;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    transform: scale(2);
+    transition: 0.3s;
+
+    &::before {
+      left: 8px !important;
+      top: 9px !important;
+    }
+
+    &:hover {
+      color: var(--active-color);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
