@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Number</title>
+    <link rel="stylesheet" href="../dist/aqua.css" />
+    <link rel="stylesheet" href="./styles/demo.css" />
+  </head>
+  <body>
+    <div class="input-group input-spinner">
+      <button
+        class="btn minus"
+        onclick="document.querySelector('#count').value--"
+      >
+        <i class="minus-icon"></i>
+      </button>
+      <input type="text" readonly value="0" class="form-control" id="count" />
+      <button
+        class="btn plus"
+        onclick="document.querySelector('#count').value++"
+      >
+        <i class="plus-icon"></i>
+      </button>
+    </div>
+  </body>
+</html>

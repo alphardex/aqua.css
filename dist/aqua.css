@@ -686,6 +686,56 @@ textarea {
   border-radius: 0;
 }
 
+.input-spinner {
+  --spinner-default-color: var(--secondary-color-darkest);
+  --spinner-active-color: var(--primary-color);
+  --spinner-max-width: 48px;
+}
+
+.input-spinner .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.input-spinner .btn:hover, .input-spinner .btn:focus, .input-spinner .btn:active {
+  border-color: var(--secondary-color);
+}
+
+.input-spinner .btn i {
+  transition: 0.3s;
+}
+
+.input-spinner .form-control {
+  --border-color: var(--secondary-color);
+  box-sizing: border-box;
+  max-width: var(--spinner-max-width);
+  text-align: center;
+  color: var(--spinner-default-color);
+  border-left: none;
+  border-right: none;
+}
+
+.input-spinner .plus {
+  --plus-color: var(--spinner-default-color);
+  border-left: none;
+  padding-left: 10px;
+}
+
+.input-spinner .plus:hover {
+  --plus-color: var(--spinner-active-color);
+}
+
+.input-spinner .minus {
+  --minus-color: var(--spinner-default-color);
+  padding-right: 10px;
+}
+
+.input-spinner .minus:hover {
+  --minus-color: var(--spinner-active-color);
+}
+
 .form-check-input[type="checkbox"] {
   --checkbox-bg-color: white;
   --border-color: var(--secondary-color);
