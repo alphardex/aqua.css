@@ -78,9 +78,25 @@
   i {
     display: inline-flex;
 
+    &[class$="-icon"] {
+      transform: scale(0.75);
+    }
+
     & ~ span {
       margin-left: 5px;
     }
+  }
+
+  &-dashed {
+    color: var(--btn-color);
+    background: transparent;
+    border-style: dashed;
+  }
+
+  &-link {
+    color: var(--btn-color);
+    background: transparent;
+    border: none;
   }
 }
 

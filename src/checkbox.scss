@@ -65,4 +65,10 @@
       cursor: not-allowed;
     }
   }
+
+  &:indeterminate {
+    &::after {
+      transform: scale(0.5);
+    }
+  }
 }

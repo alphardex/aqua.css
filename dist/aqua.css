@@ -516,8 +516,24 @@ textarea {
   display: inline-flex;
 }
 
+.btn i[class$="-icon"] {
+  transform: scale(0.75);
+}
+
 .btn i ~ span {
   margin-left: 5px;
+}
+
+.btn-dashed {
+  color: var(--btn-color);
+  background: transparent;
+  border-style: dashed;
+}
+
+.btn-link {
+  color: var(--btn-color);
+  background: transparent;
+  border: none;
 }
 
 .btn-group {
@@ -802,6 +818,10 @@ textarea {
 
 .form-check-input[type="checkbox"]:disabled ~ .form-check-label {
   cursor: not-allowed;
+}
+
+.form-check-input[type="checkbox"]:indeterminate::after {
+  transform: scale(0.5);
 }
 
 .form-check-input[type="radio"] {
