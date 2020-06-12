@@ -2088,4 +2088,12 @@ textarea {
   color: var(--active-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
+
+.card {
+  --card-bg-color: white;
+  padding: 30px;
+  background: var(--card-bg-color);
+  border-radius: 15px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+}
 /*# sourceMappingURL=aqua.css.map */
