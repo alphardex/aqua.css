@@ -12,11 +12,14 @@ button {
   cursor: pointer;
 }
 
+input {
+  outline: none;
+  appearance: none;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   margin: 0;
   border: none;
   cursor: pointer;
-  appearance: none;
-  outline: none;
 }

@@ -35,15 +35,18 @@ button {
   cursor: pointer;
 }
 
+input {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   margin: 0;
   border: none;
   cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
 }
 
 .form-check {
@@ -577,67 +580,65 @@ input[type="radio"] {
 }
 
 .form-control {
-  --input-color: white;
-  --placeholder-color: var(--secondary-color-darker);
-  --border-color: rgba(0, 0, 0, 0.3);
-  --focus-color: var(--primary-color);
-  --default-color: rgba(0, 0, 0, 0.3);
-  --invalid-color: var(--danger-color);
-  --valid-color: var(--primary-color);
-  padding: 9px 12px;
-  background: var(--input-color);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  --input-padding: 9px 12px;
+  --input-bg: white;
+  --input-placeholder-color: var(--secondary-color-darker);
+  --input-radius: 4px;
+  --input-border-color: rgba(0, 0, 0, 0.3);
+  --input-focus-border-color: var(--primary-color);
+  --input-default-border-color: rgba(0, 0, 0, 0.3);
+  --input-invalid-border-color: var(--danger-color);
+  --input-valid-border-color: var(--primary-color);
+  padding: var(--input-padding);
+  background: var(--input-bg);
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--input-radius);
   transition: 0.3s;
 }
 
 .form-control::-webkit-input-placeholder {
-  color: var(--placeholder-color);
+  color: var(--input-placeholder-color);
 }
 
 .form-control::-moz-placeholder {
-  color: var(--placeholder-color);
+  color: var(--input-placeholder-color);
 }
 
 .form-control:-ms-input-placeholder {
-  color: var(--placeholder-color);
+  color: var(--input-placeholder-color);
 }
 
 .form-control::-ms-input-placeholder {
-  color: var(--placeholder-color);
+  color: var(--input-placeholder-color);
 }
 
 .form-control::placeholder {
-  color: var(--placeholder-color);
+  color: var(--input-placeholder-color);
 }
 
 .form-control:invalid {
-  --border-color: var(--invalid-color);
+  --input-border-color: var(--input-invalid-border-color);
 }
 
 .form-control:valid {
-  --border-color: var(--valid-color);
+  --input-border-color: var(--input-valid-border-color);
 }
 
 .form-control:placeholder-shown {
-  --border-color: var(--default-color);
+  --input-border-color: var(--input-default-border-color);
 }
 
 .form-control:focus {
-  --border-color: var(--valid-color);
+  --input-border-color: var(--input-focus-border-color);
 }
 
 .form-input-material {
-  --default-color: rgba(0, 0, 0, 0.5);
-  --invalid-color: var(--danger-color);
-  --valid-color: var(--primary-color);
-  --border-bottom-color: rgba(0, 0, 0, 0.3);
+  --input-default-border-color: rgba(0, 0, 0, 0.5);
+  --input-invalid-border-color: var(--danger-color);
+  --input-valid-border-color: var(--primary-color);
+  --input-border-bottom-color: rgba(0, 0, 0, 0.3);
   position: relative;
-  border-bottom: 1px solid var(--border-bottom-color);
+  border-bottom: 1px solid var(--input-border-bottom-color);
 }
 
 .form-input-material::before {
@@ -647,7 +648,7 @@ input[type="radio"] {
   bottom: -1px;
   width: 100%;
   height: 2px;
-  background: var(--valid-color);
+  background: var(--input-valid-border-color);
   transform: scaleX(0);
   transform-origin: left;
   transition: 0.3s;
@@ -667,24 +668,20 @@ input[type="radio"] {
 
 .form-input-material .form-control-material {
   padding: 8px 0;
-  font-size: inherit;
-  font-weight: inherit;
-  color: currentColor;
   background: transparent;
   border: none;
-  outline: none;
 }
 
 .form-input-material .form-control-material:invalid ~ label {
-  color: var(--invalid-color);
+  color: var(--input-invalid-border-color);
 }
 
 .form-input-material .form-control-material:valid ~ label {
-  color: var(--valid-color);
+  color: var(--input-valid-border-color);
 }
 
 .form-input-material .form-control-material:placeholder-shown ~ label {
-  color: var(--default-color);
+  color: var(--input-default-border-color);
 }
 
 .form-input-material .form-control-material:focus ~ label,
