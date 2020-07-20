@@ -48,6 +48,322 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.mt-1 {
+  margin-top: 12px !important;
+}
+
+.mb-1 {
+  margin-bottom: 12px !important;
+}
+
+.mt-2 {
+  margin-top: 24px !important;
+}
+
+.mb-2 {
+  margin-bottom: 24px !important;
+}
+
+.mt-3 {
+  margin-top: 36px !important;
+}
+
+.mb-3 {
+  margin-bottom: 36px !important;
+}
+
+.mt-4 {
+  margin-top: 48px !important;
+}
+
+.mb-4 {
+  margin-bottom: 48px !important;
+}
+
+.mt-5 {
+  margin-top: 60px !important;
+}
+
+.mb-5 {
+  margin-bottom: 60px !important;
+}
+
+.mt-6 {
+  margin-top: 72px !important;
+}
+
+.mb-6 {
+  margin-bottom: 72px !important;
+}
+
+.mt-7 {
+  margin-top: 84px !important;
+}
+
+.mb-7 {
+  margin-bottom: 84px !important;
+}
+
+.mt-8 {
+  margin-top: 96px !important;
+}
+
+.mb-8 {
+  margin-bottom: 96px !important;
+}
+
+.mt-9 {
+  margin-top: 108px !important;
+}
+
+.mb-9 {
+  margin-bottom: 108px !important;
+}
+
+.mt-10 {
+  margin-top: 120px !important;
+}
+
+.mb-10 {
+  margin-bottom: 120px !important;
+}
+
+.mt-11 {
+  margin-top: 132px !important;
+}
+
+.mb-11 {
+  margin-bottom: 132px !important;
+}
+
+.mt-12 {
+  margin-top: 144px !important;
+}
+
+.mb-12 {
+  margin-bottom: 144px !important;
+}
+
+.mt-13 {
+  margin-top: 156px !important;
+}
+
+.mb-13 {
+  margin-bottom: 156px !important;
+}
+
+.mt-14 {
+  margin-top: 168px !important;
+}
+
+.mb-14 {
+  margin-bottom: 168px !important;
+}
+
+.mt-15 {
+  margin-top: 180px !important;
+}
+
+.mb-15 {
+  margin-bottom: 180px !important;
+}
+
+.m-1 {
+  margin: 12px !important;
+}
+
+.ml-1 {
+  margin-left: 12px !important;
+}
+
+.mr-1 {
+  margin-right: 12px !important;
+}
+
+.mx-1 {
+  margin: 0 12px !important;
+}
+
+.my-1 {
+  margin: 12px 0 !important;
+}
+
+.m-2 {
+  margin: 24px !important;
+}
+
+.ml-2 {
+  margin-left: 24px !important;
+}
+
+.mr-2 {
+  margin-right: 24px !important;
+}
+
+.mx-2 {
+  margin: 0 24px !important;
+}
+
+.my-2 {
+  margin: 24px 0 !important;
+}
+
+.m-3 {
+  margin: 36px !important;
+}
+
+.ml-3 {
+  margin-left: 36px !important;
+}
+
+.mr-3 {
+  margin-right: 36px !important;
+}
+
+.mx-3 {
+  margin: 0 36px !important;
+}
+
+.my-3 {
+  margin: 36px 0 !important;
+}
+
+.m-4 {
+  margin: 48px !important;
+}
+
+.ml-4 {
+  margin-left: 48px !important;
+}
+
+.mr-4 {
+  margin-right: 48px !important;
+}
+
+.mx-4 {
+  margin: 0 48px !important;
+}
+
+.my-4 {
+  margin: 48px 0 !important;
+}
+
+.m-5 {
+  margin: 60px !important;
+}
+
+.ml-5 {
+  margin-left: 60px !important;
+}
+
+.mr-5 {
+  margin-right: 60px !important;
+}
+
+.mx-5 {
+  margin: 0 60px !important;
+}
+
+.my-5 {
+  margin: 60px 0 !important;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-sm {
+  font-size: 12px;
+}
+
+.text-lg {
+  font-size: 24px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.whitespace-no-wrap {
+  white-space: nowrap;
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+[disabled] {
+  pointer-events: none !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+.invisible-block {
+  height: var(--height);
+}
+
+.d-contents {
+  display: contents;
+}
+
+[v-cloak] {
+  display: none !important;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate-multi {
+  --line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: var(--line-clamp);
+  -webkit-box-orient: vertical;
+}
+
+.lazyload[src] {
+  -webkit-animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.grayscale {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-check {
   display: flex;
   align-items: center;
@@ -121,6 +437,56 @@ input[type="radio"] {
 
 @keyframes fade-in {
   to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bounce-in {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-in {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -1198,18 +1564,20 @@ input[type="radio"] {
 }
 
 .dialog {
+  --dialog-padding: 18px;
+  --dialog-bg: white;
+  --dialog-radius: 15px;
   position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 999;
-  border: transparent;
-  border-radius: 10px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
-  opacity: 0;
-  -webkit-animation: fade-in 0.6s forwards;
-          animation: fade-in 0.6s forwards;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  box-sizing: border-box;
+  padding: var(--dialog-padding);
+  background: var(--dialog-bg);
+  border-radius: var(--dialog-radius);
+  -webkit-animation: bounce-in 0.6s forwards;
+          animation: bounce-in 0.6s forwards;
 }
 
 .dialog::-webkit-backdrop {
@@ -1224,15 +1592,15 @@ input[type="radio"] {
           backdrop-filter: blur(3px);
 }
 
-.dialog-content {
-  display: grid;
-  place-items: center;
-  padding: 18px;
-}
-
-.dialog-title {
-  font-size: 24px;
-  font-weight: bold;
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  transition: 0.6s;
 }
 
 .pagination {

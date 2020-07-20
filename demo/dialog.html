@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dialog</title>
-    <link rel="stylesheet" href="../dist/aqua.css" />
-    <link rel="stylesheet" href="./styles/demo.css" />
-  </head>
-  <body>
-    <dialog class="dialog" id="dialog">
-      <div class="dialog-content">
-        <div class="dialog-header">
-          <div class="dialog-title">Konosuba</div>
-        </div>
-        <div class="dialog-body">
-          <p>Kono subarashi sekai ni shufuku wo!</p>
-        </div>
-        <div class="dialog-footer">
-          <button
-            class="btn btn-primary"
-            onclick="document.querySelector('#dialog').close()"
-          >
-            Confirm
-          </button>
-          <button
-            class="btn"
-            onclick="document.querySelector('#dialog').close()"
-          >
-            Cancel
-          </button>
-        </div>
-      </div>
-    </dialog>
-    <form action="javascript:void(0);">
-      <button
-        class="btn btn-info"
-        onclick="document.querySelector('#dialog').showModal()"
-      >
-        Open Dialog
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dialog</title>
+  <link rel="stylesheet" href="../dist/aqua.css" />
+  <link rel="stylesheet" href="./styles/demo.css" />
+</head>
+
+<body>
+  <div class="dialog text-center" id="dialog">
+    <div class="dialog-title font-bold text-lg">
+      Konosuba
+    </div>
+    <div class="dialog-body mt-2">
+      Kono subarashi sekai ni shufuku wo!
+    </div>
+    <div class="dialog-footer mt-2">
+      <button class="btn btn-primary" onclick="document.querySelector('#dialog').close()">
+        Confirm
       </button>
-    </form>
-  </body>
+      <button class="btn" onclick="document.querySelector('#dialog').close()">
+        Cancel
+      </button>
+    </div>
+  </div>
+  <div class="backdrop"></div>
+  <form action="javascript:void(0);">
+    <button class="btn btn-info" onclick="document.querySelector('#dialog').showModal()">
+      Open Dialog
+    </button>
+  </form>
+</body>
+
 </html>

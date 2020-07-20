@@ -1,0 +1,144 @@
+$basic-unit: 12;
+
+@for $i from 1 through 15 {
+  .mt-#{$i} {
+    margin-top: #{$i * $basic-unit}px !important;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: #{$i * $basic-unit}px !important;
+  }
+}
+
+@for $i from 1 through 5 {
+  .m-#{$i} {
+    margin: #{$i * $basic-unit}px !important;
+  }
+
+  .ml-#{$i} {
+    margin-left: #{$i * $basic-unit}px !important;
+  }
+
+  .mr-#{$i} {
+    margin-right: #{$i * $basic-unit}px !important;
+  }
+
+  .mx-#{$i} {
+    margin: 0 #{$i * $basic-unit}px !important;
+  }
+
+  .my-#{$i} {
+    margin: #{$i * $basic-unit}px 0 !important;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-sm {
+  font-size: 12px;
+}
+
+.text-lg {
+  font-size: 24px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.whitespace-no-wrap {
+  white-space: nowrap; // 使元素不换行
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap; // 使元素保留换行符且能自动换行
+}
+
+[hidden] {
+  display: none !important; // 隐藏元素
+}
+
+[disabled] {
+  pointer-events: none !important; // 用户点击元素不会触发事件
+}
+
+img {
+  max-width: 100%;
+}
+
+.invisible-block {
+  height: var(--height); // 隐形方块，用来撑背景高度
+}
+
+.d-contents {
+  display: contents; // 充当无意义的包裹元素
+}
+
+[v-cloak] {
+  display: none !important; // 防止元素闪现
+}
+
+.truncate {
+  // 单行文本截断
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate-multi {
+  // 多行文本截断
+  --line-clamp: 2;
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: var(--line-clamp);
+  -webkit-box-orient: vertical;
+}
+
+.lazyload {
+  // 图片懒加载动画
+  &[src] {
+    animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+}
+
+.grayscale {
+  filter: grayscale(1); // 变灰
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.form-check-inline {
+  display: inline-flex;
+  margin-right: 12px;
+}
