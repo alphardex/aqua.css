@@ -1,12 +1,12 @@
 .accordion {
-  --text-color: var(--secondary-color-darker);
-  --active-color: var(--primary-color);
-  --line-color: var(--secondary-color);
+  --accordion-color: var(--secondary-color-darker);
+  --accordion-active-color: var(--primary-color);
+  --accordion-line-color: var(--secondary-color);
 
   margin: 0;
   padding: 0;
   list-style-type: none;
-  color: var(--text-color);
+  color: var(--accordion-color);
 
   &-item {
     a {
@@ -17,7 +17,7 @@
       font-size: 21px;
       color: currentColor;
       text-decoration: none;
-      border-bottom: 1px solid var(--line-color);
+      border-bottom: 1px solid var(--accordion-line-color);
       cursor: pointer;
 
       .accordion-toggle {
@@ -33,7 +33,7 @@
 
       &:hover,
       &.active {
-        color: var(--active-color);
+        color: var(--accordion-active-color);
         border-bottom: 1px solid currentColor;
       }
     }

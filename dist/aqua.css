@@ -901,8 +901,9 @@ input[type="radio"] {
   --switch-height: 21px;
   --switch-bg: white;
   --switch-radius: 12px;
-  --switch-ball-color: var(--secondary-color);
-  --switch-checked-ball-color: white;
+  --switch-ball-width: 15px;
+  --switch-ball-bg: var(--secondary-color);
+  --switch-checked-ball-bg: white;
   --switch-border-color: var(--secondary-color);
   --switch-hover-border-color: var(--secondary-color-darker);
   --switch-checked-bg: var(--primary-color);
@@ -923,9 +924,9 @@ input[type="radio"] {
   content: "";
   top: 2px;
   left: 2px;
-  width: 15px;
-  height: 15px;
-  background: var(--switch-ball-color);
+  width: var(--switch-ball-width);
+  height: var(--switch-ball-width);
+  background: var(--switch-ball-bg);
   border-radius: 50%;
   transition: 0.3s;
 }
@@ -946,7 +947,7 @@ input[type="radio"] {
 }
 
 .form-switch:checked::before {
-  --switch-ball-color: var(--switch-checked-ball-color);
+  --switch-ball-bg: var(--switch-checked-ball-bg);
   transform: translateX(20px);
 }
 
@@ -1460,13 +1461,13 @@ input[type="radio"] {
 }
 
 .accordion {
-  --text-color: var(--secondary-color-darker);
-  --active-color: var(--primary-color);
-  --line-color: var(--secondary-color);
+  --accordion-color: var(--secondary-color-darker);
+  --accordion-active-color: var(--primary-color);
+  --accordion-line-color: var(--secondary-color);
   margin: 0;
   padding: 0;
   list-style-type: none;
-  color: var(--text-color);
+  color: var(--accordion-color);
 }
 
 .accordion-item a {
@@ -1477,7 +1478,7 @@ input[type="radio"] {
   font-size: 21px;
   color: currentColor;
   text-decoration: none;
-  border-bottom: 1px solid var(--line-color);
+  border-bottom: 1px solid var(--accordion-line-color);
   cursor: pointer;
 }
 
@@ -1493,7 +1494,7 @@ input[type="radio"] {
 }
 
 .accordion-item a:hover, .accordion-item a.active {
-  color: var(--active-color);
+  color: var(--accordion-active-color);
   border-bottom: 1px solid currentColor;
 }
 
