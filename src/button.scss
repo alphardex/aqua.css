@@ -1,23 +1,25 @@
 .btn {
+  --btn-padding: 12px 20px;
+  --btn-border-width: 1px;
+  --btn-border-style: solid;
+  --btn-border-color: var(--secondary-color);
+  --btn-radius: 4px;
+
   position: relative;
-  padding: 12px 20px;
-  color: black;
-  background-color: var(--btn-color, white);
-  border: 1px solid var(--btn-color, var(--secondary-color));
-  border-radius: 4px;
-  outline: transparent;
-  cursor: pointer;
+  padding: var(--btn-padding);
+  color: var(--btn-color, black);
+  background: var(--btn-bg, white);
+  border: var(--btn-border-width) var(--btn-border-style)
+    var(--btn-border-color);
+  border-radius: var(--btn-radius);
 
-  &:hover {
-    border-color: var(--btn-color, var(--secondary-color-darker));
-  }
-
+  &:hover,
   &:focus {
-    border-color: var(--btn-color, var(--primary-color-darker));
+    border-color: var(--btn-bg, var(--secondary-color-darker));
   }
 
   &:active {
-    border-color: var(--btn-color, var(--secondary-color-darker));
+    border-color: var(--btn-bg, var(--primary-color-darker));
   }
 
   @each $type in $types {
@@ -25,19 +27,15 @@
   }
 
   &-round {
-    padding: 12px 24px;
-    border-radius: 30px;
+    --btn-radius: 30px;
   }
 
   &-circle {
+    --btn-padding: 0;
+    --btn-radius: 50%;
+
     width: 44px;
     height: 44px;
-    padding: 0;
-    border-radius: 50%;
-
-    i {
-      display: inline-flex;
-    }
   }
 
   &.disabled {
@@ -45,7 +43,7 @@
   }
 
   &.loading {
-    color: transparent;
+    --btn-color: transparent;
 
     &::before {
       position: absolute;
@@ -64,23 +62,21 @@
   }
 
   &-ghost {
-    color: var(--btn-color);
-    background-color: transparent;
-    border-color: var(--btn-color);
+    --btn-color: var(--btn-bg);
+    --btn-border-color: var(--btn-bg);
+
+    background: transparent;
     transition: 0.3s;
 
     &:hover {
-      color: white;
-      background: var(--btn-color);
+      --btn-color: white;
+
+      background: var(--btn-bg);
     }
   }
 
   i {
     display: inline-flex;
-
-    &[class$="-icon"] {
-      transform: scale(0.75);
-    }
 
     & ~ span {
       margin-left: 5px;
@@ -88,26 +84,29 @@
   }
 
   &-dashed {
-    color: var(--btn-color);
+    --btn-color: var(--btn-bg);
+    --btn-border-style: dashed;
+
     background: transparent;
-    border-style: dashed;
   }
 
   &-link {
-    color: var(--btn-color);
+    --btn-color: var(--btn-bg);
+    --btn-border-width: 0;
+
     background: transparent;
-    border: none;
   }
 }
 
 .btn-group {
-  --divider-color: var(--secondary-color-lighter);
-  --divider-length: 1px;
+  --btn-group-divider-color: var(--secondary-color-lighter);
+  --btn-group-divider-length: 1px;
 
   display: inline-flex;
 
   .btn {
-    border: calc(var(--divider-length) / 2) solid var(--divider-color);
+    border: calc(var(--btn-group-divider-length) / 2) solid
+      var(--btn-group-divider-color);
     border-top: none;
     border-bottom: none;
 

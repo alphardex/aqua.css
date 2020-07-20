@@ -1,14 +1,15 @@
 @mixin btn-color-with-state($type) {
   &-#{$type} {
-    color: white;
-    --btn-color: var(--#{$type}-color);
+    --btn-color: white;
+    --btn-bg: var(--#{$type}-color);
+    --btn-border-color: var(--btn-bg);
 
     &:active {
-      --btn-color: var(--#{$type}-color-darker);
+      --btn-bg: var(--#{$type}-color-darker);
     }
 
     &.disabled {
-      --btn-color: var(--#{$type}-color-lighter);
+      --btn-bg: var(--#{$type}-color-lighter);
     }
   }
 }
