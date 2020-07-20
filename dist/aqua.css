@@ -35,6 +35,17 @@ button {
   cursor: pointer;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+
 .form-check {
   display: flex;
   align-items: center;
@@ -754,24 +765,19 @@ button {
 }
 
 .form-check-input[type="checkbox"] {
-  --checkbox-bg-color: white;
-  --border-color: var(--secondary-color);
-  --checkbox-hover-color: var(--secondary-color-darker);
-  --checkbox-checked-color: var(--primary-color);
-  --checkbox-disabled-bg-color: var(--secondary-color-lighter);
-  --checkbox-disabled-checked-color: var(--secondary-color-darker);
+  --checkbox-width: 18px;
+  --checkbox-bg: white;
+  --checkbox-radius: 4px;
+  --checkbox-border-color: var(--secondary-color);
+  --checkbox-hover-border-color: var(--secondary-color-darker);
+  --checkbox-checked-bg: var(--primary-color);
+  --checkbox-disabled-bg: var(--secondary-color-lighter);
+  --checkbox-disabled-checked-bg: var(--secondary-color-darker);
   position: relative;
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  background: var(--checkbox-checked-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
+  width: var(--checkbox-width);
+  height: var(--checkbox-width);
+  background: var(--checkbox-checked-bg);
+  border-radius: var(--checkbox-radius);
   transition: 0.3s;
 }
 
@@ -792,14 +798,14 @@ button {
   content: "";
   width: 100%;
   height: 100%;
-  background: var(--checkbox-bg-color);
+  background: var(--checkbox-bg);
   border-radius: inherit;
-  box-shadow: inset 0 0 0 1px var(--border-color);
+  box-shadow: inset 0 0 0 1px var(--checkbox-border-color);
   transition: 0.2s;
 }
 
 .form-check-input[type="checkbox"]:hover {
-  --border-color: var(--checkbox-hover-color);
+  --checkbox-border-color: var(--checkbox-hover-border-color);
 }
 
 .form-check-input[type="checkbox"]:checked::before {
@@ -812,8 +818,8 @@ button {
 }
 
 .form-check-input[type="checkbox"]:disabled {
-  --checkbox-bg-color: var(--checkbox-disabled-bg-color);
-  --checkbox-checked-color: var(--checkbox-disabled-checked-color);
+  --checkbox-bg: var(--checkbox-disabled-bg);
+  --checkbox-checked-bg: var(--checkbox-disabled-checked-bg);
   cursor: not-allowed;
 }
 
@@ -826,24 +832,19 @@ button {
 }
 
 .form-check-input[type="radio"] {
-  --radio-bg-color: white;
-  --border-color: var(--secondary-color);
-  --radio-hover-color: var(--secondary-color-darker);
-  --radio-checked-color: var(--primary-color);
-  --radio-disabled-bg-color: var(--secondary-color-lighter);
-  --radio-disabled-checked-color: var(--secondary-color-darker);
+  --radio-width: 18px;
+  --radio-bg: white;
+  --radio-radius: 50%;
+  --radio-border-color: var(--secondary-color);
+  --radio-hover-border-color: var(--secondary-color-darker);
+  --radio-checked-bg: var(--primary-color);
+  --radio-disabled-bg: var(--secondary-color-lighter);
+  --radio-disabled-checked-bg: var(--secondary-color-darker);
   position: relative;
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  background: var(--radio-checked-color);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
+  width: var(--radio-width);
+  height: var(--radio-width);
+  background: var(--radio-checked-bg);
+  border-radius: var(--radio-radius);
   transition: 0.3s;
 }
 
@@ -858,7 +859,7 @@ button {
   content: "";
   width: 100%;
   height: 100%;
-  background: var(--radio-bg-color);
+  background: var(--radio-bg);
   border-radius: inherit;
   transform: scale(0);
 }
@@ -868,14 +869,14 @@ button {
   content: "";
   width: 100%;
   height: 100%;
-  background: var(--radio-bg-color);
+  background: var(--radio-bg);
   border-radius: inherit;
-  box-shadow: inset 0 0 0 1px var(--border-color);
+  box-shadow: inset 0 0 0 1px var(--radio-border-color);
   transition: 0.2s;
 }
 
 .form-check-input[type="radio"]:hover {
-  --border-color: var(--radio-hover-color);
+  --radio-border-color: var(--radio-hover-border-color);
 }
 
 .form-check-input[type="radio"]:checked::before {
@@ -888,8 +889,8 @@ button {
 }
 
 .form-check-input[type="radio"]:disabled {
-  --radio-bg-color: var(--radio-disabled-bg-color);
-  --radio-checked-color: var(--radio-disabled-checked-color);
+  --radio-bg: var(--radio-disabled-bg);
+  --radio-checked-bg: var(--radio-disabled-checked-bg);
   cursor: not-allowed;
 }
 

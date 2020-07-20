@@ -11,3 +11,12 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+}
