@@ -1,8 +1,8 @@
 .breadcrumb {
-  --divider: "/";
-  --divider-color: var(--secondary-color-darker);
-  --link-color: black;
-  --active-link-color: var(--primary-color);
+  --breadcrumb-divider: "/";
+  --breadcrumb-divider-color: var(--secondary-color-darker);
+  --breadcrumb-color: black;
+  --breadcrumb-active-color: var(--primary-color);
 
   display: flex;
   margin: 0;
@@ -35,21 +35,21 @@
       padding-left: 9px;
 
       &::before {
-        content: var(--divider);
+        content: var(--breadcrumb-divider);
         padding-right: 9px;
-        color: var(--divider-color);
+        color: var(--breadcrumb-divider-color);
       }
     }
 
     &:not(:last-child) {
       a {
-        color: var(--link-color);
+        color: var(--breadcrumb-color);
       }
     }
 
     &:last-child {
       a {
-        color: var(--active-link-color);
+        color: var(--breadcrumb-active-color);
       }
     }
   }

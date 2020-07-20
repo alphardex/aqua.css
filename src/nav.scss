@@ -1,18 +1,18 @@
 .nav {
-  --underline-color: var(--secondary-color);
-  --text-color: black;
-  --text-fade-color: rgba(0, 0, 0, 0.2);
-  --active-link-color: var(--primary-color);
+  --nav-underline-color: var(--secondary-color);
+  --nav-color: black;
+  --nav-active-color: var(--primary-color);
+  --nav-inactive-color: rgba(0, 0, 0, 0.2);
 
   display: flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  border-bottom: 1px solid var(--underline-color);
+  border-bottom: 1px solid var(--nav-underline-color);
 
   &:hover {
     .nav-item:not(:hover) a {
-      color: var(--text-fade-color);
+      color: var(--nav-inactive-color);
     }
   }
 
@@ -21,7 +21,7 @@
       position: relative;
       display: flex;
       padding: 24px;
-      color: var(--text-color);
+      color: var(--nav-color);
       text-decoration: none;
       transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
@@ -32,7 +32,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: var(--active-link-color);
+        background: var(--nav-active-color);
         transform: scaleX(0);
         transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); // ease-out-quartic
       }
