@@ -1,22 +1,23 @@
 .gauge {
+  --gauge-width: 90px;
   --gauge-value: 500;
   --gauge-max-value: 1000;
-  --percentage: calc(var(--gauge-value) / var(--gauge-max-value) * 100%);
-  --bg-color: white;
-  --gauge-color: var(--primary-color);
-  --gauge-color-lighter: var(--primary-color-lighter);
-  --text-color: black;
+  --gauge-percentage: calc(var(--gauge-value) / var(--gauge-max-value) * 100%);
+  --gauge-bg: white;
+  --gauge-circle-color: var(--primary-color);
+  --gauge-circle-color-lighter: var(--primary-color-lighter);
+  --gauge-color: black;
 
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px;
-  height: 90px;
-  color: var(--text-color);
+  width: var(--gauge-width);
+  height: var(--gauge-width);
+  color: var(--gauge-color);
   background: conic-gradient(
-    var(--gauge-color) var(--percentage),
-    var(--gauge-color-lighter) 0
+    var(--gauge-circle-color) var(--gauge-percentage),
+    var(--gauge-circle-color-lighter) 0
   );
   border-radius: 50%;
   counter-reset: value var(--gauge-value);
@@ -29,7 +30,7 @@
     align-items: center;
     width: 90%;
     height: 90%;
-    background: var(--bg-color);
+    background: var(--gauge-bg);
     border-radius: inherit;
   }
 

@@ -1,22 +1,24 @@
 .table {
-  --row-border-color: var(--secondary-color);
-  --thead-text-color: var(--secondary-color-darkest);
-  --thead-bg-color: var(--secondary-color-lightest);
+  --table-row-border-color: var(--secondary-color);
+  --table-thead-color: var(--secondary-color-darkest);
+  --table-thead-bg: var(--secondary-color-lightest);
+  --table-td-padding: 12px;
+  --table-td-align: left;
 
   border-collapse: collapse;
 
   thead {
-    color: var(--thead-text-color);
-    background: var(--thead-bg-color);
+    color: var(--table-thead-color);
+    background: var(--table-thead-bg);
   }
 
   tbody tr {
-    border-bottom: 1px solid var(--row-border-color);
+    border-bottom: 1px solid var(--table-row-border-color);
   }
 
   td,
   th {
-    padding: 12px;
-    text-align: left;
+    padding: var(--table-td-padding);
+    text-align: var(--table-td-align);
   }
 }

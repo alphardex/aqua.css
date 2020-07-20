@@ -1,8 +1,10 @@
 .card {
-  --card-bg-color: white;
+  --card-padding: 30px;
+  --card-bg: white;
+  --card-radius: 15px;
 
-  padding: 30px;
-  background: var(--card-bg-color);
-  border-radius: 15px;
+  padding: var(--card-padding);
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
 }

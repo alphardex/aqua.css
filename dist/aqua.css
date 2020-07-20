@@ -962,22 +962,24 @@ input[type="radio"] {
 }
 
 .progress-bar {
-  --bar-color: var(--secondary-color-lighter);
+  --progress-height: 6px;
+  --progress-radius: 30px;
+  --progress-bar-color: var(--secondary-color-lighter);
   --progress-color: var(--primary-color);
-  height: 6px;
+  height: var(--progress-height);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
 .progress-bar::-webkit-progress-bar {
-  background: var(--bar-color);
-  border-radius: 30px;
+  background: var(--progress-bar-color);
+  border-radius: var(--progress-radius);
 }
 
 .progress-bar::-webkit-progress-value {
   background: var(--progress-color);
-  border-radius: 30px;
+  border-radius: var(--progress-radius);
 }
 
 .form-control-range {
@@ -1234,8 +1236,8 @@ input[type="radio"] {
 }
 
 .pagination {
-  --active-color: var(--primary-color);
-  --disabled-color: var(--secondary-color);
+  --pagination-active-color: var(--primary-color);
+  --pagination-disabled-color: var(--secondary-color);
   display: flex;
   margin: 0;
   padding: 0;
@@ -1249,8 +1251,8 @@ input[type="radio"] {
 }
 
 .pagination .page-item:not(.disabled):hover .page-link, .pagination .page-item.active .page-link {
-  color: var(--active-color);
-  fill: var(--active-color);
+  color: var(--pagination-active-color);
+  fill: var(--pagination-active-color);
 }
 
 .pagination .page-item.active {
@@ -1266,8 +1268,8 @@ input[type="radio"] {
 }
 
 .pagination .page-item.disabled .page-link {
-  color: var(--disabled-color);
-  fill: var(--disabled-color);
+  color: var(--pagination-disabled-color);
+  fill: var(--pagination-disabled-color);
   cursor: not-allowed;
 }
 
@@ -1388,11 +1390,11 @@ input[type="radio"] {
 }
 
 .timeline {
-  --text-color: black;
-  --bg-color: white;
-  --dot-color: var(--primary-color);
-  --line-color: var(--secondary-color-lighter);
-  --timestamp-col-count: 3;
+  --timeline-color: black;
+  --timeline-line-color: var(--secondary-color-lighter);
+  --timeline-dot-bg: white;
+  --timeline-dot-color: var(--primary-color);
+  --timeline-timestamp-col: 3;
   position: relative;
   display: grid;
   gap: 40px;
@@ -1401,7 +1403,7 @@ input[type="radio"] {
   list-style-type: none;
   font-size: 14px;
   line-height: 1;
-  color: var(--text-color);
+  color: var(--timeline-color);
 }
 
 .timeline-line {
@@ -1410,12 +1412,12 @@ input[type="radio"] {
   left: 6px;
   width: 4px;
   height: 100%;
-  background: var(--line-color);
+  background: var(--timeline-line-color);
 }
 
 .timeline-item__timestamp {
   display: grid;
-  grid-template-columns: repeat(var(--timestamp-col-count), auto) 1fr;
+  grid-template-columns: repeat(var(--timeline-timestamp-col), auto) 1fr;
   align-items: center;
   gap: 6px;
 }
@@ -1424,7 +1426,7 @@ input[type="radio"] {
   position: relative;
   width: 16px;
   height: 16px;
-  background: var(--bg-color);
+  background: var(--timeline-dot-bg);
   border-radius: 50%;
 }
 
@@ -1435,7 +1437,7 @@ input[type="radio"] {
   left: -4px;
   right: -4px;
   bottom: -4px;
-  background: var(--bg-color);
+  background: var(--timeline-dot-bg);
 }
 
 .timeline-item__timestamp .dot::after {
@@ -1445,7 +1447,7 @@ input[type="radio"] {
   left: 0;
   width: 8px;
   height: 8px;
-  border: 4px solid var(--dot-color);
+  border: 4px solid var(--timeline-dot-color);
   border-radius: inherit;
 }
 
@@ -1636,21 +1638,22 @@ input[type="radio"] {
 }
 
 .gauge {
+  --gauge-width: 90px;
   --gauge-value: 500;
   --gauge-max-value: 1000;
-  --percentage: calc(var(--gauge-value) / var(--gauge-max-value) * 100%);
-  --bg-color: white;
-  --gauge-color: var(--primary-color);
-  --gauge-color-lighter: var(--primary-color-lighter);
-  --text-color: black;
+  --gauge-percentage: calc(var(--gauge-value) / var(--gauge-max-value) * 100%);
+  --gauge-bg: white;
+  --gauge-circle-color: var(--primary-color);
+  --gauge-circle-color-lighter: var(--primary-color-lighter);
+  --gauge-color: black;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px;
-  height: 90px;
-  color: var(--text-color);
-  background: conic-gradient(var(--gauge-color) var(--percentage), var(--gauge-color-lighter) 0);
+  width: var(--gauge-width);
+  height: var(--gauge-width);
+  color: var(--gauge-color);
+  background: conic-gradient(var(--gauge-circle-color) var(--gauge-percentage), var(--gauge-circle-color-lighter) 0);
   border-radius: 50%;
   counter-reset: value var(--gauge-value);
 }
@@ -1663,42 +1666,42 @@ input[type="radio"] {
   align-items: center;
   width: 90%;
   height: 90%;
-  background: var(--bg-color);
+  background: var(--gauge-bg);
   border-radius: inherit;
 }
 
 .gauge-primary {
-  --gauge-color: var(--primary-color);
-  --gauge-color-lighter: var(--primary-color-lighter);
+  --gauge-circle-color: var(--primary-color);
+  --gauge-circle-color-lighter: var(--primary-color-lighter);
 }
 
 .gauge-secondary {
-  --gauge-color: var(--secondary-color);
-  --gauge-color-lighter: var(--secondary-color-lighter);
+  --gauge-circle-color: var(--secondary-color);
+  --gauge-circle-color-lighter: var(--secondary-color-lighter);
 }
 
 .gauge-success {
-  --gauge-color: var(--success-color);
-  --gauge-color-lighter: var(--success-color-lighter);
+  --gauge-circle-color: var(--success-color);
+  --gauge-circle-color-lighter: var(--success-color-lighter);
 }
 
 .gauge-info {
-  --gauge-color: var(--info-color);
-  --gauge-color-lighter: var(--info-color-lighter);
+  --gauge-circle-color: var(--info-color);
+  --gauge-circle-color-lighter: var(--info-color-lighter);
 }
 
 .gauge-warning {
-  --gauge-color: var(--warning-color);
-  --gauge-color-lighter: var(--warning-color-lighter);
+  --gauge-circle-color: var(--warning-color);
+  --gauge-circle-color-lighter: var(--warning-color-lighter);
 }
 
 .gauge-danger {
-  --gauge-color: var(--danger-color);
-  --gauge-color-lighter: var(--danger-color-lighter);
+  --gauge-circle-color: var(--danger-color);
+  --gauge-circle-color-lighter: var(--danger-color-lighter);
 }
 
 [data-badge] {
-  --badge-color: var(--btn-color);
+  --badge-color: var(--btn-bg);
 }
 
 [data-badge]::after {
@@ -1814,16 +1817,20 @@ input[type="radio"] {
 }
 
 .tag {
+  --tag-height: 24px;
+  --tag-padding: 0 8px;
+  --tag-font-size: 12px;
+  --tag-radius: 4px;
   --close-icon-color: currentColor;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 24px;
-  padding: 0 8px;
-  font-size: 12px;
+  height: var(--tag-height);
+  padding: var(--tag-padding);
+  font-size: var(--tag-font-size);
   background: var(--tag-color);
   border: 1px solid var(--tag-color, var(--secondary-color));
-  border-radius: 4px;
+  border-radius: var(--tag-radius);
   transition: 0.3s;
 }
 
@@ -1858,31 +1865,33 @@ input[type="radio"] {
 }
 
 .tag .close-icon {
-  width: 12px;
-  height: 12px;
+  width: var(--tag-font-size);
+  height: var(--tag-font-size);
   margin-left: 4px;
 }
 
 .table {
-  --row-border-color: var(--secondary-color);
-  --thead-text-color: var(--secondary-color-darkest);
-  --thead-bg-color: var(--secondary-color-lightest);
+  --table-row-border-color: var(--secondary-color);
+  --table-thead-color: var(--secondary-color-darkest);
+  --table-thead-bg: var(--secondary-color-lightest);
+  --table-td-padding: 12px;
+  --table-td-align: left;
   border-collapse: collapse;
 }
 
 .table thead {
-  color: var(--thead-text-color);
-  background: var(--thead-bg-color);
+  color: var(--table-thead-color);
+  background: var(--table-thead-bg);
 }
 
 .table tbody tr {
-  border-bottom: 1px solid var(--row-border-color);
+  border-bottom: 1px solid var(--table-row-border-color);
 }
 
 .table td,
 .table th {
-  padding: 12px;
-  text-align: left;
+  padding: var(--table-td-padding);
+  text-align: var(--table-td-align);
 }
 
 .step {
@@ -2089,10 +2098,12 @@ input[type="radio"] {
 }
 
 .card {
-  --card-bg-color: white;
-  padding: 30px;
-  background: var(--card-bg-color);
-  border-radius: 15px;
+  --card-padding: 30px;
+  --card-bg: white;
+  --card-radius: 15px;
+  padding: var(--card-padding);
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
 }
 /*# sourceMappingURL=aqua.css.map */

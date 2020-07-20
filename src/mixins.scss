@@ -16,8 +16,8 @@
 
 @mixin gauge-color-with-state($type) {
   &-#{$type} {
-    --gauge-color: var(--#{$type}-color);
-    --gauge-color-lighter: var(--#{$type}-color-lighter);
+    --gauge-circle-color: var(--#{$type}-color);
+    --gauge-circle-color-lighter: var(--#{$type}-color-lighter);
   }
 }
 

@@ -1,9 +1,9 @@
 .timeline {
-  --text-color: black;
-  --bg-color: white;
-  --dot-color: var(--primary-color);
-  --line-color: var(--secondary-color-lighter);
-  --timestamp-col-count: 3;
+  --timeline-color: black;
+  --timeline-line-color: var(--secondary-color-lighter);
+  --timeline-dot-bg: white;
+  --timeline-dot-color: var(--primary-color);
+  --timeline-timestamp-col: 3;
 
   position: relative;
   display: grid;
@@ -13,7 +13,7 @@
   list-style-type: none;
   font-size: 14px;
   line-height: 1;
-  color: var(--text-color);
+  color: var(--timeline-color);
 
   &-line {
     position: absolute;
@@ -21,13 +21,13 @@
     left: 6px;
     width: 4px;
     height: 100%;
-    background: var(--line-color);
+    background: var(--timeline-line-color);
   }
 
   &-item {
     &__timestamp {
       display: grid;
-      grid-template-columns: repeat(var(--timestamp-col-count), auto) 1fr;
+      grid-template-columns: repeat(var(--timeline-timestamp-col), auto) 1fr;
       align-items: center;
       gap: 6px;
 
@@ -35,7 +35,7 @@
         position: relative;
         width: 16px;
         height: 16px;
-        background: var(--bg-color);
+        background: var(--timeline-dot-bg);
         border-radius: 50%;
 
         &::before {
@@ -45,7 +45,7 @@
           left: -4px;
           right: -4px;
           bottom: -4px;
-          background: var(--bg-color);
+          background: var(--timeline-dot-bg);
         }
 
         &::after {
@@ -55,7 +55,7 @@
           left: 0;
           width: 8px;
           height: 8px;
-          border: 4px solid var(--dot-color);
+          border: 4px solid var(--timeline-dot-color);
           border-radius: inherit;
         }
       }

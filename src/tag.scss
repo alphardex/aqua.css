@@ -1,15 +1,19 @@
 .tag {
+  --tag-height: 24px;
+  --tag-padding: 0 8px;
+  --tag-font-size: 12px;
+  --tag-radius: 4px;
   --close-icon-color: currentColor;
 
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 24px;
-  padding: 0 8px;
-  font-size: 12px;
+  height: var(--tag-height);
+  padding: var(--tag-padding);
+  font-size: var(--tag-font-size);
   background: var(--tag-color);
   border: 1px solid var(--tag-color, var(--secondary-color));
-  border-radius: 4px;
+  border-radius: var(--tag-radius);
   transition: 0.3s;
 
   @each $type in $types {
@@ -17,8 +21,8 @@
   }
 
   .close-icon {
-    width: 12px;
-    height: 12px;
+    width: var(--tag-font-size);
+    height: var(--tag-font-size);
     margin-left: 4px;
   }
 }

@@ -1,6 +1,6 @@
 .pagination {
-  --active-color: var(--primary-color);
-  --disabled-color: var(--secondary-color);
+  --pagination-active-color: var(--primary-color);
+  --pagination-disabled-color: var(--secondary-color);
 
   display: flex;
   margin: 0;
@@ -15,8 +15,8 @@
     &:not(.disabled):hover,
     &.active {
       .page-link {
-        color: var(--active-color);
-        fill: var(--active-color);
+        color: var(--pagination-active-color);
+        fill: var(--pagination-active-color);
       }
     }
 
@@ -32,8 +32,8 @@
       cursor: not-allowed;
 
       .page-link {
-        color: var(--disabled-color);
-        fill: var(--disabled-color);
+        color: var(--pagination-disabled-color);
+        fill: var(--pagination-disabled-color);
         cursor: not-allowed;
       }
     }

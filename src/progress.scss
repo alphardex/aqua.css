@@ -1,17 +1,19 @@
 .progress-bar {
-  --bar-color: var(--secondary-color-lighter);
+  --progress-height: 6px;
+  --progress-radius: 30px;
+  --progress-bar-color: var(--secondary-color-lighter);
   --progress-color: var(--primary-color);
 
-  height: 6px;
+  height: var(--progress-height);
   appearance: none;
 
   &::-webkit-progress-bar {
-    background: var(--bar-color);
-    border-radius: 30px;
+    background: var(--progress-bar-color);
+    border-radius: var(--progress-radius);
   }
 
   &::-webkit-progress-value {
     background: var(--progress-color);
-    border-radius: 30px;
+    border-radius: var(--progress-radius);
   }
 }
