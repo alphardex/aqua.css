@@ -6,3 +6,7 @@ body {
 .alerts {
   margin: 2rem;
 }
+
+.alert {
+  margin-bottom: 18px;
+}

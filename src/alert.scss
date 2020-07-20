@@ -1,13 +1,14 @@
 .alert {
+  --alert-padding: 14px 28px;
+  --alert-radius: 4px;
   --close-icon-color: currentColor;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 28px;
-  margin: 0 0 18px 0;
+  padding: var(--alert-padding);
   background: var(--alert-color);
-  border-radius: 4px;
+  border-radius: var(--alert-radius);
   transition: 0.3s;
 
   @each $type in $types {
