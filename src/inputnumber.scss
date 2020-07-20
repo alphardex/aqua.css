@@ -1,13 +1,14 @@
 .input-spinner {
   --spinner-default-color: var(--secondary-color-darkest);
   --spinner-active-color: var(--primary-color);
-  --spinner-max-width: 48px;
+  --spinner-max-width: 64px;
 
   .btn {
+    --btn-radius: 10px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
 
     &:hover,
     &:focus,
@@ -21,7 +22,7 @@
   }
 
   .form-control {
-    --border-color: var(--secondary-color);
+    --input-border-color: var(--secondary-color);
 
     box-sizing: border-box;
     max-width: var(--spinner-max-width);
