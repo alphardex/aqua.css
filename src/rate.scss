@@ -1,9 +1,9 @@
 .rate {
-  --star-color: var(--warning-color);
+  --rate-star-color: var(--warning-color);
 
   display: flex;
   flex-direction: row-reverse;
-  color: var(--star-color);
+  color: var(--rate-star-color);
 
   input {
     position: absolute;
@@ -59,7 +59,7 @@
       opacity: 1 !important;
     }
   }
-  
+
   &:hover input:checked ~ label::before {
     opacity: 1;
   }

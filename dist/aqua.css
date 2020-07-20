@@ -45,7 +45,6 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   margin: 0;
-  border: none;
   cursor: pointer;
 }
 
@@ -774,6 +773,7 @@ input[type="radio"] {
   width: var(--checkbox-width);
   height: var(--checkbox-width);
   background: var(--checkbox-checked-bg);
+  border: none;
   border-radius: var(--checkbox-radius);
   transition: 0.3s;
 }
@@ -841,6 +841,7 @@ input[type="radio"] {
   width: var(--radio-width);
   height: var(--radio-width);
   background: var(--radio-checked-bg);
+  border: none;
   border-radius: var(--radio-radius);
   transition: 0.3s;
 }
@@ -896,26 +897,24 @@ input[type="radio"] {
 }
 
 .form-switch {
-  --switch-bg-color: white;
+  --switch-width: 41px;
+  --switch-height: 21px;
+  --switch-bg: white;
+  --switch-radius: 12px;
   --switch-ball-color: var(--secondary-color);
-  --border-color: var(--secondary-color);
-  --switch-hover-color: var(--secondary-color-darker);
-  --switch-checked-color: var(--primary-color);
   --switch-checked-ball-color: white;
-  --switch-disabled-bg-color: var(--secondary-color-lighter);
-  --switch-disabled-checked-color: var(--secondary-color-darker);
+  --switch-border-color: var(--secondary-color);
+  --switch-hover-border-color: var(--secondary-color-darker);
+  --switch-checked-bg: var(--primary-color);
+  --switch-disabled-bg: var(--secondary-color-lighter);
+  --switch-disabled-checked-bg: var(--secondary-color-darker);
   position: relative;
-  width: 41px;
-  height: 21px;
-  margin: 0;
-  background: var(--switch-bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background: var(--switch-bg);
+  border: 1px solid var(--switch-border-color);
+  border-radius: var(--switch-radius);
   cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
   transition: 0.3s;
 }
 
@@ -938,12 +937,12 @@ input[type="radio"] {
 }
 
 .form-switch:hover {
-  --border-color: var(--switch-hover-color);
+  --switch-border-color: var(--switch-hover-border-color);
 }
 
 .form-switch:checked {
-  --switch-bg-color: var(--switch-checked-color);
-  --border-color: var(--switch-checked-color);
+  --switch-bg: var(--switch-checked-bg);
+  --switch-border-color: var(--switch-checked-bg);
 }
 
 .form-switch:checked::before {
@@ -952,8 +951,8 @@ input[type="radio"] {
 }
 
 .form-switch:disabled {
-  --switch-bg-color: var(--switch-disabled-bg-color);
-  --switch-checked-color: var(--switch-disabled-checked-color);
+  --switch-bg: var(--switch-disabled-bg);
+  --switch-checked-bg: var(--switch-disabled-checked-bg);
   cursor: not-allowed;
 }
 
@@ -1517,10 +1516,10 @@ input[type="radio"] {
 }
 
 .rate {
-  --star-color: var(--warning-color);
+  --rate-star-color: var(--warning-color);
   display: flex;
   flex-direction: row-reverse;
-  color: var(--star-color);
+  color: var(--rate-star-color);
 }
 
 .rate input {
