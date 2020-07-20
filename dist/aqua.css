@@ -981,23 +981,23 @@ input[type="radio"] {
 }
 
 .form-control-range {
-  --bar-color: var(--secondary-color-lighter);
-  --thumb-border-color: var(--primary-color);
-  height: 2px;
-  background: var(--bar-color);
-  border-radius: 30px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
+  --range-height: 2px;
+  --range-bar-bg: var(--secondary-color-lighter);
+  --range-bar-radius: 30px;
+  --range-thumb-width: 20px;
+  --range-thumb-bg: white;
+  --range-thumb-border-color: var(--primary-color);
+  height: var(--range-height);
+  background: var(--range-bar-bg);
+  border-radius: var(--range-bar-radius);
   cursor: pointer;
 }
 
 .form-control-range::-webkit-slider-thumb {
-  width: 20px;
-  height: 20px;
-  background: white;
-  border: 2px solid var(--thumb-border-color);
+  width: var(--range-thumb-width);
+  height: var(--range-thumb-width);
+  background: var(--range-thumb-bg);
+  border: 2px solid var(--range-thumb-border-color);
   border-radius: 50%;
   cursor: -webkit-grab;
   cursor: grab;
