@@ -1,39 +1,141 @@
-$basic-unit: 12;
-
 @for $i from 1 through 15 {
   .mt-#{$i} {
-    margin-top: #{$i * $basic-unit}px !important;
+    margin-top: #{$i}rem !important;
   }
 
   .mb-#{$i} {
-    margin-bottom: #{$i * $basic-unit}px !important;
+    margin-bottom: #{$i}rem !important;
   }
 }
 
 @for $i from 1 through 5 {
   .m-#{$i} {
-    margin: #{$i * $basic-unit}px !important;
+    margin: #{$i}rem !important;
   }
 
   .ml-#{$i} {
-    margin-left: #{$i * $basic-unit}px !important;
+    margin-left: #{$i}rem !important;
   }
 
   .mr-#{$i} {
-    margin-right: #{$i * $basic-unit}px !important;
+    margin-right: #{$i}rem !important;
   }
 
   .mx-#{$i} {
-    margin: 0 #{$i * $basic-unit}px !important;
+    margin: 0 #{$i}rem !important;
   }
 
   .my-#{$i} {
-    margin: #{$i * $basic-unit}px 0 !important;
+    margin: #{$i} 0rem !important;
+  }
+
+  .p-#{$i} {
+    padding: #{$i}rem !important;
+  }
+
+  .pl-#{$i} {
+    padding-left: #{$i}rem !important;
+  }
+
+  .pr-#{$i} {
+    padding-right: #{$i}rem !important;
+  }
+
+  .pt-#{$i} {
+    padding-top: #{$i}rem !important;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: #{$i}rem !important;
+  }
+
+  .px-#{$i} {
+    padding: 0 #{$i}rem !important;
+  }
+
+  .py-#{$i} {
+    padding: #{$i}rem 0 !important;
   }
 }
 
 .w-100 {
   width: 100%;
+}
+
+.box-border {
+  box-sizing: border-box;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.text-white {
+  color: white;
 }
 
 .text-sm {
