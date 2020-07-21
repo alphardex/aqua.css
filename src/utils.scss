@@ -1,3 +1,60 @@
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.inset-0 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.inset-x-0 {
+  left: 0;
+  right: 0;
+}
+
+.inset-y-0 {
+  top: 0;
+  bottom: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 @for $i from 1 through 15 {
   .mt-#{$i} {
     margin-top: #{$i}rem !important;
@@ -146,6 +203,10 @@
   font-size: 24px;
 }
 
+.leading-none {
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: bold;
 }
@@ -168,6 +229,22 @@
 
 .whitespace-pre-wrap {
   white-space: pre-wrap; // 使元素保留换行符且能自动换行
+}
+
+.rounded-sm {
+  border-radius: 5px;
+}
+
+.rounded {
+  border-radius: 15px;
+}
+
+.rounded-md {
+  border-radius: 20px;
+}
+
+.rounded-lg {
+  border-radius: 30px;
 }
 
 [hidden] {
