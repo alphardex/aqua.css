@@ -35,7 +35,7 @@ button {
   cursor: pointer;
 }
 
-input {
+input, textarea {
   outline: none;
   -webkit-appearance: none;
      -moz-appearance: none;
