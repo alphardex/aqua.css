@@ -243,7 +243,7 @@ input[type="radio"] {
 }
 
 .my-1 {
-  margin: 1 0rem !important;
+  margin: 1rem 0 !important;
 }
 
 .p-1 {
@@ -291,7 +291,7 @@ input[type="radio"] {
 }
 
 .my-2 {
-  margin: 2 0rem !important;
+  margin: 2rem 0 !important;
 }
 
 .p-2 {
@@ -339,7 +339,7 @@ input[type="radio"] {
 }
 
 .my-3 {
-  margin: 3 0rem !important;
+  margin: 3rem 0 !important;
 }
 
 .p-3 {
@@ -387,7 +387,7 @@ input[type="radio"] {
 }
 
 .my-4 {
-  margin: 4 0rem !important;
+  margin: 4rem 0 !important;
 }
 
 .p-4 {
@@ -435,7 +435,7 @@ input[type="radio"] {
 }
 
 .my-5 {
-  margin: 5 0rem !important;
+  margin: 5rem 0 !important;
 }
 
 .p-5 {
