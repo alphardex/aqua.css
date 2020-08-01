@@ -65,7 +65,7 @@
   }
 }
 
-@for $i from 1 through 5 {
+@for $i from 1 through 10 {
   .m-#{$i} {
     margin: #{$i}rem !important;
   }
@@ -79,11 +79,13 @@
   }
 
   .mx-#{$i} {
-    margin: 0 #{$i}rem !important;
+    margin-left: #{$i}rem !important;
+    margin-right: #{$i}rem !important;
   }
 
   .my-#{$i} {
-    margin: #{$i}rem 0 !important;
+    margin-top: #{$i}rem !important;
+    margin-bottom: #{$i}rem !important;
   }
 
   .p-#{$i} {
@@ -107,12 +109,46 @@
   }
 
   .px-#{$i} {
-    padding: 0 #{$i}rem !important;
+    padding-left: #{$i}rem !important;
+    padding-right: #{$i}rem !important;
   }
 
   .py-#{$i} {
-    padding: #{$i}rem 0 !important;
+    padding-top: #{$i}rem !important;
+    padding-bottom: #{$i}rem !important;
   }
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.inline-grid {
+  display: inline-grid;
+}
+
+.contents {
+  display: contents; // 充当无意义的包裹元素
 }
 
 .w-100 {
@@ -191,12 +227,24 @@
   flex: 1;
 }
 
+.text-transparent {
+  color: transparent;
+}
+
 .text-white {
   color: white;
 }
 
+.text-xs {
+  font-size: 8px;
+}
+
 .text-sm {
   font-size: 12px;
+}
+
+.text-base {
+  font-size: 18px;
 }
 
 .text-lg {
@@ -209,6 +257,34 @@
 
 .font-bold {
   font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.align-bottom {
+  vertical-align: bottom;
 }
 
 .text-left {
@@ -231,20 +307,52 @@
   white-space: pre-wrap; // 使元素保留换行符且能自动换行
 }
 
+.bg-transparent {
+  background: transparent;
+}
+
+.bg-white {
+  background: white;
+}
+
+.bg-black {
+  background: black;
+}
+
 .rounded-sm {
   border-radius: 5px;
 }
 
 .rounded {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .rounded-md {
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .rounded-lg {
-  border-radius: 30px;
+  border-radius: 20px;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 [hidden] {
@@ -259,12 +367,52 @@ img {
   max-width: 100%;
 }
 
-.invisible-block {
-  height: var(--height); // 隐形方块，用来撑背景高度
+.object-cover {
+  object-fit: cover;
 }
 
-.d-contents {
-  display: contents; // 充当无意义的包裹元素
+.object-contain {
+  object-fit: contain;
+}
+
+.object-top {
+  object-position: top;
+}
+
+.object-right {
+  object-position: right;
+}
+
+.object-bottom {
+  object-position: bottom;
+}
+
+.object-left {
+  object-position: left;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.select-all {
+  user-select: all;
+}
+
+.invisible-block {
+  height: var(--height); // 隐形方块，用来撑背景高度
 }
 
 [v-cloak] {
@@ -301,13 +449,6 @@ img {
 
 .form-group {
   display: flex;
-  align-items: center;
-}
-
-.container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
