@@ -63,9 +63,24 @@
   }
 }
 
+@mixin border-color-with-state($type) {
+  .border-#{$type} {
+    border-color: var(--#{$type}-color);
+  }
+
+  .border-#{$type}-darker {
+    border-color: var(--#{$type}-color-darker);
+  }
+
+  .border-#{$type}-lighter {
+    border-color: var(--#{$type}-color-lighter);
+  }
+}
+
 @each $type in $types {
   @include text-color-with-state($type);
   @include bg-color-with-state($type);
+  @include border-color-with-state($type);
 }
 
 .text-secondary-lightest {
