@@ -58,6 +58,14 @@ $basic-unit: 0.25;
 }
 
 @for $i from 1 through 40 {
+  .w-#{$i} {
+    width: #{$i*$basic-unit}rem !important;
+  }
+
+  .h-#{$i} {
+    height: #{$i*$basic-unit}rem !important;
+  }
+
   .m-#{$i} {
     margin: #{$i*$basic-unit}rem !important;
   }
@@ -333,6 +341,10 @@ $basic-unit: 0.25;
 
 .rounded-lg {
   border-radius: 20px;
+}
+
+.rounded-full {
+  border-radius: 50%;
 }
 
 .shadow-sm {
