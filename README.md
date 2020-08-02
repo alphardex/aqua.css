@@ -1,6 +1,6 @@
 <h1 align="center">aqua.css</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.4.9-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.5.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://aquacss.netlify.com/">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
@@ -31,7 +31,7 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.4.9/dist/aqua.min.css"
+  href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.5.0/dist/aqua.min.css"
 />
 ```
 
