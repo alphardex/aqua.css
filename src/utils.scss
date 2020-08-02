@@ -1,3 +1,5 @@
+$basic-unit: 0.25;
+
 .relative {
   position: relative;
 }
@@ -55,67 +57,65 @@
   visibility: hidden;
 }
 
-@for $i from 1 through 15 {
+@for $i from 1 through 40 {
+  .m-#{$i} {
+    margin: #{$i*$basic-unit}rem !important;
+  }
+
   .mt-#{$i} {
-    margin-top: #{$i}rem !important;
+    margin-top: #{$i*$basic-unit}rem !important;
   }
 
   .mb-#{$i} {
-    margin-bottom: #{$i}rem !important;
-  }
-}
-
-@for $i from 1 through 10 {
-  .m-#{$i} {
-    margin: #{$i}rem !important;
+    margin-bottom: #{$i*$basic-unit}rem !important;
   }
 
   .ml-#{$i} {
-    margin-left: #{$i}rem !important;
+    margin-left: #{$i*$basic-unit}rem !important;
   }
 
   .mr-#{$i} {
-    margin-right: #{$i}rem !important;
+    margin-right: #{$i*$basic-unit}rem !important;
   }
 
   .mx-#{$i} {
-    margin-left: #{$i}rem !important;
-    margin-right: #{$i}rem !important;
+    margin-left: #{$i*$basic-unit}rem !important;
+    margin-right: #{$i*$basic-unit}rem !important;
   }
 
   .my-#{$i} {
-    margin-top: #{$i}rem !important;
-    margin-bottom: #{$i}rem !important;
+    margin-top: #{$i*$basic-unit}rem !important;
+    margin-bottom: #{$i*$basic-unit}rem !important;
   }
 
   .p-#{$i} {
-    padding: #{$i}rem !important;
+    padding: #{$i*$basic-unit}rem !important;
   }
 
   .pl-#{$i} {
-    padding-left: #{$i}rem !important;
+    padding-left: #{$i*$basic-unit}rem !important;
   }
 
   .pr-#{$i} {
-    padding-right: #{$i}rem !important;
+    padding-right: #{$i*$basic-unit}rem !important;
   }
 
   .pt-#{$i} {
-    padding-top: #{$i}rem !important;
+    padding-top: #{$i*$basic-unit}rem !important;
   }
 
   .pb-#{$i} {
-    padding-bottom: #{$i}rem !important;
+    padding-bottom: #{$i*$basic-unit}rem !important;
   }
 
   .px-#{$i} {
-    padding-left: #{$i}rem !important;
-    padding-right: #{$i}rem !important;
+    padding-left: #{$i*$basic-unit}rem !important;
+    padding-right: #{$i*$basic-unit}rem !important;
   }
 
   .py-#{$i} {
-    padding-top: #{$i}rem !important;
-    padding-bottom: #{$i}rem !important;
+    padding-top: #{$i*$basic-unit}rem !important;
+    padding-bottom: #{$i*$basic-unit}rem !important;
   }
 }
 
