@@ -21,6 +21,166 @@
   --secondary-color-lightest: hsl(220, 1%, 98%);
 }
 
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-primary-darker {
+  color: var(--primary-color-darker);
+}
+
+.text-primary-lighter {
+  color: var(--primary-color-lighter);
+}
+
+.bg-primary {
+  background: var(--primary-color);
+}
+
+.bg-primary-darker {
+  background: var(--primary-color-darker);
+}
+
+.bg-primary-lighter {
+  background: var(--primary-color-lighter);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-secondary-darker {
+  color: var(--secondary-color-darker);
+}
+
+.text-secondary-lighter {
+  color: var(--secondary-color-lighter);
+}
+
+.bg-secondary {
+  background: var(--secondary-color);
+}
+
+.bg-secondary-darker {
+  background: var(--secondary-color-darker);
+}
+
+.bg-secondary-lighter {
+  background: var(--secondary-color-lighter);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.text-success-darker {
+  color: var(--success-color-darker);
+}
+
+.text-success-lighter {
+  color: var(--success-color-lighter);
+}
+
+.bg-success {
+  background: var(--success-color);
+}
+
+.bg-success-darker {
+  background: var(--success-color-darker);
+}
+
+.bg-success-lighter {
+  background: var(--success-color-lighter);
+}
+
+.text-info {
+  color: var(--info-color);
+}
+
+.text-info-darker {
+  color: var(--info-color-darker);
+}
+
+.text-info-lighter {
+  color: var(--info-color-lighter);
+}
+
+.bg-info {
+  background: var(--info-color);
+}
+
+.bg-info-darker {
+  background: var(--info-color-darker);
+}
+
+.bg-info-lighter {
+  background: var(--info-color-lighter);
+}
+
+.text-warning {
+  color: var(--warning-color);
+}
+
+.text-warning-darker {
+  color: var(--warning-color-darker);
+}
+
+.text-warning-lighter {
+  color: var(--warning-color-lighter);
+}
+
+.bg-warning {
+  background: var(--warning-color);
+}
+
+.bg-warning-darker {
+  background: var(--warning-color-darker);
+}
+
+.bg-warning-lighter {
+  background: var(--warning-color-lighter);
+}
+
+.text-danger {
+  color: var(--danger-color);
+}
+
+.text-danger-darker {
+  color: var(--danger-color-darker);
+}
+
+.text-danger-lighter {
+  color: var(--danger-color-lighter);
+}
+
+.bg-danger {
+  background: var(--danger-color);
+}
+
+.bg-danger-darker {
+  background: var(--danger-color-darker);
+}
+
+.bg-danger-lighter {
+  background: var(--danger-color-lighter);
+}
+
+.text-secondary-lightest {
+  color: var(--secondary-color-lightest);
+}
+
+.text-secondary-darkest {
+  color: var(--secondary-color-darkest);
+}
+
+.bg-secondary-lightest {
+  background: var(--secondary-color-lightest);
+}
+
+.bg-secondary-darkest {
+  background: var(--secondary-color-darkest);
+}
+
 button,
 input,
 optgroup,

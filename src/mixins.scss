@@ -34,3 +34,52 @@
     --tag-color: var(--#{$type}-color-lighter);
   }
 }
+
+@mixin text-color-with-state($type) {
+  .text-#{$type} {
+    color: var(--#{$type}-color);
+  }
+
+  .text-#{$type}-darker {
+    color: var(--#{$type}-color-darker);
+  }
+
+  .text-#{$type}-lighter {
+    color: var(--#{$type}-color-lighter);
+  }
+}
+
+@mixin bg-color-with-state($type) {
+  .bg-#{$type} {
+    background: var(--#{$type}-color);
+  }
+
+  .bg-#{$type}-darker {
+    background: var(--#{$type}-color-darker);
+  }
+
+  .bg-#{$type}-lighter {
+    background: var(--#{$type}-color-lighter);
+  }
+}
+
+@each $type in $types {
+  @include text-color-with-state($type);
+  @include bg-color-with-state($type);
+}
+
+.text-secondary-lightest {
+  color: var(--secondary-color-lightest);
+}
+
+.text-secondary-darkest {
+  color: var(--secondary-color-darkest);
+}
+
+.bg-secondary-lightest {
+  background: var(--secondary-color-lightest);
+}
+
+.bg-secondary-darkest {
+  background: var(--secondary-color-darkest);
+}
