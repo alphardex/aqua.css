@@ -1,6 +1,6 @@
 <h1 align="center">aqua.css</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.4.8-blue.svg?cacheSeconds=2592000" />
   <a href="https://aquacss.netlify.com/">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
@@ -31,7 +31,7 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css"
+  href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.4.8/dist/aqua.min.css"
 />
 ```
 
@@ -51,7 +51,7 @@ aqua.css 是一个纯 CSS 框架，没有任何 JS
 
 诸如 React、Vue 之类框架一概不需掌握，参照组件 demo 复制粘贴就能跑出效果来
 
-有人可能会问为什么没有布局相关的组件，我只能回答：`flex`和`grid`它们不香吗？
+并且该框架提供了许多极其实用的工具类，可以直接用在HTML上，这样既省去了给CSS命名的功夫，又防止了CSS文件的膨胀
 
 ### 易定制
 
