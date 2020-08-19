@@ -139,6 +139,10 @@ $px-unit-ratio: 1;
   .z-#{$i} {
     z-index: #{$i};
   }
+
+  .-z-#{$i} {
+    z-index: -#{$i};
+  }
 }
 
 .flex-row-reverse {
@@ -268,6 +272,22 @@ $px-unit-ratio: 1;
 
   .mr-#{$i} {
     margin-right: #{$i*$unit-ratio}#{$unit} !important;
+  }
+
+  .-mt-#{$i} {
+    margin-top: -#{$i*$unit-ratio}#{$unit} !important;
+  }
+
+  .-mb-#{$i} {
+    margin-bottom: -#{$i*$unit-ratio}#{$unit} !important;
+  }
+
+  .-ml-#{$i} {
+    margin-left: -#{$i*$unit-ratio}#{$unit} !important;
+  }
+
+  .-mr-#{$i} {
+    margin-right: -#{$i*$unit-ratio}#{$unit} !important;
   }
 
   .mx-#{$i} {
@@ -592,6 +612,10 @@ $px-unit-ratio: 1;
 
 .opacity-75 {
   opacity: 0.75;
+}
+
+.opacity-100 {
+  opacity: 1;
 }
 
 .cursor-pointer {
