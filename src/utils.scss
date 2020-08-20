@@ -10,20 +10,16 @@ $px-unit-ratio: 1;
   box-sizing: border-box;
 }
 
-.hidden {
-  display: none;
-}
-
 .block {
   display: block;
 }
 
-.inline {
-  display: inline;
-}
-
 .inline-block {
   display: inline-block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -32,6 +28,14 @@ $px-unit-ratio: 1;
 
 .inline-flex {
   display: inline-flex;
+}
+
+.table {
+  display: table;
+}
+
+.flow-root {
+  display: flow-root;
 }
 
 .grid {
@@ -46,12 +50,24 @@ $px-unit-ratio: 1;
   display: contents;
 }
 
-.object-cover {
-  object-fit: cover;
+.hidden {
+  display: none;
 }
 
 .object-contain {
   object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-none {
+  object-fit: none;
+}
+
+.object-scale-down {
+  object-fit: scale-down;
 }
 
 .object-top {
@@ -78,16 +94,20 @@ $px-unit-ratio: 1;
   overflow: scroll;
 }
 
-.relative {
-  position: relative;
+.scrolling-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .absolute {
   position: absolute;
 }
 
-.fixed {
-  position: fixed;
+.relative {
+  position: relative;
 }
 
 .sticky {
@@ -101,14 +121,14 @@ $px-unit-ratio: 1;
   bottom: 0;
 }
 
-.inset-x-0 {
-  left: 0;
-  right: 0;
-}
-
 .inset-y-0 {
   top: 0;
   bottom: 0;
+}
+
+.inset-x-0 {
+  left: 0;
+  right: 0;
 }
 
 .top-0 {
@@ -135,7 +155,11 @@ $px-unit-ratio: 1;
   visibility: hidden;
 }
 
-@for $i from 0 through 5 {
+.z-0 {
+  z-index: 0;
+}
+
+@for $i from 1 through 5 {
   .z-#{$i} {
     z-index: #{$i};
   }
@@ -177,12 +201,28 @@ $px-unit-ratio: 1;
   align-items: flex-end;
 }
 
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
 .self-start {
   align-self: flex-start;
 }
 
+.self-center {
+  align-self: center;
+}
+
 .self-end {
   align-self: flex-end;
+}
+
+.self-stretch {
+  align-self: stretch;
 }
 
 .justify-center {
@@ -195,6 +235,10 @@ $px-unit-ratio: 1;
 
 .justify-around {
   justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .justify-start {
@@ -331,6 +375,10 @@ $px-unit-ratio: 1;
   width: 100vw;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .h-full {
   height: 100%;
 }
@@ -369,6 +417,22 @@ $px-unit-ratio: 1;
 
 .text-2xl {
   font-size: #{1.5*$text-ratio}#{$unit};
+}
+
+.text-3xl {
+  font-size: #{1.875*$text-ratio}#{$unit};
+}
+
+.text-4xl {
+  font-size: #{2.25*$text-ratio}#{$unit};
+}
+
+.text-5xl {
+  font-size: #{3*$text-ratio}#{$unit};
+}
+
+.text-6xl {
+  font-size: #{4*$text-ratio}#{$unit};
 }
 
 .italic {
@@ -471,8 +535,24 @@ $px-unit-ratio: 1;
   white-space: nowrap;
 }
 
+.whitespace-pre {
+  white-space: pre;
+}
+
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+
 .whitespace-pre-wrap {
   white-space: pre-wrap;
+}
+
+.break-words {
+  overflow-wrap: break-word;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 .truncate {
@@ -488,6 +568,10 @@ $px-unit-ratio: 1;
   overflow: hidden;
   -webkit-line-clamp: var(--line-clamp);
   -webkit-box-orient: vertical;
+}
+
+.bg-clip-text {
+  background-clip: text;
 }
 
 .bg-transparent {
