@@ -1,121 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
-    <link rel="stylesheet" href="../dist/aqua.css" />
-    <link rel="stylesheet" href="./styles/demo.css" />
-    <link rel="stylesheet" href="./styles/form.css" />
-  </head>
-  <body>
-    <form
-      class="register-form"
-      action="javascript:void(0);"
-      onsubmit="alert(`Form Data:\n${Array.from(new FormData(this), field => field.map(encodeURIComponent).join('=')).join('&')}`)"
-    >
-      <div class="title-area">
-        Try aqua.css. It's beautiful!
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+  <link rel="stylesheet" href="../dist/aqua.css" />
+  <link rel="stylesheet" href="./styles/demo.css" />
+  <link rel="stylesheet" href="./styles/form.css" />
+</head>
+
+<body>
+  <form class="register-form" action="javascript:void(0);" onsubmit="alert(`Form Data:\n${Array.from(new FormData(this), field => field.map(encodeURIComponent).join('=')).join('&')}`)">
+    <div class="title-area">
+      Try aqua.css. It's beautiful!
+    </div>
+    <div class="login-switch-area">
+      Already have a account? <a href="#">Log in.</a>
+    </div>
+    <div class="form-control-area">
+      <div class="form-group">
+        <label for="first-name">First Name</label><input type="text" class="form-control" placeholder="John" name="first-name" pattern="^[a-zA-Z0-9_-]{1,16}$" required />
       </div>
-      <div class="login-switch-area">
-        Already have a account? <a href="#">Log in.</a>
+      <div class="form-group">
+        <label for="last-name">Last Name</label><input type="text" class="form-control" placeholder="Doe" name="last-name" pattern="^[a-zA-Z0-9_-]{1,16}$" required />
       </div>
-      <div class="form-control-area">
-        <div class="form-group">
-          <label for="first-name">First Name</label
-          ><input
-            type="text"
-            class="form-control"
-            placeholder="John"
-            name="first-name"
-            pattern="^[a-zA-Z0-9_-]{1,16}$"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="last-name">Last Name</label
-          ><input
-            type="text"
-            class="form-control"
-            placeholder="Doe"
-            name="last-name"
-            pattern="^[a-zA-Z0-9_-]{1,16}$"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone</label
-          ><input
-            type="tel"
-            class="form-control"
-            placeholder="13063509527"
-            name="phone"
-            pattern="^\+?(\d.*){3,}$"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label
-          ><input
-            type="email"
-            class="form-control"
-            placeholder="2582347430@qq.com"
-            name="email"
-            pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<
-      />()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label
-          ><input
-            type="password"
-            class="form-control"
-            placeholder=" "
-            name="password"
-            pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="confirm">Confirm Password</label
-          ><input
-            type="password"
-            class="form-control"
-            placeholder=" "
-            required
-          />
-        </div>
+      <div class="form-group">
+        <label for="phone">Phone</label><input type="tel" class="form-control" placeholder="13063509527" name="phone" pattern="^\+?(\d.*){3,}$" required />
       </div>
-      <div class="form-check-area">
-        <div class="form-check">
-          <input
-            type="checkbox"
-            id="receive-email"
-            class="form-check-input bounce"
-            name="receive-email"
-          />
-          <label for="receive-email" class="form-check-label"
-            >Yes, I want to receive alphardex's emails</label
-          >
-        </div>
-        <div class="form-check">
-          <input
-            type="checkbox"
-            id="agree-terms"
-            class="form-check-input bounce"
-            name="agree-terms"
-            required
-          />
-          <label for="agree-terms" class="form-check-label"
-            >I agree to the <a href="#">Terms, Privacy Policy</a> and
-            <a href="#">Fees</a></label
-          >
-        </div>
+      <div class="form-group">
+        <label for="email">Email</label><input type="email" class="form-control" placeholder="2582347430@qq.com" name="email" pattern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<
+      />()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' required />
       </div>
-      <div class="form-submit-area">
-        <button type="submit" class="btn btn-primary">Sign Up</button>
+      <div class="form-group">
+        <label for="password">Password</label><input type="password" class="form-control" placeholder=" " name="password" pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}" required />
       </div>
-    </form>
-  </body>
+      <div class="form-group">
+        <label for="confirm">Confirm Password</label><input type="password" class="form-control" placeholder=" " required />
+      </div>
+    </div>
+    <div class="form-check-area">
+      <div class="form-check">
+        <input type="checkbox" id="receive-email" class="form-check-input bounce" name="receive-email" />
+        <label for="receive-email" class="form-check-label">Yes, I want to receive alphardex's emails</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="agree-terms" class="form-check-input bounce" name="agree-terms" required />
+        <label for="agree-terms" class="form-check-label">I agree to the <a href="#">Terms, Privacy Policy</a> and
+          <a href="#">Fees</a></label>
+      </div>
+    </div>
+    <div class="form-submit-area">
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </div>
+  </form>
+</body>
+
 </html>

@@ -1,0 +1,28 @@
+.avatar {
+  --avatar-width: 2.5rem;
+  --avatar-bg: transparent;
+  --avatar-border: none;
+  --avatar-radius: 50%;
+
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  vertical-align: middle;
+  width: var(--avatar-width);
+  height: var(--avatar-width);
+  background: var(--avatar-bg);
+  border: var(--avatar-border);
+  border-radius: var(--avatar-radius);
+
+  @each $type in $types {
+    @include avatar-color-with-state($type);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+}

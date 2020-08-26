@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rate</title>
-    <link rel="stylesheet" href="../dist/aqua.css" />
-    <link rel="stylesheet" href="./styles/demo.css" />
-  </head>
-  <body>
-    <form
-      class="form-check-inline"
-      oninput="rate.value=parseInt(Array.from(document.querySelectorAll(`input[name='rating']`)).filter(e=>e.checked)[0].value)"
-    >
-      <div class="rate">
-        <input type="radio" name="rating" id="5" value="5" />
-        <label for="5"></label>
-        <input type="radio" name="rating" id="4" value="4" />
-        <label for="4"></label>
-        <input type="radio" name="rating" id="3" value="3" />
-        <label for="3"></label>
-        <input type="radio" name="rating" id="2" value="2" />
-        <label for="2"></label>
-        <input type="radio" name="rating" id="1" value="1" />
-        <label for="1"></label>
-      </div>
-      <output name="rate"></output>
-    </form>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rate</title>
+  <link rel="stylesheet" href="../dist/aqua.css" />
+  <link rel="stylesheet" href="./styles/demo.css" />
+</head>
+
+<body>
+  <form class="form-check-inline leading-none" oninput="rate.value=parseInt(Array.from(document.querySelectorAll(`input[name='rating']`)).filter(e=>e.checked)[0].value)">
+    <div class="rate">
+      <input type="radio" name="rating" id="5" value="5" />
+      <label for="5"></label>
+      <input type="radio" name="rating" id="4" value="4" />
+      <label for="4"></label>
+      <input type="radio" name="rating" id="3" value="3" />
+      <label for="3"></label>
+      <input type="radio" name="rating" id="2" value="2" />
+      <label for="2"></label>
+      <input type="radio" name="rating" id="1" value="1" />
+      <label for="1"></label>
+    </div>
+    <output name="rate"></output>
+  </form>
+</body>
+
 </html>

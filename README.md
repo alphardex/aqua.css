@@ -1,6 +1,6 @@
 <h1 align="center">aqua.css</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.5.2-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.5.3-blue.svg?cacheSeconds=2592000" />
   <a href="https://aquacss.netlify.com/">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
@@ -28,11 +28,7 @@
 在页面的`<head>`标签里添加以下行即可
 
 ```html
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.5.2/dist/aqua.min.css"
-/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.5.3/dist/aqua.min.css" />
 ```
 
 ### 通过 npm 安装
@@ -51,7 +47,7 @@ aqua.css 是一个纯 CSS 框架，没有任何 JS
 
 诸如 React、Vue 之类框架一概不需掌握，参照组件 demo 复制粘贴就能跑出效果来
 
-并且该框架提供了许多极其实用的工具类，可以直接用在HTML上，这样既省去了给CSS命名的功夫，又防止了CSS文件的膨胀
+并且该框架提供了许多极其实用的工具类，可以直接用在 HTML 上，这样既省去了给 CSS 命名的功夫，又防止了 CSS 文件的膨胀
 
 ### 易定制
 

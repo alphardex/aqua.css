@@ -35,6 +35,13 @@
   }
 }
 
+@mixin avatar-color-with-state($type) {
+  &-#{$type} {
+    color: white;
+    --avatar-bg: var(--#{$type}-color);
+  }
+}
+
 @mixin text-color-with-state($type) {
   .text-#{$type} {
     color: var(--#{$type}-color);
