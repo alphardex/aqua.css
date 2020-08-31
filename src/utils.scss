@@ -225,7 +225,7 @@ $px-unit-ratio: 1;
   flex-wrap: wrap-reverse;
 }
 
-.flex-wrap {
+.flex-no-wrap {
   flex-wrap: nowrap;
 }
 
@@ -1203,8 +1203,108 @@ $px-unit-ratio: 1;
   }
 }
 
+.indent-sm {
+  text-indent: 2rem;
+}
+
+.indent-md {
+  text-indent: 3rem;
+}
+
+.indent-lg {
+  text-indent: 4rem;
+}
+
+.writing-mode-horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.writing-mode-vertical {
+  writing-mode: vertical-lr;
+}
+
+.writing-mode-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
 .grayscale {
   filter: grayscale(1);
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.sepia {
+  filter: sepia(1);
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(20px);
+}
+
+.blend-normal {
+  mix-blend-mode: normal;
+}
+
+.blend-multiply {
+  mix-blend-mode: multiply;
+}
+
+.blend-screen {
+  mix-blend-mode: screen;
+}
+
+.blend-overlay {
+  mix-blend-mode: overlay;
+}
+
+.blend-darken {
+  mix-blend-mode: darken;
+}
+
+.blend-lighten {
+  mix-blend-mode: lighten;
+}
+
+.blend-color-dodge {
+  mix-blend-mode: color-dodge;
+}
+
+.blend-color-burn {
+  mix-blend-mode: color-burn;
+}
+
+.blend-hard-light {
+  mix-blend-mode: hard-light;
+}
+
+.blend-soft-light {
+  mix-blend-mode: soft-light;
+}
+
+.blend-difference {
+  mix-blend-mode: difference;
+}
+
+.blend-exclusion {
+  mix-blend-mode: exclusion;
+}
+
+.blend-hue {
+  mix-blend-mode: hue;
+}
+
+.blend-saturation {
+  mix-blend-mode: saturation;
+}
+
+.blend-color {
+  mix-blend-mode: color;
+}
+
+.blend-luminosity {
+  mix-blend-mode: luminosity;
 }
 
 .tap-highlight-none {
