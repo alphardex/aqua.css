@@ -39,12 +39,12 @@
   --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
+$device-type: "pc";
 $types: "primary", "secondary", "success", "info", "warning", "danger";
 $z-total: 5;
 $order-total: 12;
 $spacing-total: 40;
 $sizing-total: 100;
-$device-type: "weapp";
 $unit-ratio: 0;
 $unit: "";
 @if $device-type == "pc" {
