@@ -1,8 +1,8 @@
 .form-control-range {
-  --range-height: 2px;
+  --range-height: #{unit(0.5)};
   --range-bar-bg: var(--secondary-color-lighter);
   --range-bar-radius: 30px;
-  --range-thumb-width: 20px;
+  --range-thumb-width: #{unit(5)};
   --range-thumb-bg: white;
   --range-thumb-border-color: var(--primary-color);
 

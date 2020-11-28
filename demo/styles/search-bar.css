@@ -1,11 +1,11 @@
 .search-bar .form-control {
-  --input-color: var(--secondary-color-lighter);
+  --input-bg: var(--secondary-color-lighter);
   border-color: transparent;
   border-radius: 15px;
 }
 
 .search-bar .btn {
-  --btn-color: var(--secondary-color-lighter);
+  --btn-bg: var(--secondary-color-lighter);
   --search-color: var(--secondary-color-darker);
   display: flex;
   justify-content: center;

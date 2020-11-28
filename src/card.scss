@@ -1,10 +1,11 @@
 .card {
-  --card-padding: 30px;
+  --card-padding: #{unit(3)};
   --card-bg: white;
   --card-radius: 15px;
 
+  position: relative;
+  box-sizing: border-box;
   padding: var(--card-padding);
   background: var(--card-bg);
   border-radius: var(--card-radius);
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
 }

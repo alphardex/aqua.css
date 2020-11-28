@@ -13,8 +13,8 @@
 
   &::before {
     content: attr(data-tooltip);
-    padding: 10px;
-    font-size: 14px;
+    padding: unit(2.5);
+    font-size: unit(3.5);
     line-height: 1.2;
     background: var(--tooltip-color);
     border-radius: 4px;

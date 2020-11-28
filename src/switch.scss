@@ -1,9 +1,9 @@
 .form-switch {
-  --switch-width: 41px;
-  --switch-height: 21px;
+  --switch-width: #{unit(10.25)};
+  --switch-height: #{unit(5.25)};
   --switch-bg: white;
   --switch-radius: 12px;
-  --switch-ball-width: 15px;
+  --switch-ball-width: #{unit(3.75)};
   --switch-ball-bg: var(--secondary-color);
   --switch-checked-ball-bg: white;
   --switch-border-color: var(--secondary-color);
@@ -24,8 +24,8 @@
   &::before {
     position: absolute;
     content: "";
-    top: 2px;
-    left: 2px;
+    top: unit(0.5);
+    left: unit(0.5);
     width: var(--switch-ball-width);
     height: var(--switch-ball-width);
     background: var(--switch-ball-bg);
@@ -34,7 +34,7 @@
   }
 
   & ~ .form-check-label {
-    margin-left: 10px;
+    margin-left: unit(2.5);
     cursor: pointer;
     transition: 0.3s;
   }
@@ -49,7 +49,7 @@
 
     &::before {
       --switch-ball-bg: var(--switch-checked-ball-bg);
-      transform: translateX(20px);
+      transform: translateX(unit(5));
     }
   }
 

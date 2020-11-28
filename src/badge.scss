@@ -10,10 +10,10 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    min-width: 18px;
-    height: 18px;
-    padding: 2px 4px;
-    font-size: 12px;
+    min-width: unit(4.5);
+    height: unit(4.5);
+    padding: unit(0.5) unit(1);
+    font-size: unit(3);
     line-height: 1;
     background: var(--badge-color);
     border-radius: 9px;

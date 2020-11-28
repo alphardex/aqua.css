@@ -1,15 +1,16 @@
 .form-control {
-  --input-padding: 9px 12px;
+  --input-padding: #{unit(2)} #{unit(3)};
+  --input-color: black;
   --input-bg: white;
-  --input-placeholder-color: var(--secondary-color-darker);
-  --input-radius: 4px;
   --input-border-color: rgba(0, 0, 0, 0.3);
-  --input-focus-border-color: var(--primary-color);
-  --input-default-border-color: rgba(0, 0, 0, 0.3);
-  --input-invalid-border-color: var(--danger-color);
-  --input-valid-border-color: var(--primary-color);
+  --input-radius: 4px;
+  --input-placeholder-color: var(--secondary-color-darker);
 
+  box-sizing: border-box;
+  width: 100%;
   padding: var(--input-padding);
+  margin: 0;
+  color: var(--input-color);
   background: var(--input-bg);
   border: 1px solid var(--input-border-color);
   border-radius: var(--input-radius);
@@ -17,22 +18,6 @@
 
   &::placeholder {
     color: var(--input-placeholder-color);
-  }
-
-  &:invalid {
-    --input-border-color: var(--input-invalid-border-color);
-  }
-
-  &:valid {
-    --input-border-color: var(--input-valid-border-color);
-  }
-
-  &:placeholder-shown {
-    --input-border-color: var(--input-default-border-color);
-  }
-
-  &:focus {
-    --input-border-color: var(--input-focus-border-color);
   }
 }
 
@@ -51,7 +36,7 @@
     left: 0;
     bottom: -1px;
     width: 100%;
-    height: 2px;
+    height: unit(0.5);
     background: var(--input-valid-border-color);
     transform: scaleX(0);
     transform-origin: left;
@@ -64,14 +49,14 @@
 
   label {
     position: absolute;
-    top: 8px;
+    top: unit(2);
     left: 0;
     transition: 0.3s;
     transform-origin: left;
   }
 
   .form-control-material {
-    padding: 8px 0;
+    padding: unit(2) 0;
     background: transparent;
     border: none;
 

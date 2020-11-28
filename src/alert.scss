@@ -1,5 +1,5 @@
 .alert {
-  --alert-padding: 14px 28px;
+  --alert-padding: #{unit(3.5)} #{unit(7)};
   --alert-radius: 4px;
   --close-icon-color: currentColor;
 

@@ -20,26 +20,26 @@
 
     &__content {
       position: absolute;
-      left: -24px;
-      width: 100px;
+      left: unit(-6);
+      width: unit(25);
       text-align: center;
     }
 
     &__title {
-      margin-top: 8px;
-      font-size: 14px;
+      margin-top: unit(2);
+      font-size: unit(3.5);
       font-weight: bold;
       transition: 0.3s;
     }
 
     &__desc {
-      margin-top: 4px;
-      font-size: 12px;
+      margin-top: unit(1);
+      font-size: unit(3);
       transition: 0.3s;
     }
 
     &:last-child {
-      max-width: 50px;
+      max-width: unit(12.5);
 
       .step-item__node::after {
         content: none;
@@ -55,10 +55,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 32px;
-        height: 32px;
-        margin: 0 8px;
-        font-size: 12px;
+        width: unit(8);
+        height: unit(8);
+        margin: 0 unit(2);
+        font-size: unit(3);
         background: var(--step-circle-bg);
         border: 1px solid var(--step-circle-color);
         border-radius: 50%;

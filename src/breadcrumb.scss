@@ -20,7 +20,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 1px;
+        height: unit(0.25);
         background: currentColor;
         transform: scaleX(0);
         transition: 0.3s;
@@ -32,11 +32,11 @@
     }
 
     &:not(:first-child) {
-      padding-left: 9px;
+      padding-left: unit(2.25);
 
       &::before {
         content: var(--breadcrumb-divider);
-        padding-right: 9px;
+        padding-right: unit(2.25);
         color: var(--breadcrumb-divider-color);
       }
     }

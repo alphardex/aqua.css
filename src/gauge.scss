@@ -1,5 +1,5 @@
 .gauge {
-  --gauge-width: 90px;
+  --gauge-width: #{unit(22.5)};
   --gauge-value: 500;
   --gauge-max-value: 1000;
   --gauge-percentage: calc(var(--gauge-value) / var(--gauge-max-value) * 100%);

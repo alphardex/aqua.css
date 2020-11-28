@@ -1,5 +1,5 @@
 .form-check-input[type="radio"] {
-  --radio-width: 18px;
+  --radio-width: #{unit(4.5)};
   --radio-bg: white;
   --radio-radius: 50%;
   --radio-border-color: var(--secondary-color);
@@ -17,7 +17,7 @@
   transition: 0.3s;
 
   & ~ .form-check-label {
-    margin-left: 10px;
+    margin-left: unit(2.5);
     cursor: pointer;
     transition: 0.3s;
   }

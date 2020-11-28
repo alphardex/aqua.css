@@ -2,7 +2,7 @@
   --table-row-border-color: var(--secondary-color);
   --table-thead-color: var(--secondary-color-darkest);
   --table-thead-bg: var(--secondary-color-lightest);
-  --table-td-padding: 12px;
+  --table-td-padding: #{unit(3)};
   --table-td-align: left;
 
   border-collapse: collapse;

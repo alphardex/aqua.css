@@ -1,11 +1,15 @@
 .close-icon {
+  --close-icon-width: #{unit(4)};
+  --close-icon-bar-width: calc(var(--close-icon-width) / 12);
+  --close-icon-color: rgba(0, 0, 0, 0.5);
+  --close-icon-cross-color: white;
+
   position: relative;
-  display: inline-flex;
-  width: 18px;
-  height: 18px;
-  background: var(--close-icon-color, var(--secondary-color-darker));
+  display: block;
+  width: var(--close-icon-width);
+  height: var(--close-icon-width);
+  background: var(--close-icon-color);
   border-radius: 50%;
-  cursor: pointer;
 
   &::before,
   &::after {
@@ -13,26 +17,19 @@
     content: "";
     top: 50%;
     left: 50%;
-    background: var(--close-icon-cross-color, white);
+    background: var(--close-icon-cross-color);
+    border-radius: 15px;
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
   &::before {
     width: 50%;
-    height: 2px;
+    height: var(--close-icon-bar-width);
   }
 
   &::after {
-    width: 2px;
+    width: var(--close-icon-bar-width);
     height: 50%;
-  }
-
-  &:hover {
-    filter: brightness(0.9);
-  }
-
-  &:active {
-    filter: brightness(0.8);
   }
 }
 
@@ -40,8 +37,8 @@
   position: relative;
   display: inline-flex;
   box-sizing: border-box;
-  width: 22px;
-  height: 22px;
+  width: unit(5.5);
+  height: unit(5.5);
   cursor: pointer;
   color: var(--chevron-color);
 
@@ -49,8 +46,8 @@
     position: absolute;
     content: "";
     box-sizing: border-box;
-    width: 10px;
-    height: 10px;
+    width: unit(2.5);
+    height: unit(2.5);
     border-color: currentColor;
     transform: rotate(var(--chevron-rotate-deg));
   }
@@ -59,10 +56,10 @@
     --chevron-rotate-deg: -45deg;
 
     &::before {
-      left: 4px;
-      bottom: 2px;
-      border-top: 2px solid;
-      border-right: 2px solid;
+      left: unit(1);
+      bottom: unit(0.5);
+      border-top: unit(0.5) solid;
+      border-right: unit(0.5) solid;
     }
   }
 
@@ -70,10 +67,10 @@
     --chevron-rotate-deg: -45deg;
 
     &::before {
-      top: 4px;
-      right: 6px;
-      border-bottom: 2px solid;
-      border-right: 2px solid;
+      top: unit(1);
+      right: unit(1.5);
+      border-bottom: unit(0.5) solid;
+      border-right: unit(0.5) solid;
     }
   }
 
@@ -81,51 +78,51 @@
     --chevron-rotate-deg: 45deg;
 
     &::before {
-      left: 4px;
-      top: 2px;
-      border-bottom: 2px solid;
-      border-right: 2px solid;
+      left: unit(1);
+      top: unit(0.5);
+      border-bottom: unit(0.5) solid;
+      border-right: unit(0.5) solid;
     }
   }
 
   &.left {
-    --chevron-rotate-deg: 45deg;
+    --chevron-rotate-deg: 135deg;
 
     &::before {
-      left: 6px;
-      top: 4px;
-      border-bottom: 2px solid;
-      border-left: 2px solid;
+      left: unit(1.5);
+      top: unit(1);
+      border-bottom: unit(0.5) solid;
+      border-right: unit(0.5) solid;
     }
   }
 
   &.circle {
-    border: 2px solid currentColor;
+    border: unit(0.5) solid currentColor;
     border-radius: 50%;
 
     &::before {
-      width: 6px;
-      height: 6px;
+      width: unit(1.5);
+      height: unit(1.5);
     }
 
     &.down::before {
-      left: 6px;
-      top: 5px;
+      left: unit(1.5);
+      top: unit(1.25);
     }
 
     &.right::before {
-      left: 5px;
-      top: 6px;
+      left: unit(1.25);
+      top: unit(1.5);
     }
 
     &.up::before {
-      left: 6px;
-      bottom: 5px;
+      left: unit(1.5);
+      bottom: unit(1.25);
     }
 
     &.left::before {
-      left: 7px;
-      top: 6px;
+      left: unit(1.75);
+      top: unit(1.5);
     }
   }
 }
@@ -134,21 +131,21 @@
   position: relative;
   display: inline-flex;
   box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  margin: -4px 0 0 -4px;
+  width: unit(4);
+  height: unit(4);
+  margin: unit(-1) 0 0 unit(-1);
   color: var(--search-color);
-  border: 2px solid currentColor;
+  border: unit(0.5) solid currentColor;
   border-radius: 50%;
 
   &::before {
     position: absolute;
     content: "";
-    top: 10px;
-    left: 12px;
+    top: unit(2.5);
+    left: unit(3);
     box-sizing: border-box;
-    width: 2px;
-    height: 8px;
+    width: unit(0.5);
+    height: unit(2);
     background: currentColor;
     border-radius: 3px;
     transform: rotate(-45deg);
@@ -159,8 +156,8 @@
   position: relative;
   display: inline-flex;
   box-sizing: border-box;
-  width: 16px;
-  height: 16px;
+  width: unit(4);
+  height: unit(4);
   color: var(--plus-color);
   cursor: pointer;
 
@@ -175,39 +172,40 @@
   }
 
   &::before {
-    top: 7px;
-    width: 16px;
-    height: 2px;
+    top: unit(1.75);
+    width: unit(4);
+    height: unit(0.5);
   }
 
   &::after {
-    left: 7px;
-    width: 2px;
-    height: 16px;
+    left: unit(1.75);
+    width: unit(0.5);
+    height: unit(4);
   }
 
   &.circle {
-    width: 22px;
-    height: 22px;
-    border: 2px solid currentColor;
+    width: unit(5.5);
+    height: unit(5.5);
+    border: unit(0.5) solid currentColor;
     border-radius: 50%;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       border-radius: 5px;
     }
 
     &::before {
-      top: 8px;
-      left: 4px;
-      width: 10px;
-      height: 2px;
+      top: unit(2);
+      left: unit(1);
+      width: unit(2.5);
+      height: unit(0.5);
     }
 
     &::after {
-      top: 4px;
-      left: 8px;
-      width: 2px;
-      height: 10px;
+      top: unit(1);
+      left: unit(2);
+      width: unit(0.5);
+      height: unit(2.5);
     }
   }
 }
@@ -216,34 +214,34 @@
   position: relative;
   display: inline-flex;
   box-sizing: border-box;
-  width: 16px;
-  height: 16px;
+  width: unit(4);
+  height: unit(4);
   color: var(--minus-color);
   cursor: pointer;
 
   &::before {
     position: absolute;
     content: "";
-    top: 7px;
+    top: unit(1.75);
     display: inline-flex;
     box-sizing: border-box;
-    width: 16px;
-    height: 2px;
+    width: unit(4);
+    height: unit(0.5);
     background: currentColor;
     border-radius: 10px;
   }
 
   &.circle {
-    width: 22px;
-    height: 22px;
-    border: 2px solid currentColor;
+    width: unit(5.5);
+    height: unit(5.5);
+    border: unit(0.5) solid currentColor;
     border-radius: 50%;
 
     &::before {
-      top: 8px;
-      left: 4px;
-      width: 10px;
-      height: 2px;
+      top: unit(2);
+      left: unit(1);
+      width: unit(2.5);
+      height: unit(0.5);
       border-radius: 5px;
     }
   }

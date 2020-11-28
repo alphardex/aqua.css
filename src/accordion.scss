@@ -13,8 +13,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px;
-      font-size: 21px;
+      padding: unit(4.5);
+      font-size: unit(5.25);
       color: currentColor;
       text-decoration: none;
       border-bottom: 1px solid var(--accordion-line-color);
@@ -26,8 +26,8 @@
         transform: scale(1.5);
 
         &::before {
-          left: 7px !important;
-          top: 6px !important;
+          left: unit(1.75) !important;
+          top: unit(1.5) !important;
         }
       }
 
@@ -44,15 +44,15 @@
       }
 
       .accordion-content {
-        padding: 18px;
-        max-height: 180px;
+        padding: unit(4.5);
+        max-height: unit(45);
         opacity: 1;
       }
     }
   }
 
   &-content {
-    padding: 0 18px;
+    padding: 0 unit(4.5);
     max-height: 0;
     overflow: hidden;
     opacity: 0;

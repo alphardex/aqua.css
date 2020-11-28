@@ -40,3 +40,28 @@
 }
 
 $types: "primary", "secondary", "success", "info", "warning", "danger";
+$z-total: 5;
+$order-total: 12;
+$spacing-total: 40;
+$sizing-total: 100;
+$device-type: "weapp";
+$unit-ratio: 0;
+$unit: "";
+@if $device-type == "pc" {
+  $unit-ratio: 0.25;
+  $unit: rem;
+}
+@if $device-type == "sp" {
+  $unit-ratio: 1;
+  $unit: vw;
+}
+@if $device-type == "weapp" {
+  $unit-ratio: 9;
+  $unit: rpx;
+}
+@function unit($value) {
+  @return #{$value * $unit-ratio}#{$unit};
+}
+@function text-unit($value) {
+  @return #{$value * $unit-ratio * 4}#{$unit};
+}

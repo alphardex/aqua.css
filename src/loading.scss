@@ -1,8 +1,8 @@
 .loader {
   --loading-color: var(--info-color);
 
-  width: 36px;
-  height: 36px;
+  width: unit(9);
+  height: unit(9);
   display: flex;
   flex-wrap: wrap;
 

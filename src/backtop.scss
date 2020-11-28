@@ -1,7 +1,7 @@
 .back-top {
-  --backtop-visibility-height: 200px;
-  --backtop-right: 40px;
-  --backtop-bottom: 80px;
+  --backtop-visibility-height: #{unit(50)};
+  --backtop-right: #{unit(10)};
+  --backtop-bottom: #{unit(20)};
   --backtop-active-color: var(--primary-color);
   --backtop-icon-color: var(--secondary-color-darker);
 
@@ -20,8 +20,8 @@
     transition: 0.3s;
 
     &::before {
-      left: 8px !important;
-      top: 9px !important;
+      left: unit(2) !important;
+      top: unit(2.25) !important;
     }
 
     &:hover {

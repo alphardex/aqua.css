@@ -1,5 +1,5 @@
 .avatar {
-  --avatar-width: 2.5rem;
+  --avatar-width: #{unit(10)};
   --avatar-bg: transparent;
   --avatar-border: none;
   --avatar-radius: 50%;

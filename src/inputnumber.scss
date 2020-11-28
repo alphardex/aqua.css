@@ -1,7 +1,7 @@
 .input-spinner {
   --spinner-default-color: var(--secondary-color-darkest);
   --spinner-active-color: var(--primary-color);
-  --spinner-max-width: 64px;
+  --spinner-max-width: #{unit(16)};
 
   .btn {
     --btn-radius: 10px;
@@ -36,7 +36,7 @@
     --plus-color: var(--spinner-default-color);
 
     border-left: none;
-    padding-left: 10px;
+    padding-left: unit(2.5);
 
     &:hover {
       --plus-color: var(--spinner-active-color);
@@ -46,7 +46,7 @@
   .minus {
     --minus-color: var(--spinner-default-color);
 
-    padding-right: 10px;
+    padding-right: unit(2.5);
 
     &:hover {
       --minus-color: var(--spinner-active-color);

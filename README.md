@@ -1,6 +1,6 @@
 <h1 align="center">aqua.css</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.5.6-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.6.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://aquacss.netlify.com/">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
@@ -28,7 +28,11 @@
 在页面的`<head>`标签里添加以下行即可
 
 ```html
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.5.5/dist/aqua.min.css" />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.css@1.6.0/dist/aqua.min.css"
+/>
 ```
 
 ### 通过 npm 安装

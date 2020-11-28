@@ -1,7 +1,7 @@
 .tag {
-  --tag-height: 24px;
-  --tag-padding: 0 8px;
-  --tag-font-size: 12px;
+  --tag-height: #{unit(6)};
+  --tag-padding: 0 #{unit(2)};
+  --tag-font-size: #{unit(3)};
   --tag-radius: 4px;
   --close-icon-color: currentColor;
 
@@ -21,8 +21,6 @@
   }
 
   .close-icon {
-    width: var(--tag-font-size);
-    height: var(--tag-font-size);
-    margin-left: 4px;
+    margin-left: unit(1);
   }
 }

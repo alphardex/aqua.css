@@ -9,7 +9,7 @@
   line-height: 1;
 
   .page-item {
-    padding: 0 12px;
+    padding: 0 unit(3);
     cursor: pointer;
 
     &:not(.disabled):hover,

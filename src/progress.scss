@@ -1,6 +1,6 @@
 .progress-bar {
-  --progress-height: 6px;
-  --progress-radius: 30px;
+  --progress-height: #{unit(1.5)};
+  --progress-radius: #{unit(7.5)};
   --progress-bar-color: var(--secondary-color-lighter);
   --progress-color: var(--primary-color);
 

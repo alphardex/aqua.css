@@ -22,13 +22,13 @@
 
   label {
     position: relative;
-    width: 18px;
-    height: 18px;
+    width: unit(4.5);
+    height: unit(4.5);
     cursor: pointer;
     transition: 0.3s;
 
     &:not(:first-child) {
-      margin-right: 6px;
+      margin-right: unit(1.5);
     }
 
     &:hover::after {

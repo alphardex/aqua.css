@@ -7,19 +7,19 @@
 
   position: relative;
   display: grid;
-  gap: 40px;
+  gap: unit(10);
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-size: 14px;
+  font-size: unit(3.5);
   line-height: 1;
   color: var(--timeline-color);
 
   &-line {
     position: absolute;
     top: 0;
-    left: 6px;
-    width: 4px;
+    left: unit(1.5);
+    width: unit(1);
     height: 100%;
     background: var(--timeline-line-color);
   }
@@ -29,22 +29,22 @@
       display: grid;
       grid-template-columns: repeat(var(--timeline-timestamp-col), auto) 1fr;
       align-items: center;
-      gap: 6px;
+      gap: unit(1.5);
 
       .dot {
         position: relative;
-        width: 16px;
-        height: 16px;
+        width: unit(4);
+        height: unit(4);
         background: var(--timeline-dot-bg);
         border-radius: 50%;
 
         &::before {
           position: absolute;
           content: "";
-          top: -4px;
-          left: -4px;
-          right: -4px;
-          bottom: -4px;
+          top: unit(-1);
+          left: unit(-1);
+          right: unit(-1);
+          bottom: unit(-1);
           background: var(--timeline-dot-bg);
         }
 
@@ -53,8 +53,8 @@
           content: "";
           top: 0;
           left: 0;
-          width: 8px;
-          height: 8px;
+          width: unit(2);
+          height: unit(2);
           border: 4px solid var(--timeline-dot-color);
           border-radius: inherit;
         }
@@ -68,7 +68,7 @@
     }
 
     &__content {
-      margin: 18px 0 0 63px;
+      margin: unit(4.5) 0 0 unit(15.75);
       line-height: 1.5;
     }
   }

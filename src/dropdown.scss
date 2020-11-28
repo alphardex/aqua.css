@@ -15,7 +15,7 @@
     &::after {
       display: inline-flex;
       vertical-align: middle;
-      margin-left: 4px;
+      margin-left: unit(1);
       content: "";
       width: 0;
       height: 0;
@@ -32,7 +32,7 @@
     top: calc(100% + 4px);
     left: 0;
     margin: 0;
-    padding: 4px 0;
+    padding: unit(1) 0;
     list-style-type: none;
     transform: perspective(400px) rotateX(-90deg);
     transform-origin: top;
@@ -42,7 +42,7 @@
 
     .dropdown-item a {
       display: block;
-      padding: 6px 12px;
+      padding: unit(1.5) unit(3);
       text-align: center;
       text-decoration: none;
       color: var(--dropdown-color);
