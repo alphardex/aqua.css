@@ -1787,19 +1787,14 @@ input[type="radio"] {
 }
 
 .rate {
-  --rate-star-color: var(--warning-color);
   display: flex;
   flex-direction: row-reverse;
-  color: var(--rate-star-color);
 }
 
 .rate input {
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 .rate input:checked ~ label::after {
@@ -1828,7 +1823,7 @@ input[type="radio"] {
 
 .rate label::before {
   position: absolute;
-  content: url("data:image/svg+xml,%3Csvg t='1584099080940' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='9773' width='18px' height='18px' fill='currentColor' %3E%3Cpath d='M686.153143 573.732571l174.884571-169.691429-241.152-35.401143-108.032-218.258286-108.032 218.258286-241.152 35.401143 174.884571 169.691429-41.691429 240.566857 215.990857-113.737143 215.405714 113.737143zM987.282286 369.737143q0 12.580571-14.848 27.428571l-207.433143 202.313143 49.152 285.696q0.585143 4.022857 0.585143 11.410286 0 28.598857-23.405714 28.598857-10.825143 0-22.820571-6.875429l-256.585143-134.875429-256.585143 134.875429q-12.580571 6.875429-22.820571 6.875429-11.995429 0-17.993143-8.265143t-5.997714-20.260571q0-3.437714 1.170286-11.410286l49.152-285.696-208.018286-202.313143q-14.262857-15.433143-14.262857-27.428571 0-21.138286 32.036571-26.258286l286.866286-41.691429 128.585143-260.022857q10.825143-23.405714 28.013714-23.405714t28.013714 23.405714l128.585143 260.022857 286.866286 41.691429q32.036571 5.12 32.036571 26.258286z' p-id='9774' %3E%3C/path%3E%3C/svg %3E");
+  content: url("data:image/svg+xml,%3Csvg t='1584099080940' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='9773' width='18px' height='18px' fill='%23A9B1BC' %3E%3Cpath d='M686.153143 573.732571l174.884571-169.691429-241.152-35.401143-108.032-218.258286-108.032 218.258286-241.152 35.401143 174.884571 169.691429-41.691429 240.566857 215.990857-113.737143 215.405714 113.737143zM987.282286 369.737143q0 12.580571-14.848 27.428571l-207.433143 202.313143 49.152 285.696q0.585143 4.022857 0.585143 11.410286 0 28.598857-23.405714 28.598857-10.825143 0-22.820571-6.875429l-256.585143-134.875429-256.585143 134.875429q-12.580571 6.875429-22.820571 6.875429-11.995429 0-17.993143-8.265143t-5.997714-20.260571q0-3.437714 1.170286-11.410286l49.152-285.696-208.018286-202.313143q-14.262857-15.433143-14.262857-27.428571 0-21.138286 32.036571-26.258286l286.866286-41.691429 128.585143-260.022857q10.825143-23.405714 28.013714-23.405714t28.013714 23.405714l128.585143 260.022857 286.866286 41.691429q32.036571 5.12 32.036571 26.258286z' p-id='9774' %3E%3C/path%3E%3C/svg %3E");
   transition: 0.3s;
 }
 
@@ -2481,6 +2476,34 @@ input[type="radio"] {
   display: none;
 }
 
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-none {
+  float: none;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.clear-none {
+  clear: none;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2489,6 +2512,11 @@ input[type="radio"] {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .object-none {
@@ -2511,6 +2539,16 @@ input[type="radio"] {
      object-position: right;
 }
 
+.object-right-bottom {
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
+.object-right-top {
+  -o-object-position: right top;
+     object-position: right top;
+}
+
 .object-bottom {
   -o-object-position: bottom;
      object-position: bottom;
@@ -2521,16 +2559,50 @@ input[type="radio"] {
      object-position: left;
 }
 
+.object-left-bottom {
+  -o-object-position: left bottom;
+     object-position: left bottom;
+}
+
+.object-left-top {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
 .overflow-auto {
   overflow: auto;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .overflow-visible {
   overflow: visible;
 }
 
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .overflow-scroll {
@@ -2757,6 +2829,10 @@ input[type="radio"] {
 
 .justify-end {
   justify-content: flex-end;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .flex-1 {
@@ -9027,8 +9103,8 @@ input[type="radio"] {
 }
 
 .bg-clip-text {
+  background-clip: text;
   -webkit-background-clip: text;
-          background-clip: text;
 }
 
 .bg-transparent {
