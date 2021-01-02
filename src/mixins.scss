@@ -4,10 +4,6 @@
     --btn-bg: var(--#{$type}-color);
     --btn-border-color: var(--btn-bg);
 
-    &:active {
-      --btn-bg: var(--#{$type}-color-darker);
-    }
-
     &.disabled {
       --btn-bg: var(--#{$type}-color-lighter);
     }
