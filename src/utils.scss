@@ -227,6 +227,40 @@
   right: 0;
 }
 
+@for $i from 0 through $position-total {
+  .top-#{$i} {
+    top: unit($i) !important;
+  }
+
+  .right-#{$i} {
+    right: unit($i) !important;
+  }
+
+  .bottom-#{$i} {
+    bottom: unit($i) !important;
+  }
+
+  .left-#{$i} {
+    left: unit($i) !important;
+  }
+
+  .-top-#{$i} {
+    top: unit(-$i) !important;
+  }
+
+  .-right-#{$i} {
+    right: unit(-$i) !important;
+  }
+
+  .-bottom-#{$i} {
+    bottom: unit(-$i) !important;
+  }
+
+  .-left-#{$i} {
+    left: unit(-$i) !important;
+  }
+}
+
 .visible {
   visibility: visible;
 }
@@ -416,38 +450,6 @@
 }
 
 @for $i from 0 through $spacing-total {
-  .top-#{$i} {
-    top: unit($i) !important;
-  }
-
-  .right-#{$i} {
-    right: unit($i) !important;
-  }
-
-  .bottom-#{$i} {
-    bottom: unit($i) !important;
-  }
-
-  .left-#{$i} {
-    left: unit($i) !important;
-  }
-
-  .-top-#{$i} {
-    top: unit(-$i) !important;
-  }
-
-  .-right-#{$i} {
-    right: unit(-$i) !important;
-  }
-
-  .-bottom-#{$i} {
-    bottom: unit(-$i) !important;
-  }
-
-  .-left-#{$i} {
-    left: unit(-$i) !important;
-  }
-
   .p-#{$i} {
     padding: unit($i) !important;
   }
@@ -1584,4 +1586,26 @@
 
 .heartbeat {
   animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.mask-top {
+  mask: linear-gradient(0deg, black, transparent);
+}
+
+.mask-right {
+  mask: linear-gradient(90deg, black, transparent);
+}
+
+.mask-bottom {
+  mask: linear-gradient(180deg, black, transparent);
+}
+
+.mask-left {
+  mask: linear-gradient(270deg, black, transparent);
+}
+
+.text-grad {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
