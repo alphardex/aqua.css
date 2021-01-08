@@ -8,9 +8,8 @@
   --checkbox-disabled-bg: var(--secondary-color-lighter);
   --checkbox-disabled-checked-bg: var(--secondary-color-darker);
 
+  @include square(var(--checkbox-width));
   position: relative;
-  width: var(--checkbox-width);
-  height: var(--checkbox-width);
   background: var(--checkbox-checked-bg);
   border: none;
   border-radius: var(--checkbox-radius);
@@ -29,10 +28,8 @@
   }
 
   &::after {
-    position: absolute;
+    @include cover;
     content: "";
-    width: 100%;
-    height: 100%;
     background: var(--checkbox-bg);
     border-radius: inherit;
     box-shadow: inset 0 0 0 1px var(--checkbox-border-color);

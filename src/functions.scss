@@ -1,0 +1,6 @@
+@function unit($value) {
+  @return #{$value * $unit-ratio}#{$unit};
+}
+@function text-unit($value) {
+  @return #{$value * $unit-ratio * 4}#{$unit};
+}

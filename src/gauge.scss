@@ -8,28 +8,20 @@
   --gauge-circle-color-lighter: var(--primary-color-lighter);
   --gauge-color: black;
 
+  @include flex-center;
+  @include circle(var(--gauge-width));
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: var(--gauge-width);
-  height: var(--gauge-width);
   color: var(--gauge-color);
   background: conic-gradient(
     var(--gauge-circle-color) var(--gauge-percentage),
     var(--gauge-circle-color-lighter) 0
   );
-  border-radius: 50%;
   counter-reset: value var(--gauge-value);
 
   &::before {
-    position: absolute;
+    @include cover($top: auto, $left: auto, $width: 90%, $height: 90%);
+    @include flex-center;
     content: counter(value);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 90%;
     background: var(--gauge-bg);
     border-radius: inherit;
   }

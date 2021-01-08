@@ -4,10 +4,7 @@
   --dialog-bg: white;
   --dialog-radius: 15px;
 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @include hv-center($position: fixed);
   z-index: 1001;
   box-sizing: border-box;
   width: var(--dialog-width);
@@ -18,20 +15,15 @@
 
   .close-icon {
     --close-icon-width: #{unit(12)};
-    position: absolute;
-    left: 50%;
+
+    @include h-center;
     bottom: unit(-16);
-    transform: translateX(-50%);
   }
 }
 
 .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
+  @include cover($position: fixed);
   z-index: 1000;
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.75);
   transition: 0.6s;
 }

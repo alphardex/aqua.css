@@ -32,29 +32,19 @@
       gap: unit(1.5);
 
       .dot {
+        @include circle(unit(4));
         position: relative;
-        width: unit(4);
-        height: unit(4);
         background: var(--timeline-dot-bg);
-        border-radius: 50%;
 
         &::before {
-          position: absolute;
+          @include inset(unit(-1));
           content: "";
-          top: unit(-1);
-          left: unit(-1);
-          right: unit(-1);
-          bottom: unit(-1);
           background: var(--timeline-dot-bg);
         }
 
         &::after {
-          position: absolute;
+          @include cover($width: unit(2), $height: unit(2));
           content: "";
-          top: 0;
-          left: 0;
-          width: unit(2);
-          height: unit(2);
           border: 4px solid var(--timeline-dot-color);
           border-radius: inherit;
         }

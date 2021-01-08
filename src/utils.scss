@@ -611,6 +611,10 @@
   max-height: 100vh;
 }
 
+.min-w-0 {
+  min-width: 0;
+}
+
 .text-xs {
   font-size: text-unit(0.75);
 }
@@ -743,8 +747,26 @@
   color: white;
 }
 
+.text-black {
+  color: black;
+}
+
 .text-current {
   color: currentColor;
+}
+
+@each $type in $types {
+  @include text-color-with-state($type);
+  @include bg-color-with-state($type);
+  @include border-color-with-state($type);
+}
+
+.text-secondary-lightest {
+  color: var(--secondary-color-lightest);
+}
+
+.text-secondary-darkest {
+  color: var(--secondary-color-darkest);
 }
 
 .underline {
@@ -856,14 +878,17 @@
 }
 
 .bg-clip-border {
+  -webkit-background-clip: border-box;
   background-clip: border-box;
 }
 
 .bg-clip-padding {
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 
 .bg-clip-content {
+  -webkit-background-clip: content-box;
   background-clip: content-box;
 }
 
@@ -886,6 +911,22 @@
 
 .bg-black {
   background: black;
+}
+
+.bg-secondary-lightest {
+  background: var(--secondary-color-lightest);
+}
+
+.bg-secondary-darkest {
+  background: var(--secondary-color-darkest);
+}
+
+.bg-origin-padding {
+  background-origin: padding-box;
+}
+
+.bg-origin-content {
+  background-origin: content-box;
 }
 
 .rounded-sm {
@@ -1608,4 +1649,26 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.text-stroke {
+  position: relative;
+  color: transparent;
+
+  &::before,
+  &::after {
+    @include cover;
+    content: attr(data-stroke-text);
+    color: var(--stroke-inner-color, white);
+  }
+
+  &::before {
+    z-index: 0;
+    -webkit-text-stroke: var(--stroke-width, 5px)
+      var(--stroke-outer-color, black);
+  }
+
+  &::after {
+    z-index: 1;
+  }
 }

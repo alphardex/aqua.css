@@ -5,9 +5,7 @@
   --tag-radius: 4px;
   --close-icon-color: currentColor;
 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center($display: inline-flex);
   height: var(--tag-height);
   padding: var(--tag-padding);
   font-size: var(--tag-font-size);

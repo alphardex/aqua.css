@@ -39,7 +39,7 @@
   --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-$device-type: "weapp";
+$device-type: "pc";
 $types: "primary", "secondary", "success", "info", "warning", "danger";
 $position-total: 100;
 $z-total: 5;
@@ -59,10 +59,4 @@ $unit: "";
 @if $device-type == "weapp" {
   $unit-ratio: 9;
   $unit: rpx;
-}
-@function unit($value) {
-  @return #{$value * $unit-ratio}#{$unit};
-}
-@function text-unit($value) {
-  @return #{$value * $unit-ratio * 4}#{$unit};
 }

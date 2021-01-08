@@ -4,12 +4,10 @@
   --close-icon-color: rgba(0, 0, 0, 0.5);
   --close-icon-cross-color: white;
 
+  @include circle(var(--close-icon-width));
   position: relative;
   display: block;
-  width: var(--close-icon-width);
-  height: var(--close-icon-width);
   background: var(--close-icon-color);
-  border-radius: 50%;
 
   &::before,
   &::after {
@@ -34,20 +32,18 @@
 }
 
 .chevron-icon {
+  @include square(unit(5.5));
   position: relative;
   display: inline-flex;
   box-sizing: border-box;
-  width: unit(5.5);
-  height: unit(5.5);
   cursor: pointer;
   color: var(--chevron-color);
 
   &::before {
+    @include square(unit(2.5));
     position: absolute;
     content: "";
     box-sizing: border-box;
-    width: unit(2.5);
-    height: unit(2.5);
     border-color: currentColor;
     transform: rotate(var(--chevron-rotate-deg));
   }
@@ -128,11 +124,10 @@
 }
 
 .search-icon {
+  @include square(unit(4));
   position: relative;
   display: inline-flex;
   box-sizing: border-box;
-  width: unit(4);
-  height: unit(4);
   margin: unit(-1) 0 0 unit(-1);
   color: var(--search-color);
   border: unit(0.5) solid currentColor;
@@ -153,11 +148,10 @@
 }
 
 .plus-icon {
+  @include square(unit(4));
   position: relative;
   display: inline-flex;
   box-sizing: border-box;
-  width: unit(4);
-  height: unit(4);
   color: var(--plus-color);
   cursor: pointer;
 
@@ -211,11 +205,10 @@
 }
 
 .minus-icon {
+  @include square(unit(4));
   position: relative;
   display: inline-flex;
   box-sizing: border-box;
-  width: unit(4);
-  height: unit(4);
   color: var(--minus-color);
   cursor: pointer;
 

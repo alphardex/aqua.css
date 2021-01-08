@@ -51,17 +51,13 @@
       align-items: center;
 
       &::before {
+        @include flex-center;
+        @include circle(unit(8));
         content: counter(step);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: unit(8);
-        height: unit(8);
         margin: 0 unit(2);
         font-size: unit(3);
         background: var(--step-circle-bg);
         border: 1px solid var(--step-circle-color);
-        border-radius: 50%;
         transition: 0.3s;
       }
 

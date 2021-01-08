@@ -12,11 +12,9 @@
   cursor: pointer;
 
   &::-webkit-slider-thumb {
-    width: var(--range-thumb-width);
-    height: var(--range-thumb-width);
+    @include circle(var(--range-thumb-width));
     background: var(--range-thumb-bg);
     border: 2px solid var(--range-thumb-border-color);
-    border-radius: 50%;
     cursor: grab;
     appearance: none;
     transition: 0.3s;

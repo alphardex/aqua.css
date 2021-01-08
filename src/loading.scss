@@ -5,19 +5,13 @@
   --loader-border: 2px;
   --loader-border-color: var(--primary-color-transparent);
 
+  @include circle(var(--loader-width));
   position: relative;
-  width: var(--loader-width);
-  height: var(--loader-width);
   box-shadow: inset 0 0 0 var(--loader-border) var(--loader-border-color);
-  border-radius: 50%;
 
   &::before {
-    position: absolute;
+    @include cover;
     content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     border-radius: inherit;
     box-shadow: inset 0 0 0 var(--loader-stroke) var(--loader-stroke-color);
     clip-path: inset(0 50% 0 0);

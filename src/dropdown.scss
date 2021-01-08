@@ -13,12 +13,11 @@
     transition: 0.4s;
 
     &::after {
+      @include square(0);
       display: inline-flex;
       vertical-align: middle;
       margin-left: unit(1);
       content: "";
-      width: 0;
-      height: 0;
       border-style: solid;
       border-width: 5px 5px 0 6px;
       border-color: var(--dropdown-toggle-color) transparent transparent

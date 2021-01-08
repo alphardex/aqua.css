@@ -22,14 +22,12 @@
   transition: 0.3s;
 
   &::before {
+    @include circle(var(--switch-ball-width));
     position: absolute;
-    content: "";
     top: unit(0.5);
     left: unit(0.5);
-    width: var(--switch-ball-width);
-    height: var(--switch-ball-width);
+    content: "";
     background: var(--switch-ball-bg);
-    border-radius: 50%;
     transition: 0.3s;
   }
 

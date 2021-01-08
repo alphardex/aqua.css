@@ -6,9 +6,7 @@
   .btn {
     --btn-radius: 10px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 
     &:hover,
     &:focus,

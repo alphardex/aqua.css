@@ -20,11 +20,9 @@
   }
 
   &-link {
+    @include circle(var(--carousel-link-width));
     content: "";
-    width: var(--carousel-link-width);
-    height: var(--carousel-link-width);
     margin: 0 var(--carousel-link-margin);
-    border-radius: 50%;
     box-shadow: inset 0 0 0 calc(var(--carousel-link-width) / 8)
       var(--carousel-link-color);
     transition: 0.3s;

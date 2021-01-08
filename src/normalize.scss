@@ -7,18 +7,20 @@ textarea {
   margin: 0;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+}
+
 button {
   outline: none;
   cursor: pointer;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   outline: none;
   appearance: none;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  margin: 0;
-  cursor: pointer;
 }
