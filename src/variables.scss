@@ -14,7 +14,7 @@ $ring-variations: 0, 1, 2, 4, 8;
 $unit-ratio: 0;
 $unit: "";
 $wild-card: "*";
-$root-name: "root";
+$root-name: ":root";
 @if $device-type == "pc" {
   $unit-ratio: 0.25;
   $unit: rem;

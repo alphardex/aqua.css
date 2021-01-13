@@ -1,4 +1,4 @@
-root {
+:root {
   --primary-color: hsl(196, 78%, 61%);
   --secondary-color: hsl(217, 15%, 83%);
   --success-color: hsl(165, 58%, 55%);
@@ -13005,53 +13005,98 @@ select {
 }
 
 .ring-0 {
-  --ring-shadow: var(--ring-inset,/*!*/ /*!*/) 0 0 0 calc(0px + var(--ring-offset-width, 0px)) var(--ring-color);
+  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+      0
+      0
+      0
+      calc(0px + var(--ring-offset-width, 0px))
+      var(--ring-color);
   box-shadow: var(--ring-offset-shadow, 0 0 transparent), var(--ring-shadow, 0 0 transparent);
 }
 
 .ring-offset-0 {
   --ring-offset-width: 0px;
-  --ring-offset-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color, white);
+  --ring-offset-shadow: 0
+      0
+      0
+      var(--ring-offset-width)
+      var(--ring-offset-color, white);
 }
 
 .ring-1 {
-  --ring-shadow: var(--ring-inset,/*!*/ /*!*/) 0 0 0 calc(1px + var(--ring-offset-width, 0px)) var(--ring-color);
+  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+      0
+      0
+      0
+      calc(1px + var(--ring-offset-width, 0px))
+      var(--ring-color);
   box-shadow: var(--ring-offset-shadow, 0 0 transparent), var(--ring-shadow, 0 0 transparent);
 }
 
 .ring-offset-1 {
   --ring-offset-width: 1px;
-  --ring-offset-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color, white);
+  --ring-offset-shadow: 0
+      0
+      0
+      var(--ring-offset-width)
+      var(--ring-offset-color, white);
 }
 
 .ring-2 {
-  --ring-shadow: var(--ring-inset,/*!*/ /*!*/) 0 0 0 calc(2px + var(--ring-offset-width, 0px)) var(--ring-color);
+  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+      0
+      0
+      0
+      calc(2px + var(--ring-offset-width, 0px))
+      var(--ring-color);
   box-shadow: var(--ring-offset-shadow, 0 0 transparent), var(--ring-shadow, 0 0 transparent);
 }
 
 .ring-offset-2 {
   --ring-offset-width: 2px;
-  --ring-offset-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color, white);
+  --ring-offset-shadow: 0
+      0
+      0
+      var(--ring-offset-width)
+      var(--ring-offset-color, white);
 }
 
 .ring-4 {
-  --ring-shadow: var(--ring-inset,/*!*/ /*!*/) 0 0 0 calc(4px + var(--ring-offset-width, 0px)) var(--ring-color);
+  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+      0
+      0
+      0
+      calc(4px + var(--ring-offset-width, 0px))
+      var(--ring-color);
   box-shadow: var(--ring-offset-shadow, 0 0 transparent), var(--ring-shadow, 0 0 transparent);
 }
 
 .ring-offset-4 {
   --ring-offset-width: 4px;
-  --ring-offset-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color, white);
+  --ring-offset-shadow: 0
+      0
+      0
+      var(--ring-offset-width)
+      var(--ring-offset-color, white);
 }
 
 .ring-8 {
-  --ring-shadow: var(--ring-inset,/*!*/ /*!*/) 0 0 0 calc(8px + var(--ring-offset-width, 0px)) var(--ring-color);
+  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+      0
+      0
+      0
+      calc(8px + var(--ring-offset-width, 0px))
+      var(--ring-color);
   box-shadow: var(--ring-offset-shadow, 0 0 transparent), var(--ring-shadow, 0 0 transparent);
 }
 
 .ring-offset-8 {
   --ring-offset-width: 8px;
-  --ring-offset-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color, white);
+  --ring-offset-shadow: 0
+      0
+      0
+      var(--ring-offset-width)
+      var(--ring-offset-color, white);
 }
 
 .ring-inset {
@@ -13632,5 +13677,23 @@ select {
 
 .all-unset {
   all: unset;
+}
+
+.border-stripe {
+  --stripe-width: 0.5rem;
+  --stripe-deg: -45deg;
+  --stripe-offset-1: 2px;
+  --stripe-offset-2: 1rem;
+  --stripe-radius: 15px;
+  --stripe-inset: calc(var(--stripe-width) * -1);
+}
+
+.border-stripe::before {
+  top: var(--stripe-inset);
+  left: var(--stripe-inset);
+  right: var(--stripe-inset);
+  bottom: var(--stripe-inset);
+  content: "";
+  z-index: -1;
 }
 /*# sourceMappingURL=aqua.css.map */

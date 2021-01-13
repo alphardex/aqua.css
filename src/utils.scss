@@ -1241,13 +1241,23 @@
 
 @each $i in $ring-variations {
   .ring-#{$i} {
-    --ring-shadow: var(--ring-inset,/*!*/ /*!*/) 0 0 0 calc(#{$i}px + var(--ring-offset-width, 0px)) var(--ring-color);
-    box-shadow: var(--ring-offset-shadow, 0 0 transparent), var(--ring-shadow, 0 0 transparent);
+    --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+      0
+      0
+      0
+      calc(#{$i}px + var(--ring-offset-width, 0px))
+      var(--ring-color);
+    box-shadow: var(--ring-offset-shadow, 0 0 transparent),
+      var(--ring-shadow, 0 0 transparent);
   }
 
   .ring-offset-#{$i} {
     --ring-offset-width: #{$i}px;
-    --ring-offset-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color, white);
+    --ring-offset-shadow: 0
+      0
+      0
+      var(--ring-offset-width)
+      var(--ring-offset-color, white);
   }
 }
 
@@ -1807,4 +1817,19 @@
 
 .all-unset {
   all: unset;
+}
+
+.border-stripe {
+  --stripe-width: 0.5rem;
+  --stripe-deg: -45deg;
+  --stripe-offset-1: 2px;
+  --stripe-offset-2: 1rem;
+  --stripe-radius: 15px;
+  --stripe-inset: calc(var(--stripe-width) * -1);
+
+  &::before {
+    @include inset(var(--stripe-inset));
+    content: "";
+    z-index: -1;
+  }
 }
