@@ -1,4 +1,36 @@
-:root {
+$device-type: "weapp";
+$types: "primary", "secondary", "success", "info", "warning", "danger";
+$position-total: 100;
+$z-total: 5;
+$order-total: 12;
+$spacing-total: 40;
+$sizing-total: 100;
+$grid-cols-total: 12;
+$grid-rows-total: 6;
+$gap-total: 100;
+$border-variations: 0, 2, 4, 8;
+$divide-variations: 2, 4, 8;
+$ring-variations: 0, 1, 2, 4, 8;
+$unit-ratio: 0;
+$unit: "";
+$wild-card: "*";
+$root-name: "root";
+@if $device-type == "pc" {
+  $unit-ratio: 0.25;
+  $unit: rem;
+}
+@if $device-type == "sp" {
+  $unit-ratio: 1;
+  $unit: vw;
+}
+@if $device-type == "weapp" {
+  $unit-ratio: 9;
+  $unit: rpx;
+  $wild-card: "view";
+  $root-name: "page";
+}
+
+#{$root-name} {
   --primary-color: hsl(196, 78%, 61%);
   --secondary-color: hsl(217, 15%, 83%);
   --success-color: hsl(165, 58%, 55%);
@@ -37,26 +69,4 @@
   --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
   --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
   --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-
-$device-type: "pc";
-$types: "primary", "secondary", "success", "info", "warning", "danger";
-$position-total: 100;
-$z-total: 5;
-$order-total: 12;
-$spacing-total: 40;
-$sizing-total: 100;
-$unit-ratio: 0;
-$unit: "";
-@if $device-type == "pc" {
-  $unit-ratio: 0.25;
-  $unit: rem;
-}
-@if $device-type == "sp" {
-  $unit-ratio: 1;
-  $unit: vw;
-}
-@if $device-type == "weapp" {
-  $unit-ratio: 9;
-  $unit: rpx;
 }

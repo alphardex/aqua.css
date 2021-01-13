@@ -80,6 +80,20 @@
   }
 }
 
+@mixin ring-color-with-state($type) {
+  .ring-#{$type} {
+    --ring-color: var(--#{$type}-color);
+  }
+
+  .ring-#{$type}-darker {
+    --ring-color: var(--#{$type}-color-darker);
+  }
+
+  .ring-#{$type}-lighter {
+    --ring-color: var(--#{$type}-color-lighter);
+  }
+}
+
 @mixin cover(
   $top: 0,
   $left: 0,
@@ -94,8 +108,7 @@
   height: $height;
 }
 
-@mixin inset($inset: 0, $position: absolute) {
-  position: $position;
+@mixin inset($inset: 0) {
   top: $inset;
   left: $inset;
   right: $inset;

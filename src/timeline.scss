@@ -38,6 +38,7 @@
 
         &::before {
           @include inset(unit(-1));
+          position: absolute;
           content: "";
           background: var(--timeline-dot-bg);
         }
