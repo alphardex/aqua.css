@@ -10493,6 +10493,22 @@ select {
   margin-bottom: auto !important;
 }
 
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
 .w-0 {
   width: 0rem !important;
 }
@@ -13695,5 +13711,35 @@ select {
   bottom: var(--stripe-inset);
   content: "";
   z-index: -1;
+  background: repeating-linear-gradient(var(--stripe-deg), var(--stripe-color-1) 0 var(--stripe-offset-1), var(--stripe-color-2) 0 var(--stripe-offset-2));
+  border-radius: var(--stripe-radius);
+}
+
+.cover {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.w-1px {
+  width: 1px;
+}
+
+.h-1px {
+  height: 1px;
+}
+
+.m-1px {
+  margin: 1px;
+}
+
+.p-1px {
+  padding: 1px;
+}
+
+.animation-none {
+  -webkit-animation: none;
+          animation: none;
 }
 /*# sourceMappingURL=aqua.css.map */
