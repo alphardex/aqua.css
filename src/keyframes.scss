@@ -98,3 +98,28 @@
     animation-timing-function: ease-out;
   }
 }
+
+@keyframes float-up-down {
+  0% {
+    transform: translateY(var(--negative-float-up-down-distance));
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(var(--float-up-down-distance));
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+}
