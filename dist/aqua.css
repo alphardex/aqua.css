@@ -666,7 +666,7 @@ select {
 
 .btn-ghost {
   --btn-color: var(--btn-bg);
-  --btn-border-color: var(--btn-bg);
+  --btn-border: 1px solid var(--btn-bg);
   background: transparent;
   transition: 0.3s;
 }
@@ -686,13 +686,13 @@ select {
 
 .btn-dashed {
   --btn-color: var(--btn-bg);
-  --btn-border-style: dashed;
+  --btn-border: 1px dashed var(--secondary-color);
   background: transparent;
 }
 
 .btn-link {
   --btn-color: var(--btn-bg);
-  --btn-border-width: 0;
+  --btn-border: 0;
   background: transparent;
 }
 

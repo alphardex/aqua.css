@@ -31,7 +31,7 @@
     transition: 0.3s;
   }
 
-  & ~ .form-check-label {
+  & #{$sibling-selector} .form-check-label {
     margin-left: unit(2.5);
     cursor: pointer;
     transition: 0.3s;
@@ -57,7 +57,7 @@
 
     cursor: not-allowed;
 
-    & ~ .form-check-label {
+    & #{$sibling-selector} .form-check-label {
       cursor: not-allowed;
     }
   }

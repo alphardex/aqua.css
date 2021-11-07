@@ -1,4 +1,4 @@
-$device-type: "sp";
+$device-type: "weapp";
 $types: "primary", "secondary", "success", "info", "warning", "danger";
 $position-total: 100;
 $z-total: 5;
@@ -15,6 +15,8 @@ $unit-ratio: 0;
 $unit: "";
 $wild-card: "*";
 $root-name: ":root";
+$sibling-selector: "~";
+$ring-inset: "var(--ring-inset, /*!*/ /*!*/)";
 @if $device-type == "pc" {
   $unit-ratio: 0.25;
   $unit: rem;
@@ -28,6 +30,8 @@ $root-name: ":root";
   $unit: rpx;
   $wild-card: "view";
   $root-name: "page";
+  $sibling-selector: "+";
+  $ring-inset: "";
 }
 
 #{$root-name} {

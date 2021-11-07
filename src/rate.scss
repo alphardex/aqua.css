@@ -7,11 +7,11 @@
     opacity: 0;
     visibility: hidden;
 
-    &:checked ~ label::after {
+    &:checked #{$sibling-selector} label::after {
       opacity: 1;
     }
 
-    &:checked ~ label::before {
+    &:checked #{$sibling-selector} label::before {
       opacity: 0;
     }
   }
@@ -45,17 +45,17 @@
     }
 
     &:hover::before,
-    &:hover ~ label::before {
+    &:hover #{$sibling-selector} label::before {
       opacity: 0 !important;
     }
 
     &:hover::after,
-    &:hover ~ label::after {
+    &:hover #{$sibling-selector} label::after {
       opacity: 1 !important;
     }
   }
 
-  &:hover input:checked ~ label::before {
+  &:hover input:checked #{$sibling-selector} label::before {
     opacity: 1;
   }
 }

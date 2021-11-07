@@ -666,7 +666,7 @@ select {
 
 .btn-ghost {
   --btn-color: var(--btn-bg);
-  --btn-border-color: var(--btn-bg);
+  --btn-border: 1px solid var(--btn-bg);
   background: transparent;
   transition: 0.3s;
 }
@@ -680,19 +680,19 @@ select {
   display: inline-flex;
 }
 
-.btn i ~ span {
+.btn i + span {
   margin-left: 5px;
 }
 
 .btn-dashed {
   --btn-color: var(--btn-bg);
-  --btn-border-style: dashed;
+  --btn-border: 1px dashed var(--secondary-color);
   background: transparent;
 }
 
 .btn-link {
   --btn-color: var(--btn-bg);
-  --btn-border-width: 0;
+  --btn-border: 0;
   background: transparent;
 }
 
@@ -802,20 +802,20 @@ select {
   border: none;
 }
 
-.form-input-material .form-control-material:invalid ~ label {
+.form-input-material .form-control-material:invalid + label {
   color: var(--input-invalid-border-color);
 }
 
-.form-input-material .form-control-material:valid ~ label {
+.form-input-material .form-control-material:valid + label {
   color: var(--input-valid-border-color);
 }
 
-.form-input-material .form-control-material:placeholder-shown ~ label {
+.form-input-material .form-control-material:placeholder-shown + label {
   color: var(--input-default-border-color);
 }
 
-.form-input-material .form-control-material:focus ~ label,
-.form-input-material .form-control-material:not(:placeholder-shown) ~ label {
+.form-input-material .form-control-material:focus + label,
+.form-input-material .form-control-material:not(:placeholder-shown) + label {
   transform: translateY(-120%) scale(0.75);
 }
 
@@ -909,7 +909,7 @@ select {
   transition: 0.3s;
 }
 
-.form-check-input[type="checkbox"] ~ .form-check-label {
+.form-check-input[type="checkbox"] + .form-check-label {
   margin-left: 22.5rpx;
   cursor: pointer;
   transition: 0.3s;
@@ -953,7 +953,7 @@ select {
   cursor: not-allowed;
 }
 
-.form-check-input[type="checkbox"]:disabled ~ .form-check-label {
+.form-check-input[type="checkbox"]:disabled + .form-check-label {
   cursor: not-allowed;
 }
 
@@ -979,7 +979,7 @@ select {
   transition: 0.3s;
 }
 
-.form-check-input[type="radio"] ~ .form-check-label {
+.form-check-input[type="radio"] + .form-check-label {
   margin-left: 22.5rpx;
   cursor: pointer;
   transition: 0.3s;
@@ -1024,7 +1024,7 @@ select {
   cursor: not-allowed;
 }
 
-.form-check-input[type="radio"]:disabled ~ .form-check-label {
+.form-check-input[type="radio"]:disabled + .form-check-label {
   cursor: not-allowed;
 }
 
@@ -1063,7 +1063,7 @@ select {
   transition: 0.3s;
 }
 
-.form-switch ~ .form-check-label {
+.form-switch + .form-check-label {
   margin-left: 22.5rpx;
   cursor: pointer;
   transition: 0.3s;
@@ -1089,7 +1089,7 @@ select {
   cursor: not-allowed;
 }
 
-.form-switch:disabled ~ .form-check-label {
+.form-switch:disabled + .form-check-label {
   cursor: not-allowed;
 }
 
@@ -1661,11 +1661,11 @@ select {
   visibility: hidden;
 }
 
-.rate input:checked ~ label::after {
+.rate input:checked + label::after {
   opacity: 1;
 }
 
-.rate input:checked ~ label::before {
+.rate input:checked + label::before {
   opacity: 0;
 }
 
@@ -1700,16 +1700,16 @@ select {
 }
 
 .rate label:hover::before,
-.rate label:hover ~ label::before {
+.rate label:hover + label::before {
   opacity: 0 !important;
 }
 
 .rate label:hover::after,
-.rate label:hover ~ label::after {
+.rate label:hover + label::after {
   opacity: 1 !important;
 }
 
-.rate:hover input:checked ~ label::before {
+.rate:hover input:checked + label::before {
   opacity: 1;
 }
 
@@ -13109,7 +13109,7 @@ select {
 }
 
 .ring-0 {
-  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+  --ring-shadow: 
       0
       0
       0
@@ -13128,7 +13128,7 @@ select {
 }
 
 .ring-1 {
-  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+  --ring-shadow: 
       0
       0
       0
@@ -13147,7 +13147,7 @@ select {
 }
 
 .ring-2 {
-  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+  --ring-shadow: 
       0
       0
       0
@@ -13166,7 +13166,7 @@ select {
 }
 
 .ring-4 {
-  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+  --ring-shadow: 
       0
       0
       0
@@ -13185,7 +13185,7 @@ select {
 }
 
 .ring-8 {
-  --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+  --ring-shadow: 
       0
       0
       0

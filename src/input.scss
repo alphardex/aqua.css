@@ -61,24 +61,24 @@
     border: none;
 
     &:invalid {
-      & ~ label {
+      & #{$sibling-selector} label {
         color: var(--input-invalid-border-color);
       }
     }
 
-    &:valid ~ label {
+    &:valid #{$sibling-selector} label {
       color: var(--input-valid-border-color);
     }
 
-    &:placeholder-shown ~ label {
+    &:placeholder-shown #{$sibling-selector} label {
       color: var(--input-default-border-color);
     }
 
     // label will float in 2 situations based on its sibling input:
     // 1. input get focus
     // 2. input has text filled
-    &:focus ~ label,
-    &:not(:placeholder-shown) ~ label {
+    &:focus #{$sibling-selector} label,
+    &:not(:placeholder-shown) #{$sibling-selector} label {
       transform: translateY(-120%) scale(0.75);
     }
   }

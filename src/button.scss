@@ -48,7 +48,7 @@
 
   &-ghost {
     --btn-color: var(--btn-bg);
-    --btn-border-color: var(--btn-bg);
+    --btn-border: 1px solid var(--btn-bg);
 
     background: transparent;
     transition: 0.3s;
@@ -63,21 +63,21 @@
   i {
     display: inline-flex;
 
-    & ~ span {
+    & #{$sibling-selector} span {
       margin-left: 5px;
     }
   }
 
   &-dashed {
     --btn-color: var(--btn-bg);
-    --btn-border-style: dashed;
+    --btn-border: 1px dashed var(--secondary-color);
 
     background: transparent;
   }
 
   &-link {
     --btn-color: var(--btn-bg);
-    --btn-border-width: 0;
+    --btn-border: 0;
 
     background: transparent;
   }

@@ -1271,7 +1271,7 @@
 
 @each $i in $ring-variations {
   .ring-#{$i} {
-    --ring-shadow: var(--ring-inset, /*!*/ /*!*/)
+    --ring-shadow: #{$ring-inset}
       0
       0
       0
