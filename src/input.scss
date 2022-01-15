@@ -15,9 +15,40 @@
   border: 1px solid var(--input-border-color);
   border-radius: var(--input-radius);
   transition: 0.3s;
+  appearance: none;
+  outline: none;
 
   &::placeholder {
     color: var(--input-placeholder-color);
+  }
+}
+
+select.form-control:not([multiple]) {
+  --select-active-color: var(--input-color);
+  --select-inactive-color: var(--input-placeholder-color);
+
+  color: var(--select-active-color);
+
+  &:required {
+    & > option {
+      &:first-of-type {
+        color: var(--select-inactive-color);
+      }
+    }
+
+    &:invalid {
+      color: var(--select-inactive-color);
+
+      & > option {
+        &:not(:first-of-type) {
+          color: var(--select-active-color);
+        }
+      }
+
+      & > optgroup {
+        color: var(--select-active-color);
+      }
+    }
   }
 }
 
@@ -59,6 +90,8 @@
     padding: unit(2) 0;
     background: transparent;
     border: none;
+    appearance: none;
+    outline: none;
 
     &:invalid {
       & #{$sibling-selector} label {

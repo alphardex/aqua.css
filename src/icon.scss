@@ -8,6 +8,7 @@
   position: relative;
   display: block;
   background: var(--close-icon-color);
+  cursor: pointer;
 
   &::before,
   &::after {

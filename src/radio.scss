@@ -14,6 +14,9 @@
   border: none;
   border-radius: var(--radio-radius);
   transition: 0.3s;
+  appearance: none;
+  margin: 0;
+  cursor: pointer;
 
   & #{$sibling-selector} .form-check-label {
     margin-left: unit(2.5);

@@ -10,29 +10,26 @@
 </head>
 
 <body>
-  <div class="dialog text-center" id="dialog">
-    <div class="font-bold text-lg">
-      Konosuba
-    </div>
-    <div class="mt-2">
-      Kono subarashi sekai ni shufuku wo!
-    </div>
-    <div class="mt-2">
-      <button class="btn btn-primary" onclick="document.querySelector('#dialog').close()">
-        Confirm
-      </button>
-      <button class="btn" onclick="document.querySelector('#dialog').close()">
-        Cancel
-      </button>
+  <div class="dialog">
+    <div class="text-center space-y-2">
+      <div class="font-bold text-lg">
+        Konosuba
+      </div>
+      <div>
+        Kono subarashi sekai ni shufuku wo!
+      </div>
+      <div>
+        <button class="btn btn-primary">
+          Confirm
+        </button>
+        <button class="btn">
+          Cancel
+        </button>
+      </div>
     </div>
     <div class="close-icon"></div>
   </div>
   <div class="backdrop"></div>
-  <form action="javascript:void(0);">
-    <button class="btn btn-info" onclick="document.querySelector('#dialog').showModal()">
-      Open Dialog
-    </button>
-  </form>
 </body>
 
 </html>

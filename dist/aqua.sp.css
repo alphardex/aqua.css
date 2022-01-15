@@ -44,28 +44,10 @@ input,
 optgroup,
 select,
 textarea {
-  font: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
   margin: 0;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  margin: 0;
-  cursor: pointer;
-}
-
-button {
-  outline: none;
-  cursor: pointer;
-}
-
-input,
-textarea,
-select {
-  outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 @-webkit-keyframes spin {
@@ -160,6 +142,34 @@ select {
 
 @-webkit-keyframes bounce-in {
   from {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-in {
+  from {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes dialog-bounce-in {
+  from {
     transform: translate(-50%, -50%) scale(0.8);
   }
   50% {
@@ -172,7 +182,7 @@ select {
   }
 }
 
-@keyframes bounce-in {
+@keyframes dialog-bounce-in {
   from {
     transform: translate(-50%, -50%) scale(0.8);
   }
@@ -310,6 +320,30 @@ select {
   }
 }
 
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsate-fwd {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .close-icon {
   --close-icon-width: 4vw;
   --close-icon-bar-width: calc(var(--close-icon-width) / 12);
@@ -321,6 +355,7 @@ select {
   position: relative;
   display: block;
   background: var(--close-icon-color);
+  cursor: pointer;
 }
 
 .close-icon::before, .close-icon::after {
@@ -565,6 +600,8 @@ select {
   background: var(--btn-bg, white);
   border: var(--btn-border);
   border-radius: var(--btn-radius);
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -676,17 +713,9 @@ select {
   background: var(--btn-bg);
 }
 
-.btn i {
-  display: inline-flex;
-}
-
-.btn i ~ span {
-  margin-left: 5px;
-}
-
 .btn-dashed {
   --btn-color: var(--btn-bg);
-  --btn-border: 1px dashed var(--secondary-color);
+  --btn-border: 1px dashed var(--btn-bg);
   background: transparent;
 }
 
@@ -694,6 +723,11 @@ select {
   --btn-color: var(--btn-bg);
   --btn-border: 0;
   background: transparent;
+}
+
+.btn-sm {
+  --btn-padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
 }
 
 .btn-group {
@@ -740,6 +774,10 @@ select {
   border: 1px solid var(--input-border-color);
   border-radius: var(--input-radius);
   transition: 0.3s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -760,6 +798,28 @@ select {
 
 .form-control::placeholder {
   color: var(--input-placeholder-color);
+}
+
+select.form-control:not([multiple]) {
+  --select-active-color: var(--input-color);
+  --select-inactive-color: var(--input-placeholder-color);
+  color: var(--select-active-color);
+}
+
+select.form-control:not([multiple]):required > option:first-of-type {
+  color: var(--select-inactive-color);
+}
+
+select.form-control:not([multiple]):required:invalid {
+  color: var(--select-inactive-color);
+}
+
+select.form-control:not([multiple]):required:invalid > option:not(:first-of-type) {
+  color: var(--select-active-color);
+}
+
+select.form-control:not([multiple]):required:invalid > optgroup {
+  color: var(--select-active-color);
 }
 
 .form-input-material {
@@ -800,6 +860,10 @@ select {
   padding: 2vw 0;
   background: transparent;
   border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
 }
 
 .form-input-material .form-control-material:invalid ~ label {
@@ -907,6 +971,11 @@ select {
   border: none;
   border-radius: var(--checkbox-radius);
   transition: 0.3s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  cursor: pointer;
 }
 
 .form-check-input[type="checkbox"] ~ .form-check-label {
@@ -977,6 +1046,11 @@ select {
   border: none;
   border-radius: var(--radio-radius);
   transition: 0.3s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  cursor: pointer;
 }
 
 .form-check-input[type="radio"] ~ .form-check-label {
@@ -1047,8 +1121,12 @@ select {
   background: var(--switch-bg);
   border: 1px solid var(--switch-border-color);
   border-radius: var(--switch-radius);
-  cursor: pointer;
   transition: 0.3s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  cursor: pointer;
 }
 
 .form-switch::before {
@@ -1124,6 +1202,9 @@ select {
   height: var(--range-height);
   background: var(--range-bar-bg);
   border-radius: var(--range-bar-radius);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
@@ -1344,8 +1425,8 @@ select {
   padding: var(--dialog-padding);
   background: var(--dialog-bg);
   border-radius: var(--dialog-radius);
-  -webkit-animation: bounce-in 0.6s forwards;
-          animation: bounce-in 0.6s forwards;
+  -webkit-animation: fade-in 0.6s both;
+          animation: fade-in 0.6s both;
 }
 
 .dialog .close-icon {
@@ -1354,6 +1435,11 @@ select {
   left: 50%;
   transform: translateX(-50%);
   bottom: -16vw;
+}
+
+.dialog.bounce-in {
+  -webkit-animation: dialog-bounce-in 0.6s forwards;
+          animation: dialog-bounce-in 0.6s forwards;
 }
 
 .backdrop {
@@ -13972,5 +14058,28 @@ select {
 .blink {
   -webkit-animation: blink 2s linear both infinite;
           animation: blink 2s linear both infinite;
+}
+
+.bounce-in {
+  -webkit-animation: bounce-in 0.6s forwards;
+          animation: bounce-in 0.6s forwards;
+}
+
+.pulsate-fwd {
+  -webkit-animation: pulsate-fwd 0.8s ease-in-out infinite both;
+          animation: pulsate-fwd 0.8s ease-in-out infinite both;
+}
+
+.hollow {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rich-text img {
+  max-width: 100%;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 /*# sourceMappingURL=aqua.css.map */

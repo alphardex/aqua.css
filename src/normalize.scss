@@ -3,24 +3,8 @@ input,
 optgroup,
 select,
 textarea {
-  font: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
   margin: 0;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  margin: 0;
-  cursor: pointer;
-}
-
-button {
-  outline: none;
-  cursor: pointer;
-}
-
-input,
-textarea,
-select {
-  outline: none;
-  appearance: none;
 }

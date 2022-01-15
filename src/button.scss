@@ -9,6 +9,8 @@
   background: var(--btn-bg, white);
   border: var(--btn-border);
   border-radius: var(--btn-radius);
+  white-space: nowrap;
+  cursor: pointer;
 
   @each $type in $types {
     @include btn-color-with-state($type);
@@ -60,17 +62,9 @@
     }
   }
 
-  i {
-    display: inline-flex;
-
-    & #{$sibling-selector} span {
-      margin-left: 5px;
-    }
-  }
-
   &-dashed {
     --btn-color: var(--btn-bg);
-    --btn-border: 1px dashed var(--secondary-color);
+    --btn-border: 1px dashed var(--btn-bg);
 
     background: transparent;
   }
@@ -80,6 +74,12 @@
     --btn-border: 0;
 
     background: transparent;
+  }
+
+  &-sm {
+    --btn-padding: 0.25rem 0.5rem;
+
+    font-size: 0.75rem;
   }
 }
 

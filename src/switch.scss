@@ -18,8 +18,10 @@
   background: var(--switch-bg);
   border: 1px solid var(--switch-border-color);
   border-radius: var(--switch-radius);
-  cursor: pointer;
   transition: 0.3s;
+  appearance: none;
+  margin: 0;
+  cursor: pointer;
 
   &::before {
     @include circle(var(--switch-ball-width));

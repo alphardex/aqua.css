@@ -50,6 +50,22 @@
 
 @keyframes bounce-in {
   from {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-bounce-in {
+  from {
     transform: translate(-50%, -50%) scale(0.8);
   }
 
@@ -121,5 +137,17 @@
 
   50% {
     opacity: 0.25;
+  }
+}
+
+@keyframes pulsate-fwd {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

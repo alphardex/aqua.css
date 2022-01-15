@@ -9,6 +9,7 @@
   height: var(--range-height);
   background: var(--range-bar-bg);
   border-radius: var(--range-bar-radius);
+  appearance: none;
   cursor: pointer;
 
   &::-webkit-slider-thumb {
