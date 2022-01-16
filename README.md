@@ -13,14 +13,6 @@
 
 ### 🏠 [文档](https://aquacss.netlify.com/)
 
-## 范例
-
-![Dashboard](https://user-gold-cdn.xitu.io/2020/4/2/1713911e73046096?w=1920&h=1371&f=png&s=165668)
-
-地址：[猛戳这里](https://codepen.io/alphardex/full/yLNwKqx)
-
-看到这么精美的 Dashboard 是不是心动了？快来尝试一下吧！
-
 ## 安装
 
 ### 通过 cdn 引用
@@ -38,7 +30,7 @@
 ### 通过 npm 安装
 
 ```sh
-npm i @alphardex/aqua.css -S
+npm i @alphardex/aqua.css
 ```
 
 ## 特点
