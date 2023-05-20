@@ -17,14 +17,17 @@ $wild-card: "*";
 $root-name: ":root";
 $sibling-selector: "~";
 $ring-inset: "var(--ring-inset, /*!*/ /*!*/)";
+
 @if $device-type == "pc" {
   $unit-ratio: 0.25;
   $unit: rem;
 }
+
 @if $device-type == "sp" {
   $unit-ratio: 1;
   $unit: vw;
 }
+
 @if $device-type == "weapp" {
   $unit-ratio: 9;
   $unit: rpx;
