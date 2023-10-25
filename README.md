@@ -1,4 +1,8 @@
-<h1 align="center">aqua.css</h1>
+<div align="center">
+  <img src="./assets/logo.jpg" width="200">
+  <h1>aqua.css</h1>
+  <p>A delicate CSS framework for humans.</p>
+</div>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.7.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://aquacss.netlify.com/">
@@ -9,7 +13,7 @@
   </a>
 </p>
 
-> A delicate CSS framework for humans.
+> Aqua, a megami of "wisdom" in Konosuba.
 
 ### 🏠 [文档](https://aquacss.netlify.com/)
 
